@@ -2,19 +2,27 @@
 
 import { motion } from "framer-motion";
 import InteractiveText from "@/components/InteractiveText";
+import { cn } from "@/lib/utils";
 
 interface EventHeadingProps {
   prefix?: string;
   title: string;
+  align?: "left" | "center" | "right"; // 👈 NEW
 }
 
 const EventHeading = ({
   prefix = "Annual Symposium",
   title,
+  align = "left",
 }: EventHeadingProps) => {
   return (
     <motion.div
-      className="mb-12"
+      className={cn(
+        "mb-12 w-full flex",
+        align === "left" && "justify-start",
+        align === "center" && "justify-center",
+        align === "right" && "justify-end"
+      )}
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

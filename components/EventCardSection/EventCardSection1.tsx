@@ -1,4 +1,3 @@
-
 "use client";
 import { useState, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -12,8 +11,10 @@ const events = [
     title: "DevCon 2026",
     date: "March 15-17, 2026",
     location: "San Francisco, CA",
-    description: "The premier developer conference bringing together 5,000+ engineers to explore cutting-edge technologies, from AI/ML to cloud-native architectures.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop",
+    description:
+      "The premier developer conference bringing together 5,000+ engineers to explore cutting-edge technologies, from AI/ML to cloud-native architectures.",
+    image:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop",
     tags: ["Conference", "DevOps", "Cloud"],
     attendees: 4250,
   },
@@ -22,8 +23,10 @@ const events = [
     title: "AI Hackathon 2026",
     date: "April 8-10, 2026",
     location: "Austin, TX",
-    description: "48-hour intensive hackathon focused on building the next generation of AI-powered applications. $50K in prizes, mentorship from industry leaders.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&auto=format&fit=crop",
+    description:
+      "48-hour intensive hackathon focused on building the next generation of AI-powered applications. $50K in prizes, mentorship from industry leaders.",
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&auto=format&fit=crop",
     tags: ["Hackathon", "AI/ML", "Startup"],
     attendees: 850,
   },
@@ -32,8 +35,10 @@ const events = [
     title: "React Summit 2026",
     date: "May 22-24, 2026",
     location: "New York, NY",
-    description: "Join the world's largest React conference featuring talks from core team members, workshops on React 19, and networking with the global React community.",
-    image: "https://images.unsplash.com/photo-1558403194-611308249627?w=800&auto=format&fit=crop",
+    description:
+      "Join the world's largest React conference featuring talks from core team members, workshops on React 19, and networking with the global React community.",
+    image:
+      "https://images.unsplash.com/photo-1558403194-611308249627?w=800&auto=format&fit=crop",
     tags: ["React", "Frontend", "JavaScript"],
     attendees: 3200,
   },
@@ -79,38 +84,36 @@ const EventCardsSection1 = () => {
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe) goToNext();
     if (isRightSwipe) goToPrevious();
   };
 
   const getCardStyle = (index: number) => {
     const diff = index - activeIndex;
-    const normalizedDiff = ((diff + events.length) % events.length);
-    const adjustedDiff = normalizedDiff > events.length / 2 
-      ? normalizedDiff - events.length 
-      : normalizedDiff;
+    const normalizedDiff = (diff + events.length) % events.length;
+    const adjustedDiff =
+      normalizedDiff > events.length / 2
+        ? normalizedDiff - events.length
+        : normalizedDiff;
 
     return {
-      transform: `translateX(${adjustedDiff * 85}%) scale(${1 - Math.abs(adjustedDiff) * 0.1})`,
+      transform: `translateX(${adjustedDiff * 85}%) scale(${
+        1 - Math.abs(adjustedDiff) * 0.1
+      })`,
       zIndex: 10 - Math.abs(adjustedDiff),
     };
   };
 
   return (
-    <section 
-      className="min-h-screen py-20 px-4 overflow-hidden"
+    <section
+      className="min-h-screen py-20 px-4 overflow-hidden bt"
       style={{ background: "hsl(var(--events-bg))" }}
     >
       <div className="max-w-6xl mx-auto">
-
         {/* ✅ PERFECTLY PLACED HEADING */}
-        <EventHeading
-          prefix="Annual Symposium"
-          title="NEURONEX"
-        />
         {/* Section Header */}
-        <div className="text-center mb-16 space-y-4">
+        {/* <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             Upcoming Tech Events
           </h2>
@@ -118,13 +121,25 @@ const EventCardsSection1 = () => {
             Discover and register for the most exciting tech conferences, hackathons, 
             and summits happening around the world.
           </p>
+        </div> */}
+        {/* Section Header */}
+
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            Upcoming Tech Events
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Discover and register for the most exciting tech conferences,
+            hackathons, and summits happening around the world.
+          </p>
         </div>
 
+        
+        <EventHeading prefix="Annual Symposium" title="NEURONEX" />
+
         {/* Cards Container */}
-        <div 
+        <div
           className="relative flex items-start justify-center min-h-[650px] pt-10"
-
-
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
@@ -151,7 +166,9 @@ const EventCardsSection1 = () => {
           </Button>
 
           {/* Event Cards */}
-          <div className="relative w-full max-w-sm mx-auto">
+          <div className="relative w-full max-w-md mx-auto">
+
+
             {events.map((event, index) => (
               <div
                 key={event.id}
@@ -175,9 +192,10 @@ const EventCardsSection1 = () => {
               key={index}
               className={`
                 w-3 h-3 rounded-full transition-all duration-300
-                ${index === activeIndex 
-                  ? "bg-white scale-125" 
-                  : "bg-white/30 hover:bg-white/50"
+                ${
+                  index === activeIndex
+                    ? "bg-white scale-125"
+                    : "bg-white/30 hover:bg-white/50"
                 }
               `}
               onClick={() => setActiveIndex(index)}

@@ -44,7 +44,10 @@ const EventCard = ({
       {/* Card content wrapper */}
       <div className="relative">
         {/* Event Image */}
-        <div className="relative h-48 overflow-hidden z-10">
+       <div className="relative h-72 md:h-80 overflow-hidden z-10">
+
+
+
           <img
             src={image}
             alt={title}
