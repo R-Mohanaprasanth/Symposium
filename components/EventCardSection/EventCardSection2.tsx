@@ -90,24 +90,31 @@ const EventCardsSection2 = () => {
   };
 
   const getCardStyle = (index: number) => {
-    const diff = index - activeIndex;
-    const normalizedDiff = (diff + events.length) % events.length;
-    const adjustedDiff =
-      normalizedDiff > events.length / 2
-        ? normalizedDiff - events.length
-        : normalizedDiff;
+  const diff = index - activeIndex;
+  const normalizedDiff = ((diff + events.length) % events.length);
+  const adjustedDiff =
+    normalizedDiff > events.length / 2
+      ? normalizedDiff - events.length
+      : normalizedDiff;
 
-    return {
-      transform: `translateX(${adjustedDiff * 85}%) scale(${
-        1 - Math.abs(adjustedDiff) * 0.1
-      })`,
-      zIndex: 10 - Math.abs(adjustedDiff),
-    };
+  const isCenter = adjustedDiff === 0;
+
+  return {
+    transform: `
+  translateX(${adjustedDiff * 55}%)
+  translateY(${isCenter ? 0 : 32}px)
+  scale(${isCenter ? 1 : 0.9})
+`,
+
+    zIndex: isCenter ? 20 : 10 - Math.abs(adjustedDiff),
+    filter: isCenter ? "none" : "blur(1px)",
+    opacity: isCenter ? 1 : 0.75,
   };
+};
 
   return (
     <section
-      className="min-h-screen py-20 px-4 overflow-hidden "
+      className="min-h-screen py-20 px-4 overflow-hidden -mt-60 "
       style={{ background: "hsl(var(--events-bg))" }}
     >
       <div className="max-w-6xl mx-auto">
@@ -156,7 +163,8 @@ const EventCardsSection2 = () => {
           </Button> */}
 
           {/* Event Cards */}
-          <div className="relative w-full max-w-md mx-auto">
+          <div className="relative w-full max-w-[400px] mx-auto  ">
+
             {events.map((event, index) => (
               <div
                 key={event.id}

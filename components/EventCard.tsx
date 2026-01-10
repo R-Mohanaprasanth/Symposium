@@ -32,33 +32,38 @@ const EventCard = ({
       className={`
         relative overflow-hidden rounded-2xl cursor-pointer
         transition-all duration-500 ease-out
-        ${isActive 
-          ? "scale-100 opacity-100 z-20" 
-          : "scale-90 opacity-60 z-10 hover:opacity-80"
-        }
+       ${
+         isActive
+           ? "scale-100 opacity-100 z-30"
+           : "scale-90 opacity-60 z-10 hover:opacity-80"
+       }
+
+        
       `}
       style={{
-        background: "linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-mid)), hsl(var(--gradient-end)))",
+        background:
+          "linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-mid)), hsl(var(--gradient-end)))",
       }}
     >
+      {isActive && (
+        <div className="absolute inset-0 z-10 rounded-2xl bg-background" />
+      )}
+
       {/* Card content wrapper */}
       <div className="relative">
         {/* Event Image */}
-       <div className="relative h-72 md:h-80 overflow-hidden z-10">
-
-
-
+        <div className="relative h-40 overflow-hidden z-10">
           <img
             src={image}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          
+
           {/* Tags overlay */}
           <div className="absolute bottom-3 left-3 flex flex-wrap gap-2">
             {tags.map((tag, index) => (
-              <Badge 
+              <Badge
                 key={index}
                 className="bg-white/20 backdrop-blur-md text-white border-white/30 hover:bg-white/30"
               >
@@ -70,7 +75,6 @@ const EventCard = ({
 
         {/* Event Details */}
         <div className="p-5 space-y-4 relative z-30 bg-black/40 backdrop-blur-sm">
-
           <h3 className="text-xl font-bold text-white tracking-tight">
             {title}
           </h3>
@@ -90,34 +94,33 @@ const EventCard = ({
             </div>
           </div>
 
-         <p
-  className={`text-sm leading-relaxed transition-opacity duration-300 ${
-    isActive ? "text-white/85 opacity-100" : "opacity-0"
-  }`}
->
+          <p
+            className={`text-sm leading-relaxed transition-opacity duration-300 ${
+              isActive ? "text-white/85 opacity-100" : "opacity-0"
+            }`}
+          >
             {description}
           </p>
 
           {/* Register Button */}
           {isActive && (
-  <Button
-    className="w-full bg-white/20 backdrop-blur-md text-white border border-white/30 
+            <Button
+              className="w-full bg-white/20 backdrop-blur-md text-white border border-white/30 
                hover:bg-white hover:text-primary transition-all duration-300
                font-semibold py-5 rounded-xl"
-    onClick={(e) => {
-      e.stopPropagation();
-      console.log(`Registering for ${title}`);
-    }}
-  >
-    Register Now
-  </Button>
-)}
-
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log(`Registering for ${title}`);
+              }}
+            >
+              Register Now
+            </Button>
+          )}
         </div>
       </div>
 
       {/* Decorative glow effect */}
-      <div 
+      <div
         className={`
           absolute -bottom-20 -right-20 w-40 h-40 rounded-full blur-3xl
           transition-opacity duration-500

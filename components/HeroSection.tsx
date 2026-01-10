@@ -95,7 +95,7 @@ const HeroSection: React.FC = () => {
             size="lg"
             className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary hover:opacity-90 transition-all group"
           >
-            Start Your Project
+            Technical Event
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
 
@@ -105,7 +105,7 @@ const HeroSection: React.FC = () => {
             className="border-border/50 bg-card/30 backdrop-blur-sm text-foreground font-semibold px-8 py-6 text-lg hover:bg-card/50 hover:border-primary/50 transition-all group"
           >
             <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-            Watch Showreel
+           Non-Technical Event
           </Button>
         </motion.div>
 

@@ -1,16 +1,7 @@
 "use client";
-
 import { useState, useCallback, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import EventCard from "../EventCard";
 import EventHeading from "../EventHeading";
-import EventsMarquee from "../EventsMarquee";
-import { motion, type Variants } from "framer-motion";
-
-
-
-
 
 const events = [
   {
@@ -51,35 +42,7 @@ const events = [
   },
 ];
 
-const fadeUp: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-const fade: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-
-
-const EventCardsSection1 = () => {
+const EventCardsSection3 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -147,18 +110,12 @@ const EventCardsSection1 = () => {
   };
 };
 
-
   return (
-    <motion.section
-  initial="hidden"
-  animate="visible"
-  variants={fade}
-  className="min-h-screen py-20 px-4 overflow-hidden"
-  style={{ background: "hsl(var(--events-bg))" }}
->
-
+    <section
+      className="min-h-screen py-20 px-4 overflow-hidden -mt-60 "
+      style={{ background: "hsl(var(--events-bg))" }}
+    >
       <div className="max-w-6xl mx-auto">
-        {/* ✅ PERFECTLY PLACED HEADING */}
         {/* Section Header */}
         {/* <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
@@ -169,40 +126,18 @@ const EventCardsSection1 = () => {
             and summits happening around the world.
           </p>
         </div> */}
-        {/* Section Header */}
 
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Upcoming Tech Events
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover and register for the most exciting tech conferences,
-            hackathons, and summits happening around the world.
-          </p>
-
-          <EventsMarquee
-          events={[
-            "Community Meetup",
-            "AI Hackathon",
-            "Web3 Summit",
-            "Dev Conference",
-            "Startup Pitch Day",
-          ]}
-        />
-        </div>
-
-        
-
-        
         <EventHeading prefix="Annual Symposium" title="NEURONEX" />
 
-        {/* Cards Container */}
-        <motion.div
-  variants={fadeUp}
-  transition={{ delay: 0.2 }}
-  className="relative flex items-start justify-center min-h-[650px] pt-10"
->
 
+
+        {/* Cards Container */}
+        <div
+          className="relative flex items-start justify-center min-h-[650px] pt-10"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           {/* Navigation Arrows */}
           {/* <Button
             variant="outline"
@@ -222,13 +157,11 @@ const EventCardsSection1 = () => {
             onClick={goToNext}
           >
             <ChevronRight className="w-6 h-6" />
+            
           </Button> */}
 
           {/* Event Cards */}
           <div className="relative w-full max-w-[400px] mx-auto ">
-
-
-
 
             {events.map((event, index) => (
               <div
@@ -244,7 +177,7 @@ const EventCardsSection1 = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Dot Indicators */}
         <div className="flex justify-center gap-3 mt-8">
@@ -265,9 +198,8 @@ const EventCardsSection1 = () => {
           ))}
         </div>
       </div>
-    </motion.section>
-
+    </section>
   );
 };
 
-export default EventCardsSection1;
+export default EventCardsSection3;
