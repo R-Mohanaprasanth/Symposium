@@ -5,6 +5,7 @@ import EventCardsSection1 from "@/components/EventCardSection/EventCardSection1"
 import EventCardsSection2 from "@/components/EventCardSection/EventCardSection2";
 import EventCardSection3 from "@/components/EventCardSection/EventCardSection3";
 import EventCardsSection3 from "@/components/EventCardSection/EventCardSection3";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
         <EventCardsSection3 />
         <EventCardsSection2 />
         <EventCardsSection3 />
+
+        <Footer />
         
       </div>
     </main>

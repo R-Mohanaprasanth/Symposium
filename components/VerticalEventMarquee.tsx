@@ -21,7 +21,7 @@ export default function VerticalEventMarquee() {
           {[...Array(12)].map((_, i) => (
             <motion.span
               key={i}
-              animate={{ opacity: [0.4, 0.65, 0.4] }}
+              animate={{ opacity: [0.3, 0.25, 0.3] }}
               transition={{
                 duration: 6,
                 ease: "easeInOut",
@@ -49,7 +49,7 @@ export default function VerticalEventMarquee() {
           {[...Array(12)].map((_, i) => (
             <motion.span
               key={i}
-              animate={{ opacity: [0.4, 0.65, 0.4] }}
+              animate={{ opacity: [0.3, 0.25, 0.3] }}
               transition={{
                 duration: 6,
                 ease: "easeInOut",
