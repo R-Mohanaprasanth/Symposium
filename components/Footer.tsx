@@ -9,7 +9,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative mt-32 border-t border-border/50 bg-background"
+      className="relative -mt-12 border-t py-12 p-35 border-border/50 bg-background"
     >
       {/* Top glow */}
       <div className="absolute inset-x-0 -top-20 h-20 bg-gradient-to-t from-primary/10 to-transparent pointer-events-none" />

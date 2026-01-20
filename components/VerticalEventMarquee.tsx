@@ -8,7 +8,7 @@ export default function VerticalEventMarquee() {
   return (
     <>
       {/* LEFT MARQUEE */}
-      <div className="fixed left-[max(1.5rem,calc((100vw-1280px)/2-2.5rem))] top-0 h-screen z-30 pointer-events-none">
+      <div className="fixed left-[max(0.5rem,calc((100vw-1280px)/2-3.5rem))] top-0 h-screen z-30 pointer-events-none">
         <motion.div
           className="flex flex-col items-center justify-center gap-16 h-[200%]"
           animate={{ y: ["0%", "-50%"] }}
@@ -36,7 +36,7 @@ export default function VerticalEventMarquee() {
       </div>
 
       {/* RIGHT MARQUEE */}
-      <div className="fixed right-[max(1.5rem,calc((100vw-1280px)/2-2.5rem))] top-0 h-screen z-30 pointer-events-none">
+      <div className="fixed right-[max(0.5rem,calc((100vw-1280px)/2-3.5rem))] top-0 h-screen z-30 pointer-events-none">
         <motion.div
           className="flex flex-col items-center justify-center gap-16 h-[200%]"
           animate={{ y: ["-50%", "0%"] }}
