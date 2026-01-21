@@ -21,49 +21,84 @@ export default function EventsMasterSlider() {
   }, [isPaused]);
 
   return (
-  <section
-    className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center"
-    onMouseEnter={() => setIsPaused(true)}
-    onMouseLeave={() => setIsPaused(false)}
-    onTouchStart={() => setIsPaused(true)}
-    onTouchEnd={() => setIsPaused(false)}
-  >
-    {/* ✅ EVENT TITLE */}
-    {/* <AnimatePresence mode="wait">
-  <motion.h2
-    key={events[index].sectionTitle}
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -10 }}
-    transition={{ duration: 0.4 }}
-    className="text-3xl md:text-4xl font-semibold mb-12 text-left w-full max-w-6xl px-6"
-  >
-    {events[index].sectionTitle}
-  </motion.h2>
-</AnimatePresence> */}
+    <section
+      id="technical-events"
+      className="
+        relative
+        overflow-hidden
+        flex
+        flex-col
+        items-center
+        justify-center
+        py-3
+      "
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
+    >
+      {/* SLIDER */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={events[index].slug}
+          initial={{ x: 500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -500, opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          className="w-full flex justify-center"
+        >
+          <EventSection {...events[index]} />
+        </motion.div>
+      </AnimatePresence>
 
+      {/* SLIDE POINTERS */}
+      <div className="absolute bottom-1 flex gap-3 z-20">
+        {/* First 3 */}
+        {events.slice(0, 3).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`
+              w-10 h-10 rounded-full
+              flex items-center justify-center
+              text-sm font-semibold
+              transition-all
+              ${
+                index === i
+                  ? "bg-[#0B1C2D] text-white"
+                  : "bg-white/70 text-[#0B1C2D]"
+              }
+            `}
+          >
+            {i + 1}
+          </button>
+        ))}
 
-    {/* ✅ SLIDER */}
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={events[index].slug}
-        initial={{ x: 500, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: -500, opacity: 0 }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-        className="w-full flex justify-center"
-      >
-       {/* <div className="w-full max-w-6xl px-6 mb-10">
-  <h2 className="mt-4 text-4xl md:text-5xl font-bold font-display text-foreground">
-    {events[index].sectionTitle}{" "}
-    <span className="gradient-text">Neuronex 2K26</span>
-  </h2>
-</div> */}
+        {/* Dots */}
+        {events.length > 4 && (
+          <span className="px-2 text-white text-xl">...</span>
+        )}
 
-
-        <EventSection {...events[index]} />
-      </motion.div>
-    </AnimatePresence>
-  </section>
-);
+        {/* Last */}
+        {events.length > 3 && (
+          <button
+            onClick={() => setIndex(events.length - 1)}
+            className={`
+              w-10 h-10 rounded-full
+              flex items-center justify-center
+              text-sm font-semibold
+              transition-all
+              ${
+                index === events.length - 1
+                  ? "bg-[#0B1C2D] text-white"
+                  : "bg-white/70 text-[#0B1C2D]"
+              }
+            `}
+          >
+            {events.length}
+          </button>
+        )}
+      </div>
+    </section>
+  );
 }

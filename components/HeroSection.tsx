@@ -2,13 +2,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import InteractiveText from "@/components/InteractiveText";
 import EventCountdown from "@/components/EventCountdown";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 text-[#e2e2e2]">
+
+      {/* Background Video */}
+  {/* <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  >
+
+   <source src="/videos/background.mp4" type="video/mp4" />
+  </video> */}
       {/* Background Elements */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
@@ -57,7 +70,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-muted-foreground -mt 3 block">
+          <span className="text-sm font-medium text-[#e2e2e2] block">
             Showcase your Skills
           </span>
         </motion.div>
@@ -67,12 +80,13 @@ const HeroSection: React.FC = () => {
           className="mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.2 }}  
         >
           <h1 className="text-5xl md:text-7xl lg:text-15xl font-bold font-display tracking-tight leading-none -mt-4">
-            <span className="block text-3xl md:text-5xl lg:text-6xl text-foreground mb-2">
-              Symposium
-            </span>
+            <span className="block text-3xl md:text-5xl lg:text-6xl text-[#e2e2e2] mb-2">
+  Symposium
+</span>
+
 
             <InteractiveText
               text="NEURONEX"
@@ -91,13 +105,15 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary hover:opacity-90 transition-all group"
-          >
-            Technical Event
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link href="/events#technical-events">
+  <Button
+    size="lg"
+    className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary hover:opacity-90 transition-all group"
+  >
+    Technical Event
+    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+  </Button>
+</Link>
 
           <Button
             size="lg"
@@ -132,7 +148,8 @@ const HeroSection: React.FC = () => {
               <div className="text-3xl md:text-4xl font-bold font-display gradient-text mb-1 mr-3 mr-3">
                 {stat.value}
               </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+              <div className="text-sm text-[#e2e2e2]/80">{stat.label}</div>
+
             </motion.div>
           ))}
         </motion.div>

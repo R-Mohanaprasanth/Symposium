@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 const menuItems = [
   { name: "Home", href: "/" },
   { name: "Events", href: "/events" },
-  { name: "Team", href: "/team" },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -30,26 +29,26 @@ const Navbar = () => {
           ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
           : "bg-transparent"
       }`}
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
 
           {/* LOGO */}
           <Link href="/">
             <motion.div
-              className="flex items-center gap-2 group cursor-pointer"
-              whileHover={{ scale: 1.03 }}
+              className="flex items-center gap-3 group cursor-pointer"
+              whileHover={{ scale: 1.04 }}
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center glow-primary">
-                <span className="text-primary-foreground font-bold text-lg font-display">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center glow-primary">
+                <span className="text-primary-foreground font-bold text-xl font-display">
                   N
                 </span>
               </div>
 
-              <span className="text-xl font-bold font-display tracking-tight">
+              <span className="text-2xl font-bold font-display tracking-tight">
                 <span className="text-foreground">NEURO</span>
                 <span className="gradient-text">NEX</span>
               </span>
@@ -57,7 +56,7 @@ const Navbar = () => {
           </Link>
 
           {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-14">
             {menuItems.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -67,7 +66,7 @@ const Navbar = () => {
               >
                 <Link
                   href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium animated-underline"
+                  className="text-lg text-muted-foreground hover:text-foreground transition-colors font-medium animated-underline"
                 >
                   {item.name}
                 </Link>
@@ -79,7 +78,7 @@ const Navbar = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold px-6 glow-primary hover:opacity-90">
+              <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold px-7 py-6 text-base glow-primary hover:opacity-90">
                 <Rocket className="w-4 h-4 mr-2" />
                 Get Started
               </Button>
@@ -89,7 +88,7 @@ const Navbar = () => {
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative z-50 p-2 text-foreground"
+            className="md:hidden relative z-50 p-3 text-foreground"
             aria-label="Toggle menu"
           >
             <AnimatePresence mode="wait">
@@ -101,7 +100,7 @@ const Navbar = () => {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X size={24} />
+                  <X size={28} />
                 </motion.div>
               ) : (
                 <motion.div
@@ -111,7 +110,7 @@ const Navbar = () => {
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Menu size={24} />
+                  <Menu size={28} />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -123,13 +122,13 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden fixed inset-0 top-20 bg-background/95 backdrop-blur-xl z-40"
-            initial={{ opacity: 0, y: -20 }}
+            className="md:hidden fixed inset-0 top-24 bg-background/95 backdrop-blur-xl z-40"
+            initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex flex-col items-center justify-center h-full gap-8">
+            <div className="flex flex-col items-center justify-center h-full gap-10">
               {menuItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -140,7 +139,7 @@ const Navbar = () => {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-2xl font-display font-semibold text-foreground hover:text-primary transition-colors"
+                    className="text-3xl font-display font-semibold text-foreground hover:text-primary transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -152,7 +151,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold px-8 py-6 text-lg glow-primary">
+                <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold px-10 py-7 text-lg glow-primary">
                   <Rocket className="w-5 h-5 mr-2" />
                   Get Started
                 </Button>

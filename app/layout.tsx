@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar"; 
 import VerticalEventMarquee from "@/components/VerticalEventMarquee";// ✅ ADD THIS LINE
+import BlobCursor from "@/components/BlogCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Navbar />   {/* ✅ ADD THIS */}
         <VerticalEventMarquee />
+        <BlobCursor />
         {children}
       </body>
     </html>

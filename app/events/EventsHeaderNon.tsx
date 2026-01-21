@@ -4,7 +4,7 @@ import EventsMarquee from "@/components/EventsMarquee";
 
 const EventsHeaderNon = () => {
   return (
-    <section className="pt-32 pb-20 text-center -mt-50">
+    <section className="pt-32 pb-20 text-center">
       <div className="max-w-5xl mx-auto px-6 space-y-4">
 
         <h2 className="text-4xl md:text-5xl font-bold text-foreground">
