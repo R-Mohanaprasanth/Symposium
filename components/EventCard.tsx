@@ -21,7 +21,7 @@ interface Props {
 export default function EventCard({
   slug,
   title,
-  
+
   date,
   location,
   attendees,
@@ -40,19 +40,11 @@ export default function EventCard({
         ${isActive ? "scale-100 opacity-100" : "scale-90 opacity-60"}
       `}
     >
-
-      
-      
-
       {/* IMAGE */}
-      <div className="relative h-52">
-        <img
-          src={image}
-          className="w-full h-full object-cover"
-          alt={title}
-        />
+      {/* <div className="relative h-82">
+        <img src={image} className="w-full h-full object-cover" alt={title} /> */}
 
-        <div className="absolute bottom-3 left-3 flex gap-2">
+        {/* <div className="absolute bottom-3 left-3 flex gap-2">
           {tags.map((tag, i) => (
             <Badge
               key={i}
@@ -61,12 +53,12 @@ export default function EventCard({
               {tag}
             </Badge>
           ))}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       {/* CONTENT */}
-      <div className="bg-zinc-400 text-white p-6 space-y-3">
-        <h3 className="text-2xl font-bold">{title}</h3>
+      {/* <div className="bg-zinc-400 text-white p-6 space-y-3"> */}
+        {/* <h3 className="text-2xl font-bold">{title}</h3>
 
         <div className="text-sm space-y-1 opacity-90">
           <div className="flex gap-2 items-center">
@@ -80,9 +72,9 @@ export default function EventCard({
           </div>
         </div>
 
-        <p className="text-sm opacity-90">{description}</p>
+        <p className="text-sm opacity-90">{description}</p> */}
 
-        <Button
+        {/* <Button
           onClick={(e) => {
             e.stopPropagation(); // 🔥 VERY IMPORTANT
             router.push(`/events/${slug}`);
@@ -90,8 +82,30 @@ export default function EventCard({
           className="w-full mt-3 bg-white/30 hover:bg-white text-black"
         >
           Register Now
-        </Button>
-      </div>
+        </Button> */}
+        {/* IMAGE */}
+        <div className="relative h-94">
+          <img src={image} className="w-full h-full object-cover" alt={title} />
+
+          {/* REGISTER BUTTON INSIDE IMAGE */}
+          <Button
+            onClick={(e) => {
+              e.stopPropagation();
+              router.push(`/events/${slug}`);
+            }}
+            className="
+      absolute bottom-4 left-1/2 -translate-x-1/2
+      bg-white/80 text-black
+      hover:bg-white
+      backdrop-blur-md
+      rounded-xl
+      px-6
+    "
+          >
+            Explore Now
+          </Button>
+        </div>
+      {/* </div> */}
     </div>
   );
 }

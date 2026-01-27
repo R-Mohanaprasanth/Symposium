@@ -4,27 +4,77 @@ import EventsMarquee from "@/components/EventsMarquee";
 
 const EventsHeaderNon = () => {
   return (
-    <section className="pt-32 pb-20 text-center">
-      <div className="max-w-5xl mx-auto px-6 space-y-4">
+    <section className="relative pt-36 pb-24 overflow-hidden text-center">
 
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-          Upcoming Non-Tech Events
+      {/* SOFT CYAN ACCENT */}
+      <div
+        className="
+          absolute
+          -top-40
+          left-1/2
+          -translate-x-1/2
+          w-[700px]
+          h-[700px]
+          bg-[#01ffff]/10
+          blur-[160px]
+          rounded-full
+          pointer-events-none
+        "
+      />
+
+      <div className="relative max-w-5xl mx-auto px-6 space-y-6">
+
+        {/* BADGE */}
+        <span
+          className="
+            inline-block
+            px-6 py-2
+            text-sm font-semibold tracking-widest
+            text-white
+            border border-[#01ffff]
+            bg-[#01ffff]/10
+            rounded-md
+          "
+        >
+          NON-TECH EVENTS
+        </span>
+
+        {/* HEADING */}
+        <h2 className="text-4xl md:text-5xl font-bold font-display leading-tight text-white">
+          Upcoming{" "}
+          <span
+            className="
+              bg-gradient-to-r
+              from-[#00bebe]
+              via-[#01ffff]
+              to-[#00bebe]
+              bg-clip-text
+              text-transparent
+            "
+          >
+            Non-Tech Events
+          </span>
         </h2>
 
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Discover and register for the most exciting tech conferences,
-          hackathons, and summits happening around the world.
+        {/* DESCRIPTION */}
+        <p className="text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+          Engage, collaborate, and enjoy interactive sessions, cultural
+          activities, fun challenges, and memorable experiences beyond
+          technology.
         </p>
 
-        <EventsMarquee
-          events={[
-            "Community Meetup",
-            "AI Hackathon",
-            "Web3 Summit",
-            "Dev Conference",
-            "Startup Pitch Day",
-          ]}
-        />
+        {/* MARQUEE */}
+        <div className="pt-6">
+          <EventsMarquee
+            events={[
+              "Fun Games",
+              "Cultural Fest",
+              "Open Mic",
+              "Team Challenges",
+              "Creative Workshops",
+            ]}
+          />
+        </div>
       </div>
     </section>
   );

@@ -26,31 +26,53 @@ const Navbar = () => {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
+          // ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
+          ? "bg-transparent"
           : "bg-transparent"
       }`}
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
+      // style={{
+      //   backgroundImage: "url('/images/bg-1.png')",
+      // }}
     >
+      {/* <div className="absolute inset-0 bg-black/70 z-0" /> */}
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-24">
-
           {/* LOGO */}
           <Link href="/">
             <motion.div
               className="flex items-center gap-3 group cursor-pointer"
               whileHover={{ scale: 1.04 }}
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center glow-primary">
-                <span className="text-primary-foreground font-bold text-xl font-display">
+              {/* <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center glow-primary"> */}
+              <div
+                className="
+  w-12 h-12
+  rounded-xl
+  bg-gradient-to-br from-zinc-200 via-white to-zinc-300
+  shadow-md
+  flex items-center justify-center
+"
+              >
+                <span className="text-black font-bold text-3xl font-display leading-none">
                   N
                 </span>
               </div>
 
-              <span className="text-2xl font-bold font-display tracking-tight">
+              {/* <span className="text-2xl font-bold font-display tracking-tight">
                 <span className="text-foreground">NEURO</span>
                 <span className="gradient-text">NEX</span>
+              </span> */}
+
+              <span className="text-2xl font-bold font-display tracking-tight">
+                <span className="bg-gradient-to-r from-zinc-300 via-white to-zinc-200 bg-clip-text text-transparent">
+                  NEURO
+                </span>
+                <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-300 bg-clip-text text-transparent">
+                  NEX
+                </span>
               </span>
             </motion.div>
           </Link>
@@ -66,7 +88,22 @@ const Navbar = () => {
               >
                 <Link
                   href={item.href}
-                  className="text-lg text-muted-foreground hover:text-foreground transition-colors font-medium animated-underline"
+                  className="
+  text-lg font-medium
+  text-zinc-300
+  hover:text-white
+  transition-all duration-300
+  relative
+  after:content-['']
+  after:absolute
+  after:left-0
+  after:-bottom-1
+  after:w-0
+  after:h-[2px]
+  after:bg-gradient-to-r after:from-zinc-300 after:to-white
+  after:transition-all after:duration-300
+  hover:after:w-full
+"
                 >
                   {item.name}
                 </Link>
@@ -78,7 +115,20 @@ const Navbar = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold px-7 py-6 text-base glow-primary hover:opacity-90">
+              <Button
+                className="
+    bg-gradient-to-r from-zinc-200 via-white to-zinc-300
+    text-black
+    font-semibold
+    px-7 py-6
+    text-base
+    border border-white/60
+    shadow-md
+    hover:brightness-110
+    hover:shadow-xl
+    transition
+  "
+              >
                 <Rocket className="w-4 h-4 mr-2" />
                 Get Started
               </Button>
@@ -88,7 +138,13 @@ const Navbar = () => {
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative z-50 p-3 text-foreground"
+            className="
+  text-3xl font-display font-semibold
+  text-zinc-200
+  hover:text-white
+  transition-colors
+  md:hidden
+"
             aria-label="Toggle menu"
           >
             <AnimatePresence mode="wait">

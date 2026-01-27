@@ -9,7 +9,7 @@ import SponsorsSection from "./home/SponsorsSection";
 export default function Home() {
   return (
     <main>
-      <BlogCursor />
+
       <HeroSection />
       <AboutSection />
       <EventsCTASection />

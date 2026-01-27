@@ -28,13 +28,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />   {/* ✅ ADD THIS */}
-        <VerticalEventMarquee />
-        <BlobCursor />
-        {children}
-      </body>
+  className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+>
+  {/* BACKGROUND IMAGE */}
+  <div
+    className="fixed inset-0 -z-10 bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/images/bg-1.png')",
+    }}
+  />
+
+  {/* DARK OVERLAY */}
+  <div className="fixed inset-0 -z-10 bg-black/60" />
+
+  {/* WEBSITE CONTENT */}
+  <Navbar />
+  <VerticalEventMarquee />
+
+  {children}
+</body>
+
     </html>
   );
 }

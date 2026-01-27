@@ -27,7 +27,13 @@ export default function VerticalEventMarquee() {
                 ease: "easeInOut",
                 repeat: Infinity,
               }}
-              className="vertical-text text-xl md:text-2xl font-medium tracking-[0.4em] text-muted-foreground/60"
+              className="
+                vertical-text
+                text-xl md:text-2xl
+                font-medium
+                tracking-[0.4em]
+                text-[#01ffff]/50
+              "
             >
               {TEXT}
             </motion.span>
@@ -55,7 +61,13 @@ export default function VerticalEventMarquee() {
                 ease: "easeInOut",
                 repeat: Infinity,
               }}
-              className="vertical-text text-xl md:text-2xl font-medium tracking-[0.4em] text-muted-foreground/60"
+              className="
+                vertical-text
+                text-xl md:text-2xl
+                font-medium
+                tracking-[0.4em]
+                text-[#01ffff]/50
+              "
             >
               {TEXT}
             </motion.span>

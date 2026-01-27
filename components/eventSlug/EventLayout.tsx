@@ -6,20 +6,55 @@ import EventDescription from "./EventDescription";
 
 export default function EventLayout({ event }: any) {
   return (
-    <section className="min-h-screen px-6 py-28 flex justify-center bg-[#0B1C2D]">
+    <section className="relative min-h-screen px-6 py-32 flex justify-center overflow-hidden">
+
+      {/* BACKGROUND IMAGE */}
       <div
         className="
-          max-w-6xl w-full
-          bg-[#12263A]
+          fixed inset-0
+          bg-[url('/images/bg-1.png')]
+          bg-cover
+          bg-center
+          bg-no-repeat
+          -z-20
+        "
+      />
+
+      {/* DARK OVERLAY */}
+      <div className="fixed inset-0 bg-black/65 -z-10" />
+
+      {/* CYAN TECH GLOW */}
+      <div
+        className="
+          fixed
+          top-[35%]
+          left-1/2
+          -translate-x-1/2
+          w-[700px]
+          h-[700px]
+          bg-[#01ffff]/10
+          blur-[220px]
+          rounded-full
+          -z-10
+        "
+      />
+
+      {/* MAIN CARD */}
+      <div
+        className="
+          relative
+          max-w-6xl
+          w-full
           rounded-3xl
           p-10
-          border border-white/10
+          border border-[#01ffff]/30
+          bg-[#061824]/80
+          backdrop-blur-xl
           shadow-2xl
-          backdrop-blur
         "
       >
         {/* HERO */}
-        <div className="overflow-hidden rounded-2xl border border-white/10 mb-14">
+        <div className="overflow-hidden rounded-2xl border border-[#01ffff]/25 mb-14">
           <EventHero image={event.heroImage} />
         </div>
 
@@ -32,22 +67,48 @@ export default function EventLayout({ event }: any) {
           </div>
 
           {/* EVENT DETAILS */}
-          <div className="h-full bg-[#0B1C2D]/70 rounded-2xl p-8 border border-white/10">
+          <div
+            className="
+              h-full
+              rounded-2xl
+              p-8
+              border border-[#01ffff]/25
+              bg-[#061824]/70
+              backdrop-blur
+            "
+          >
             <EventDetails event={event} />
           </div>
 
           {/* COORDINATOR */}
-          <div className="h-full bg-[#0B1C2D]/70 rounded-2xl p-8 border border-white/10">
+          <div
+            className="
+              h-full
+              rounded-2xl
+              p-8
+              border border-[#01ffff]/25
+              bg-[#061824]/70
+              backdrop-blur
+            "
+          >
             <EventContacts coordinator={event.coordinator} />
           </div>
 
         </div>
 
         {/* RULES */}
-        <div className="mt-14 bg-[#0B1C2D]/60 rounded-2xl p-8 border border-white/10">
+        <div
+          className="
+            mt-14
+            rounded-2xl
+            p-8
+            border border-[#01ffff]/25
+            bg-[#061824]/65
+            backdrop-blur
+          "
+        >
           <EventRules image={event.rulesImage} />
         </div>
-
       </div>
     </section>
   );

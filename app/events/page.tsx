@@ -1,42 +1,42 @@
 "use client";
 
-import BlogCursor from "@/components/BlogCursor";
 import EventsHeader from "./EventsHeader";
 import EventsHeaderNon from "./EventsHeaderNon";
-import EventsSlider from "@/components/EventsSlider";
-// import EventsSliderNon from "@/components/EventsSliderNon";
-import Footer from "@/components/Footer";
-import EventSlidesSection from "@/components/EventsPage/EventSlidesSection";
-import { events } from "@/data/events";
-
-import EventSlideSection from "@/components/EventsPage/EventSlidesSection";
 import EventsMasterSlider from "@/components/event/EventsMasterSlider";
+import Footer from "@/components/Footer";
 
 export default function EventsPage() {
   return (
-    <>
-      <BlogCursor />
+    <main className="relative min-h-screen overflow-hidden">
 
-      {/* TECH EVENTS */}
-      {/* <section>
+      {/* BACKGROUND IMAGE */}
+      <div
+        className="
+          fixed inset-0
+          bg-[url('/images/bg-1.png')]
+          bg-cover
+          bg-center
+          bg-no-repeat
+          -z-20
+        "
+      />
+
+      {/* DARK OVERLAY */}
+      {/* <div className="fixed inset-0 bg-black/65 -z-10" /> */}
+
+      {/* CONTENT */}
+      <div className="relative z-10">
+
+        {/* TECH EVENTS */}
         <EventsHeader />
-        <EventsSlider />
-      </section>
+        <EventsMasterSlider />
 
-      {/* NON-TECH EVENTS */}
-      {/* <section>
+        {/* NON-TECH EVENTS */}
         <EventsHeaderNon />
-        <EventsSliderNon />
-      </section> */} 
-      <EventsHeader />
-      
+        <EventsMasterSlider />
 
-      <EventsMasterSlider />
-
-      <EventsHeaderNon />
-      <EventsMasterSlider />
-
-      <Footer />
-    </>
+        <Footer />
+      </div>
+    </main>
   );
 }

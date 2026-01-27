@@ -7,22 +7,30 @@ export default function EventDescription({
     <div
       className="
         w-full
-        bg-gradient-to-br from-[#0B1C2D]/90 to-[#12263A]/90
         rounded-2xl
         p-12
-        border border-white/10
-        shadow-lg
+        border border-[#01ffff]/25
+        bg-[#061824]/70
+        backdrop-blur
       "
     >
-      {/* Title */}
-      <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-8">
+      <h2
+        className="
+          text-2xl md:text-3xl font-bold mb-8
+          bg-gradient-to-r
+          from-[#00bebe]
+          via-[#01ffff]
+          to-[#00bebe]
+          bg-clip-text
+          text-transparent
+        "
+      >
         About the Event
       </h2>
 
-      {/* Content */}
       <p
         className="
-          text-slate-200
+          text-zinc-300
           text-lg md:text-xl
           leading-8 md:leading-9
           whitespace-pre-line

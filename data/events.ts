@@ -10,7 +10,7 @@ export const events = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/devcon-4.avif",
         tags: ["Conference", "DevOps", "Cloud"],
         description:
           "The premier developer conference bringing together engineers.",

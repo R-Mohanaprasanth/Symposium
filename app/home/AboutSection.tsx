@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, Rocket, Users } from "lucide-react";
+import TechFrame from "@/components/common/TechFrame";
 
 const features = [
   {
@@ -27,9 +28,7 @@ const features = [
 const AboutSection = () => {
   return (
     <section className="relative py-12 p-35 overflow-hidden mt-20">
-
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -37,14 +36,37 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
         >
-          <span className="text-sm uppercase tracking-widest text-primary font-medium">
+          <span
+            className="
+    inline-block
+    px-6 py-3
+    text-white font-semibold tracking-wide
+    border border-[#01ffff]
+    bg-[#01ffff]/15
+    backdrop-blur-sm
+    rounded-md
+  "
+          >
             About the Event
           </span>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold font-display text-foreground leading-tight">
+          {/* <TechFrame className="max-w-6xl mx-auto mt-20"> */}
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold font-display text-white leading-tight">
             Experience the Future at{" "}
-            <span className="gradient-text">NEURONEX 2K26</span>
+            <span
+              className="
+    bg-gradient-to-r
+    from-[#00bebe]
+    via-[#01ffff]
+    to-[#00bebe]
+    bg-clip-text
+    text-transparent
+  "
+            >
+              NEURONEX 2K26
+            </span>
           </h2>
+          {/* </TechFrame> */}
 
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-xl">
             Neuronex 2K26 is an annual technical symposium designed to bring
@@ -57,6 +79,26 @@ const AboutSection = () => {
             Through workshops, competitions, and interactive sessions,
             participants gain exposure to modern engineering practices and
             future-ready skills.
+          </p>
+
+          <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
+            Neuronex 2K26 encourages participants to push boundaries, think
+            critically, and transform ideas into impactful solutions. The
+            symposium is crafted to bridge the gap between academic learning and
+            industry expectations through practical exposure.
+          </p>
+
+          <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
+            With a blend of technical and non-technical events, Neuronex
+            provides an inclusive environment where students from diverse
+            domains collaborate, showcase talent, and build confidence beyond
+            traditional classroom limits.
+          </p>
+
+          <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
+            More than just a competition, Neuronex 2K26 is a celebration of
+            innovation, teamwork, and future-ready thinking — empowering the
+            next generation of engineers to lead, adapt, and inspire.
           </p>
         </motion.div>
 
@@ -74,20 +116,22 @@ const AboutSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: index * 0.15 }}
               >
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-6 h-6 text-primary" />
-                </div>
+                <TechFrame>
+                  {/* Icon */}
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-6 h-6 text-white" />
+                  </div>
 
-                {/* Text */}
-                <div>
-                  <h3 className="text-xl font-semibold mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+                  {/* Text */}
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1 text-white">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </TechFrame>
               </motion.div>
             );
           })}
