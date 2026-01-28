@@ -1,13 +1,11 @@
 "use client";
 
-import { Calendar, MapPin, Users } from "lucide-react";
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 interface Props {
   slug: string;
-
   title: string;
   date: string;
   location: string;
@@ -18,94 +16,121 @@ interface Props {
   isActive: boolean;
 }
 
-export default function EventCard({
-  slug,
-  title,
-
-  date,
-  location,
-  attendees,
-  image,
-  tags,
-  description,
-  isActive,
-}: Props) {
+export default function EventCard({ slug, image, isActive }: Props) {
   const router = useRouter();
 
   return (
     <div
       className={`
-        w-[380px] rounded-3xl overflow-hidden
-        transition-all duration-500
+        relative
+        w-[380px]
+        rounded-3xl
+        p-4
+        bg-[#0B1C2D]/60
+        backdrop-blur
+        transition-all
+        duration-500
+        overflow-hidden
         ${isActive ? "scale-100 opacity-100" : "scale-90 opacity-60"}
       `}
     >
+{/* base mild border */}
+    <div
+      className="absolute inset-0 rounded-3xl"
+      style={{
+        padding: "1.5px",
+        background: "rgba(1,255,255,0.25)",
+        WebkitMask:
+          "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+        WebkitMaskComposite: "xor",
+        maskComposite: "exclude",
+      }}
+    />
+
+    {/* rotating glow */}
+   <motion.div
+  className="absolute inset-0 rounded-3xl pointer-events-none"
+  style={{
+    padding: "3.5px",
+
+    background: `
+      conic-gradient(
+        from 0deg,
+        rgba(1,255,255,0.15) 0deg,
+        rgba(1, 255, 255, 0.15) 40deg,
+        rgb(1, 255, 255) 60deg,
+        rgba(12, 113, 113, 0.4) 80deg,
+        rgba(1,255,255,0.15) 100deg,
+        rgba(1,255,255,0.15) 360deg
+      )
+    `,
+
+    WebkitMask:
+      "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+    WebkitMaskComposite: "xor",
+    maskComposite: "exclude",
+  }}
+  animate={{
+    backgroundImage: [
+      `
+      conic-gradient(
+        from 0deg,
+        rgba(1,255,255,0.15) 0deg,
+        rgba(1,255,255,0.15) 40deg,
+        rgba(1,255,255,1) 60deg,
+        rgba(1,255,255,0.4) 80deg,
+        rgba(1,255,255,0.15) 100deg,
+        rgba(1,255,255,0.15) 360deg
+      )
+      `,
+      `
+      conic-gradient(
+        from 360deg,
+        rgba(1,255,255,0.15) 0deg,
+        rgba(1,255,255,0.15) 40deg,
+        rgba(1,255,255,1) 60deg,
+        rgba(1,255,255,0.4) 80deg,
+        rgba(1,255,255,0.15) 100deg,
+        rgba(1,255,255,0.15) 360deg
+      )
+      `,
+    ],
+  }}
+  transition={{
+    duration: 3.8,
+    ease: "linear",
+    repeat: Infinity,
+  }}
+/>
+
+
+
       {/* IMAGE */}
-      {/* <div className="relative h-82">
-        <img src={image} className="w-full h-full object-cover" alt={title} /> */}
+      <div className="relative h-94 rounded-2xl overflow-hidden bg-black z-10">
+        <img
+          src={image}
+          alt="event"
+          className="w-full h-full object-cover rounded-2xl"
+        />
 
-        {/* <div className="absolute bottom-3 left-3 flex gap-2">
-          {tags.map((tag, i) => (
-            <Badge
-              key={i}
-              className="bg-black/40 text-white backdrop-blur"
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div> */}
-      {/* </div> */}
-
-      {/* CONTENT */}
-      {/* <div className="bg-zinc-400 text-white p-6 space-y-3"> */}
-        {/* <h3 className="text-2xl font-bold">{title}</h3>
-
-        <div className="text-sm space-y-1 opacity-90">
-          <div className="flex gap-2 items-center">
-            <Calendar size={16} /> {date}
-          </div>
-          <div className="flex gap-2 items-center">
-            <MapPin size={16} /> {location}
-          </div>
-          <div className="flex gap-2 items-center">
-            <Users size={16} /> {attendees} attending
-          </div>
-        </div>
-
-        <p className="text-sm opacity-90">{description}</p> */}
-
-        {/* <Button
+        {/* BUTTON */}
+        <Button
           onClick={(e) => {
-            e.stopPropagation(); // 🔥 VERY IMPORTANT
+            e.stopPropagation();
             router.push(`/events/${slug}`);
           }}
-          className="w-full mt-3 bg-white/30 hover:bg-white text-black"
+          className="
+            absolute bottom-4 left-1/2 -translate-x-1/2
+            bg-white/80 text-black
+            hover:bg-white
+            backdrop-blur-md
+            rounded-xl
+            px-6
+          "
         >
-          Register Now
-        </Button> */}
-        {/* IMAGE */}
-        <div className="relative h-94">
-          <img src={image} className="w-full h-full object-cover" alt={title} />
-
-          {/* REGISTER BUTTON INSIDE IMAGE */}
-          <Button
-            onClick={(e) => {
-              e.stopPropagation();
-              router.push(`/events/${slug}`);
-            }}
-            className="
-      absolute bottom-4 left-1/2 -translate-x-1/2
-      bg-white/80 text-black
-      hover:bg-white
-      backdrop-blur-md
-      rounded-xl
-      px-6
-    "
-          >
-            Explore Now
-          </Button>
-        </div>
-      {/* </div> */}
+          Explore Now
+        </Button>
+      </div>
     </div>
   );
 }

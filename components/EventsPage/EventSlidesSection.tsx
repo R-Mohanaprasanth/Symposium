@@ -33,13 +33,38 @@ export default function EventSection({
   return (
     <section className="relative min-h-screen overflow-hidden px-24 pt-24">
       {/* EVENT HEADING */}
-   <h2 className="absolute top-12 left-0 text-2xl md:text-4xl font-bold tracking-wide -mt-10
-">
-  {eventHeading.split(" ")[0]}{" "}
-  <span className="gradient-text">
-    {eventHeading.split(" ").slice(1).join(" ")}
-  </span>
+   <h2 className="absolute top-12 left-0 -mt-10 text-2xl md:text-4xl font-bold tracking-wide leading-tight">
+   <span
+    className="
+      block
+      text-sm md:text-base
+      uppercase
+      tracking-[0.35em]
+      text-white/60
+      mb-2
+    "
+  >
+    {eventHeading.split(" ")[0]}
+  </span>{" "}
+<span
+  className="
+    bg-gradient-to-r
+    from-[#00d6d6]
+    via-[#7feeee]
+    to-[#00d6d6]
+    bg-clip-text
+    text-transparent
+    font-extrabold
+    text-3xl md:text-5xl
+    tracking-tight
+  "
+>
+
+  {eventHeading.split(" ").slice(1).join(" ")}
+</span>
+
 </h2>
+
 
     <div className="flex justify-center mt-10">
       <div className="relative w-[900px] h-[540px] flex items-center justify-center">

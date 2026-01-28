@@ -22,7 +22,7 @@ export default function EventsPage() {
       />
 
       {/* DARK OVERLAY */}
-      {/* <div className="fixed inset-0 bg-black/65 -z-10" /> */}
+      <div className="absolute inset-0 bg-black/65 z-10" />
 
       {/* CONTENT */}
       <div className="relative z-10">

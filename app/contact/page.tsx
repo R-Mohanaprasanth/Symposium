@@ -21,6 +21,7 @@ export default function ContactPage() {
       />
 
       {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/65 z-10" />
       
       {/* PAGE CONTENT */}
       <div className="relative z-10">

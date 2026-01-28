@@ -26,8 +26,8 @@ const Navbar = () => {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          // ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
-          ? "bg-transparent"
+          ? // ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
+            "bg-transparent"
           : "bg-transparent"
       }`}
       initial={{ opacity: 0, y: -30 }}
@@ -68,10 +68,10 @@ const Navbar = () => {
 
               <span className="text-2xl font-bold font-display tracking-tight">
                 <span className="bg-gradient-to-r from-zinc-300 via-white to-zinc-200 bg-clip-text text-transparent">
-                  NEURO
+                  Velammal Institute of
                 </span>
                 <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-300 bg-clip-text text-transparent">
-                  NEX
+                  Technology
                 </span>
               </span>
             </motion.div>
