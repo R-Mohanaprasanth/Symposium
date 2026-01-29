@@ -9,14 +9,33 @@ import HeroSection2 from "@/components/HeroSection2";
 
 export default function Home() {
   return (
-    <main>
+    <main >
 
-      <HeroSection />
-      <AboutSection />
-      <EventsCTASection />
-      <GuidelinesSection />
-      <SponsorsSection />
-      <Footer />
+      {/* BACKGROUND IMAGE */}
+      <div
+        className="
+          fixed inset-0
+          bg-[url('/images/bg-1.png')]
+          bg-cover
+          bg-center
+          bg-no-repeat
+          -z-20
+        "
+      />
+
+      {/* DARK OVERLAY */}
+      <div className="fixed inset-0 bg-black/65 -z-10" />
+
+      {/* CONTENT */}
+      <div className="relative z-10">
+        <HeroSection />
+        <AboutSection />
+        <EventsCTASection />
+        <GuidelinesSection />
+        <SponsorsSection />
+        <Footer />
+      </div>
+
     </main>
   );
 }

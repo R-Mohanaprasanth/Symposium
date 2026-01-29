@@ -66,17 +66,7 @@ const HeroSection: React.FC = () => {
       {/* <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 text-center"> */}
 
         {/* BADGE */}
-        {/* <motion.div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 -mt-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Sparkles className="w-4 h-4 text-[#01ffff]" />
-          <span className="text-sm font-medium text-zinc-200">
-            Showcase your Skills
-          </span>
-        </motion.div> */}
+        
 
         {/* HEADING */}
         {/* <motion.div
@@ -166,46 +156,292 @@ const HeroSection: React.FC = () => {
           />
         </div>
       </motion.div> */}
+<div className="absolute inset-0 bg-black/60 z-10" />
 
-  <motion.h1
-  className="
-    absolute
-    top-20
-    left-1/2
-    -translate-x-1/2
-    w-full
-    text-center
-    text-[4rem] md:text-[6.5rem] lg:text-[8rem]
-    font-extrabold
-    tracking-[0.06em]
-    text-white
-    z-20
-    select-none
-    granule-text
-  "
-  initial={{
-    scale: 1.6,
-    opacity: 0,
-    filter: "blur(14px)",
-  }}
-  animate={{
-    scale: 1,
-    opacity: 1,
-    filter: "blur(0px)",
-  }}
-  transition={{
-    duration: 3.8,
-    ease: "easeOut",
-  }}
+<motion.div
+  className="relative inline-flex items-center mb-8 -mt-130"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
 >
-  NEURONEX
-</motion.h1>
+  {/* base mild border */}
+  <div
+    className="absolute inset-0 rounded-full"
+    style={{
+      padding: "1.5px",
+      background: "rgba(1,255,255,0.25)",
+      WebkitMask:
+        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+      WebkitMaskComposite: "xor",
+      maskComposite: "exclude",
+    }}
+  />
+
+  {/* rotating glow */}
+  <motion.div
+    className="absolute inset-0 rounded-full pointer-events-none"
+    style={{
+      padding: "10.5px",
+      background: `
+        conic-gradient(
+          from 0deg,
+          rgba(1,255,255,0.15) 0deg,
+          rgba(1,255,255,0.15) 40deg,
+          rgb(1,255,255) 60deg,
+          rgba(12,113,113,0.4) 80deg,
+          rgba(1,255,255,0.15) 100deg,
+          rgba(1,255,255,0.15) 360deg
+        )
+      `,
+      WebkitMask:
+        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+      WebkitMaskComposite: "xor",
+      maskComposite: "exclude",
+    }}
+    animate={{
+      backgroundImage: [
+        `
+        conic-gradient(
+          from 0deg,
+          rgba(1,255,255,0.15) 0deg,
+          rgba(1,255,255,0.15) 40deg,
+          rgba(1,255,255,1) 60deg,
+          rgba(1,255,255,0.4) 80deg,
+          rgba(1,255,255,0.15) 100deg,
+          rgba(1,255,255,0.15) 360deg
+        )
+        `,
+        `
+        conic-gradient(
+          from 360deg,
+          rgba(1,255,255,0.15) 0deg,
+          rgba(1,255,255,0.15) 40deg,
+          rgba(1,255,255,1) 60deg,
+          rgba(1,255,255,0.4) 80deg,
+          rgba(1,255,255,0.15) 100deg,
+          rgba(1,255,255,0.15) 360deg
+        )
+        `,
+      ],
+    }}
+    transition={{
+      duration: 2.8,
+      ease: "linear",
+      repeat: Infinity,
+       delay: 1.5
+    }}
+  />
+
+  {/* CONTENT */}
+  <div
+    className="
+      relative z-10
+      inline-flex items-center gap-2
+      px-4 py-2
+      rounded-full
+      bg-white/10
+      backdrop-blur-md
+    "
+  >
+    <Sparkles className="w-4 h-4 text-[#01ffff]" />
+    <span className="text-sm font-medium text-zinc-200">
+      Showcase your Skills
+    </span>
+  </div>
+</motion.div>
+
+
+
+<motion.svg
+  viewBox="0 0 1000 300"
+  className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-20"
+  initial={{ opacity: 0, scale: 1.3 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 2.8, ease: "easeOut", delay: 1.5 }}
+>
+  <defs>
+    {/* Gradient */}
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stopColor="#00bebe" />
+  <stop offset="40%" stopColor="#00cccc" />
+  <stop offset="100%" stopColor="#006a6a" />
+  <stop offset="30%" stopColor="#000000" />
+  <stop offset="55%" stopColor="#007777" />
+
+</linearGradient>
 
 
 
 
+    {/* Shadow */}
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow
+  dx="0"
+  dy="6"
+  stdDeviation="14"
+  floodColor="#00bebe"
+  floodOpacity="0.35"
+/>
+
+    </filter>
+
+    {/* Curve */}
+    <path
+      id="curve"
+      d="M 100 200 Q 500 200 900 200"
+    />
+  </defs>
+
+  <text
+    fill="url(#textGradient)"
+    fontSize="110"
+    fontFamily="Space Grotesk"
+    fontWeight="800"
+    letterSpacing="0.01"
+    filter="url(#textShadow)"
+  >
+    <textPath href="#curve" startOffset="50%" textAnchor="middle">
+      NEURONEX
+    </textPath>
+  </text>
+</motion.svg>
+
+<div className="absolute z-30 mt-10 flex justify-center">
+  <EventCountdown />
+</div>
+
+{/* CTA BUTTONS */}
+        <motion.div
+          className="absolute top-[60%] left-1/2 -translate-x-1/2
+           flex flex-col sm:flex-row items-center justify-center gap-4 mt-16 z-30"
+
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <Link href="/events#technical-events">
+            <Button
+              size="lg"
+           className="
+  px-8 py-6 text-lg
+  text-white font-semibold
+  border border-[#00bebe]
+  rounded-md
+  bg-gradient-to-b
+  from-[#00e5e5]
+  via-[#00bebe]
+  to-[#002222]
+  backdrop-blur-md
+  hover:brightness-110
+  transition
+"
 
 
+
+            >
+              Technical Event
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+
+          <Button
+            size="lg"
+            variant="outline"
+           className="
+  px-8 py-6 text-lg
+  text-white font-semibold tracking-wide
+  border border-[#01ffff]
+  bg-[#01ffff]/15
+  backdrop-blur-sm
+  rounded-md
+  hover:bg-[#01ffff]/25
+  transition
+"
+
+
+          >
+            <Play className="w-5 h-5 mr-2" />
+            Non-Technical Event
+          </Button>
+        </motion.div>
+
+       {/* STATS */}
+<motion.div
+  className="
+    absolute z-30
+    mt-112
+    grid grid-cols-2 md:grid-cols-4
+    gap-16
+    text-center
+  "
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.8 }}
+>
+  {[
+    { value: "150+", label: "Events Conducted" },
+    { value: "98%", label: "Student Satisfaction" },
+    { value: "10+", label: "Years Experience" },
+    { value: "1000+", label: "Prize Pool" },
+  ].map((stat, i) => (
+    <motion.div
+      key={i}
+      whileHover={{ y: -6 }}
+      transition={{ type: "spring", stiffness: 200 }}
+    >
+      {/* VALUE */}
+      <div
+        className="
+          text-3xl md:text-4xl
+          font-extrabold
+          bg-gradient-to-b
+          from-white
+          via-white
+          to-white
+          bg-clip-text
+          text-transparent
+        "
+      >
+        {stat.value}
+      </div>
+
+      {/* LABEL */}
+      <div
+        className="
+          mt-1
+          text-sm
+          tracking-wide
+          text-[#8ffefe]
+        "
+      >
+        {stat.label}
+      </div>
+    </motion.div>
+  ))}
+</motion.div>
+
+{/* SCROLL INDICATOR */}
+<motion.div
+  className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30"
+  animate={{ opacity: [0.4, 1, 0.4] }}
+  transition={{ duration: 2, repeat: Infinity }}
+>
+  <div
+    className="
+      w-6 h-10
+      rounded-full
+      border-2 border-white
+      flex justify-center
+      pt-2
+    "
+  >
+    <motion.div
+      className="w-1.5 h-1.5 rounded-full bg-[#01ffff]"
+      animate={{ y: [0, 12, 0] }}
+      transition={{ duration: 1.5, repeat: Infinity }}
+    />
+  </div>
+</motion.div>
 
     </section>
   );

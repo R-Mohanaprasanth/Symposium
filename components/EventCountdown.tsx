@@ -2,6 +2,27 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Orbitron } from "next/font/google";
+import { Anton } from "next/font/google";
+import { Oxanium } from "next/font/google";
+import { Audiowide } from "next/font/google";
+import { Michroma } from "next/font/google";
+
+const michroma = Michroma({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+
+const audiowide = Audiowide({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const oxanium = Oxanium({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+});
 
 type TimeLeft = {
   days: number;
@@ -9,6 +30,16 @@ type TimeLeft = {
   minutes: number;
   seconds: number;
 };
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+});
 
 const EVENT_DATE = new Date("2026-02-15T09:00:00");
 
@@ -69,7 +100,18 @@ export default function EventCountdown() {
 function TimeBox({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text text-glow">
+      <div className={`
+    ${michroma.className}
+    text-4xl md:text-6xl lg:text-7xl
+    font-extrabold
+    bg-gradient-to-b
+    from-white
+    via-zinc-200
+    to-zinc-400
+    bg-clip-text
+    text-transparent
+  `}
+>
         {String(value).padStart(2, "0")}
       </div>
       <span className="mt-2 text-xs md:text-sm uppercase tracking-widest text-muted-foreground">

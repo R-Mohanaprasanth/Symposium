@@ -47,16 +47,13 @@ export default function EventSection({
     {eventHeading.split(" ")[0]}
   </span>{" "}
 <span
-  className="
+   className="
     bg-gradient-to-r
-    from-[#00d6d6]
-    via-[#7feeee]
-    to-[#00d6d6]
+    from-[#00bebe]
+    via-[#01ffff]
+    to-[#00bebe]
     bg-clip-text
     text-transparent
-    font-extrabold
-    text-3xl md:text-5xl
-    tracking-tight
   "
 >
 

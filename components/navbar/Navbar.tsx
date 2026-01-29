@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const menuItems = [
   { name: "Home", href: "/" },
@@ -47,7 +48,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.04 }}
             >
               {/* <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center glow-primary"> */}
-              <div
+              {/* <div
                 className="
   w-12 h-12
   rounded-xl
@@ -59,21 +60,68 @@ const Navbar = () => {
                 <span className="text-black font-bold text-3xl font-display leading-none">
                   N
                 </span>
-              </div>
+              </div> */}
+
+              <div
+  className="
+    w-12 h-12
+    rounded-xl
+    bg-gradient-to-br from-zinc-200 via-white to-zinc-300
+    shadow-md
+    flex items-center justify-center
+    overflow-hidden
+  "
+>
+  <Image
+    src="/images/logo.png"   // ← put your image inside /public
+    alt="Logo"
+    width={32}
+    height={32}
+    className="object-contain"
+  />
+</div>
 
               {/* <span className="text-2xl font-bold font-display tracking-tight">
                 <span className="text-foreground">NEURO</span>
                 <span className="gradient-text">NEX</span>
               </span> */}
 
-              <span className="text-2xl font-bold font-display tracking-tight">
-                <span className="bg-gradient-to-r from-zinc-300 via-white to-zinc-200 bg-clip-text text-transparent">
-                  Velammal Institute of
-                </span>
-                <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-300 bg-clip-text text-transparent">
-                  Technology
-                </span>
-              </span>
+              <div className="flex items-center gap-4">
+
+  {/* LOGO */}
+  {/* <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white text-black font-bold text-xl">
+    N
+  </div> */}
+
+  {/* TEXT */}
+  <div className="flex flex-col leading-tight">
+    
+    <span
+  className="
+    text-2xl
+    font-extrabold
+    font-display
+    tracking-tight
+    bg-gradient-to-r
+    from-[#01ffff]
+    via-[#7ffdfd]
+    to-white
+    bg-clip-text
+    text-transparent
+  "
+>
+  Velammal
+</span>
+
+    <span className="text-sm font-semibold tracking-wide bg-gradient-to-r from-white via-zinc-200 to-zinc-300 bg-clip-text text-transparent">
+      Institute of Technology
+    </span>
+
+  </div>
+
+</div>
+
+
             </motion.div>
           </Link>
 
@@ -91,48 +139,76 @@ const Navbar = () => {
                   className="
   text-lg font-medium
   text-zinc-300
-  hover:text-white
   transition-all duration-300
   relative
+
+  hover:text-[#00ffff]
+
   after:content-['']
   after:absolute
   after:left-0
   after:-bottom-1
   after:w-0
   after:h-[2px]
-  after:bg-gradient-to-r after:from-zinc-300 after:to-white
-  after:transition-all after:duration-300
+  after:bg-gradient-to-r
+  after:from-[#00bebe]
+  after:via-[#00cccc]
+  after:to-[#00ffff]
+  after:transition-all
+  after:duration-300
+
   hover:after:w-full
 "
+
                 >
                   {item.name}
                 </Link>
               </motion.div>
             ))}
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              <Button
-                className="
-    bg-gradient-to-r from-zinc-200 via-white to-zinc-300
-    text-black
-    font-semibold
-    px-7 py-6
-    text-base
-    border border-white/60
-    shadow-md
-    hover:brightness-110
-    hover:shadow-xl
-    transition
-  "
-              >
-                <Rocket className="w-4 h-4 mr-2" />
-                Get Started
-              </Button>
-            </motion.div>
+          <motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.4 }}
+>
+  <Button
+    style={{
+  background: `
+    linear-gradient(
+      to bottom,
+      #00bebe 0%,
+      #00cccc 32%,
+      #009999 50%,
+      #006a6a 100%,
+      #000000 200%
+    )
+  `,
+  boxShadow: `
+    inset 0 8px 18px rgba(0,255,255,0.25),
+    inset 0 -10px 22px rgba(0,0,0,0.85),
+    0 0 30px rgba(0,204,204,0.45)
+  `,
+  filter: "blur(0.0px)",
+}}
+
+    className="
+      text-white
+      font-semibold
+      px-7 py-6
+      text-base
+      border border-[#00cccc]/60
+      shadow-[0_0_28px_rgba(0,204,204,0.45)]
+      hover:brightness-110
+      hover:shadow-[0_0_45px_rgba(0,204,204,0.7)]
+      transition
+    "
+  >
+    <Rocket className="w-4 h-4 mr-2" />
+    Get Started
+  </Button>
+</motion.div>
+
+
           </div>
 
           {/* MOBILE BUTTON */}
