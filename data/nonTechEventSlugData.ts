@@ -1,6 +1,6 @@
-export const eventSlugData = [
+export const nonTechEventSlugData = [
   {
-    slug: "paper-verse",
+    slug: "infinity-gruantlet",
 
     heroImage: "/images/devcon-1.png",
 
@@ -30,7 +30,7 @@ activities that encourage innovation, learning, and teamwork.
   },
 
   {
-    slug: "code-&-conquer",
+    slug: "itanoru-sekai",
 
     heroImage: "/images/devcon-1.png",
 
@@ -59,7 +59,7 @@ The event emphasizes creativity, problem-solving, teamwork, and practical applic
     rulesImage: "/images/hackathon/rules.png",
   },
   {
-    slug: "mind-cache",
+    slug: "final-destination",
 
     heroImage: "/images/devcon-1.png",
 
@@ -88,7 +88,7 @@ The event emphasizes creativity, problem-solving, teamwork, and practical applic
     rulesImage: "/images/hackathon/rules.png",
   },
   {
-    slug: "bug-slayer",
+    slug: "hawkins-mystery",
 
     heroImage: "/images/devcon-1.png",
 
@@ -117,7 +117,7 @@ The event emphasizes creativity, problem-solving, teamwork, and practical applic
     rulesImage: "/images/hackathon/rules.png",
   },
   {
-    slug: "visualix",
+    slug: "alice-in-brdland",
 
     heroImage: "/images/devcon-1.png",
 
@@ -146,7 +146,7 @@ The event emphasizes creativity, problem-solving, teamwork, and practical applic
     rulesImage: "/images/hackathon/rules.png",
   },
   {
-    slug: "idea-clash",
+    slug: "campus-chaos",
 
     heroImage: "/images/devcon-1.png",
 
@@ -175,7 +175,36 @@ The event emphasizes creativity, problem-solving, teamwork, and practical applic
     rulesImage: "/images/hackathon/rules.png",
   },
   {
-    slug: "quizophilia",
+    slug: "music-mania",
+
+    heroImage: "/images/devcon-1.png",
+
+    title: "AI Hackathon 2026",
+    subtitle: "Neuronex Technical Fest",
+
+    description: `
+AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
+
+Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
+
+The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
+`,
+
+    date: "April 8–10, 2026",
+    time: "48 Hours",
+    venue: "Main Seminar Hall",
+
+    teamLimit: "Max 4 Members",
+
+    coordinator: {
+      name: "xxxxxxxxxxx",
+      phone: "xxxxxxxxxxx",
+    },
+
+    rulesImage: "/images/hackathon/rules.png",
+  },
+  {
+    slug: "miniout-circle",
 
     heroImage: "/images/devcon-1.png",
 

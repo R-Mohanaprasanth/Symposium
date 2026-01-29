@@ -64,10 +64,7 @@ const SponsorsSection = () => {
             <span className="text-white">Partner With </span>
             <span
               className="
-                bg-gradient-to-r
-                from-[#00bebe]
-                via-[#01ffff]
-                to-[#00bebe]
+                bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
                 bg-clip-text
                 text-transparent
               "

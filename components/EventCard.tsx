@@ -6,13 +6,9 @@ import { motion } from "framer-motion";
 
 interface Props {
   slug: string;
-  title: string;
-  date: string;
-  location: string;
-  attendees: number;
+  
   image: string;
-  tags: string[];
-  description: string;
+  
   isActive: boolean;
 }
 

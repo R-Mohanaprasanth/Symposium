@@ -1,7 +1,7 @@
-export const technicalEvents = [
+export const nonTechnicalEvents = [
   {
-    slug: "paper-verse",
-    eventHeading: "Paper Verse",
+    slug: "infinity-gruantlet",
+    eventHeading: "Infinity Gruntlet",
 
     slides: [
       {
@@ -17,26 +17,9 @@ export const technicalEvents = [
   },
 
   {
-    slug: "code-&-conquer",
+    slug: "itanoru-sekai",
 
-    eventHeading: "Code & Conquer",
-
-    slides: [
-      {
-        image: "/images/devcon-1.png",
-      },
-      {
-        image: "/images/devcon-1.png",
-      },
-      {
-        image: "/images/devcon-1.png",
-      },
-    ],
-  },
-  {
-    slug: "mind-cache",
-
-    eventHeading: "Mind Cache",
+    eventHeading: "Itanoru Sekai",
 
     slides: [
       {
@@ -51,26 +34,9 @@ export const technicalEvents = [
     ],
   },
   {
-    slug: "bug-slayer",
+    slug: "final-destination",
 
-    eventHeading: "Bug Slayer",
-
-    slides: [
-      {
-        image: "/images/devcon-1.png",
-      },
-      {
-        image: "/images/devcon-1.png",
-      },
-      {
-        image: "/images/devcon-1.png",
-      },
-    ],
-  },
-  {
-    slug: "visualix",
-
-    eventHeading: "Visualix",
+    eventHeading: "Final Destination",
 
     slides: [
       {
@@ -85,9 +51,9 @@ export const technicalEvents = [
     ],
   },
   {
-    slug: "idea-clash",
+    slug: "hawkins-mystery",
 
-    eventHeading: "Idea Clash",
+    eventHeading: "Hawkins Mystery",
 
     slides: [
       {
@@ -102,9 +68,60 @@ export const technicalEvents = [
     ],
   },
   {
-    slug: "quizophilia",
+    slug: "alice-in-brdland",
 
-    eventHeading: "Quizophilia",
+    eventHeading: "Alice in Brdland",
+
+    slides: [
+      {
+        image: "/images/devcon-1.png",
+      },
+      {
+        image: "/images/devcon-1.png",
+      },
+      {
+        image: "/images/devcon-1.png",
+      },
+    ],
+  },
+  {
+    slug: "campus-chaos",
+
+    eventHeading: "Campus Chaos",
+
+    slides: [
+      {
+        image: "/images/devcon-1.png",
+      },
+      {
+        image: "/images/devcon-1.png",
+      },
+      {
+        image: "/images/devcon-1.png",
+      },
+    ],
+  },
+  {
+    slug: "music-mania",
+
+    eventHeading: "Music Mania",
+
+    slides: [
+      {
+        image: "/images/devcon-1.png",
+      },
+      {
+        image: "/images/devcon-1.png",
+      },
+      {
+        image: "/images/devcon-1.png",
+      },
+    ],
+  },
+  {
+    slug: "miniout-circle",
+
+    eventHeading: "Miniout Circle",
 
     slides: [
       {
@@ -119,4 +136,3 @@ export const technicalEvents = [
     ],
   },
 ];
-

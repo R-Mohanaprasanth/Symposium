@@ -59,10 +59,7 @@ const EventsHeader = () => {
           Upcoming{" "}
           <span
             className="
-              bg-gradient-to-r
-              from-[#00bebe]
-              via-[#01ffff]
-              to-[#00bebe]
+               bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
               bg-clip-text
               text-transparent
             "
@@ -81,11 +78,13 @@ const EventsHeader = () => {
         <div className="pt-6">
           <EventsMarquee
             events={[
-              "Community Meetup",
-              "AI Hackathon",
-              "Web3 Summit",
-              "Dev Conference",
-              "Startup Pitch Day",
+              "Paper Verse",
+              "Code & Conquer",
+              "Mind Cache",
+              "Bug Slayer",
+              "Visualix",
+              "Idea Clash",
+              "Quizophilia",
             ]}
           />
         </div>

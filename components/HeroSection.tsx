@@ -159,76 +159,21 @@ const HeroSection: React.FC = () => {
 <div className="absolute inset-0 bg-black/60 z-10" />
 
 <motion.div
-  className="relative inline-flex items-center mb-8 -mt-130"
-  initial={{ opacity: 0, y: 20 }}
+  className="relative inline-flex items-center -mt-135"
+  initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
+  transition={{ duration: 0.7 }}
 >
-  {/* base mild border */}
+  {/* BORDER */}
   <div
     className="absolute inset-0 rounded-full"
     style={{
-      padding: "1.5px",
-      background: "rgba(1,255,255,0.25)",
+      padding: "2px",
+      background: "rgba(1,255,255,0.35)",
       WebkitMask:
         "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
       WebkitMaskComposite: "xor",
       maskComposite: "exclude",
-    }}
-  />
-
-  {/* rotating glow */}
-  <motion.div
-    className="absolute inset-0 rounded-full pointer-events-none"
-    style={{
-      padding: "10.5px",
-      background: `
-        conic-gradient(
-          from 0deg,
-          rgba(1,255,255,0.15) 0deg,
-          rgba(1,255,255,0.15) 40deg,
-          rgb(1,255,255) 60deg,
-          rgba(12,113,113,0.4) 80deg,
-          rgba(1,255,255,0.15) 100deg,
-          rgba(1,255,255,0.15) 360deg
-        )
-      `,
-      WebkitMask:
-        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-      WebkitMaskComposite: "xor",
-      maskComposite: "exclude",
-    }}
-    animate={{
-      backgroundImage: [
-        `
-        conic-gradient(
-          from 0deg,
-          rgba(1,255,255,0.15) 0deg,
-          rgba(1,255,255,0.15) 40deg,
-          rgba(1,255,255,1) 60deg,
-          rgba(1,255,255,0.4) 80deg,
-          rgba(1,255,255,0.15) 100deg,
-          rgba(1,255,255,0.15) 360deg
-        )
-        `,
-        `
-        conic-gradient(
-          from 360deg,
-          rgba(1,255,255,0.15) 0deg,
-          rgba(1,255,255,0.15) 40deg,
-          rgba(1,255,255,1) 60deg,
-          rgba(1,255,255,0.4) 80deg,
-          rgba(1,255,255,0.15) 100deg,
-          rgba(1,255,255,0.15) 360deg
-        )
-        `,
-      ],
-    }}
-    transition={{
-      duration: 2.8,
-      ease: "linear",
-      repeat: Infinity,
-       delay: 1.5
     }}
   />
 
@@ -249,6 +194,9 @@ const HeroSection: React.FC = () => {
     </span>
   </div>
 </motion.div>
+
+
+
 
 
 
@@ -344,25 +292,26 @@ const HeroSection: React.FC = () => {
             </Button>
           </Link>
 
-          <Button
-            size="lg"
-            variant="outline"
-           className="
-  px-8 py-6 text-lg
-  text-white font-semibold tracking-wide
-  border border-[#01ffff]
-  bg-[#01ffff]/15
-  backdrop-blur-sm
-  rounded-md
-  hover:bg-[#01ffff]/25
-  transition
-"
+          <Link href="/events#non-technical-events">
+  <Button
+    size="lg"
+    variant="outline"
+    className="
+      px-8 py-6 text-lg
+      text-white font-semibold tracking-wide
+      border border-[#01ffff]
+      bg-[#01ffff]/15
+      backdrop-blur-sm
+      rounded-md
+      hover:bg-[#01ffff]/25
+      transition
+    "
+  >
+    <Play className="w-5 h-5 mr-2" />
+    Non-Technical Event
+  </Button>
+</Link>
 
-
-          >
-            <Play className="w-5 h-5 mr-2" />
-            Non-Technical Event
-          </Button>
         </motion.div>
 
        {/* STATS */}
@@ -423,8 +372,9 @@ const HeroSection: React.FC = () => {
 {/* SCROLL INDICATOR */}
 <motion.div
   className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30"
-  animate={{ opacity: [0.4, 1, 0.4] }}
-  transition={{ duration: 2, repeat: Infinity }}
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.8 }}
 >
   <div
     className="

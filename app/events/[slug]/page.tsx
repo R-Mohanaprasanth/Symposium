@@ -1,4 +1,5 @@
 import { eventSlugData } from "@/data/eventSlugData";
+import { nonTechEventSlugData } from "@/data/nonTechEventSlugData";
 import EventLayout from "@/components/eventSlug/EventLayout";
 
 interface Props {
@@ -10,7 +11,14 @@ interface Props {
 export default async function EventSlugPage({ params }: Props) {
   const { slug } = await params;
 
-  const event = eventSlugData.find((e) => e.slug === slug);
+  // ✅ merge both sources
+  const allEvents = [
+    ...eventSlugData,
+    ...nonTechEventSlugData,
+  ];
+
+  // ✅ find from both
+  const event = allEvents.find((e) => e.slug === slug);
 
   if (!event) {
     return (
@@ -36,7 +44,7 @@ export default async function EventSlugPage({ params }: Props) {
       />
 
       {/* DARK OVERLAY */}
-     
+      <div className="fixed inset-0 bg-black/65 -z-10" />
 
       {/* PAGE CONTENT */}
       <div className="relative z-10">

@@ -47,10 +47,7 @@ export default function ContactHero() {
             Contact{" "}
             <span
               className="
-                bg-gradient-to-r
-                from-[#00bebe]
-                via-[#01ffff]
-                to-[#00bebe]
+                 bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
                 bg-clip-text
                 text-transparent
               "

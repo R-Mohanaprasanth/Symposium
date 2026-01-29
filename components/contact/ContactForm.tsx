@@ -34,9 +34,24 @@ export default function ContactForm() {
           "
         >
           {/* TITLE */}
-          <h2 className="text-2xl font-semibold text-[#01ffff] mb-8 text-center tracking-wide">
-            Send Us a Message
-          </h2>
+          <h2
+  className="
+    text-2xl
+    font-semibold
+    mb-8
+    text-center
+    tracking-wide
+    bg-gradient-to-r
+    from-[#01ffff]
+    via-[#7ffdfd]
+    to-white
+    bg-clip-text
+    text-transparent
+  "
+>
+  Send Us a Message
+</h2>
+
 
           <form className="grid md:grid-cols-2 gap-6">
 

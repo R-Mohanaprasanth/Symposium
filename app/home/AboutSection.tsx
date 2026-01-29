@@ -58,10 +58,7 @@ const AboutSection = () => {
             Experience the Future at{" "}
             <span
               className="
-    bg-gradient-to-r
-    from-[#00bebe]
-    via-[#01ffff]
-    to-[#00bebe]
+    bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
     bg-clip-text
     text-transparent
   "
@@ -142,7 +139,7 @@ const AboutSection = () => {
       </div>
 
       {/* BACKGROUND ACCENT */}
-      <div className="absolute -top-40 right-0 w-[500px] h-[500px] bg-secondary/10 blur-3xl rounded-full pointer-events-none" />
+      {/* <div className="absolute -top-40 right-0 w-[500px] h-[500px] bg-secondary/10 blur-3xl rounded-full pointer-events-none" /> */}
     </section>
   );
 };

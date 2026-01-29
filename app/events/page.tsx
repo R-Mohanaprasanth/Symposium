@@ -4,6 +4,8 @@ import EventsHeader from "./EventsHeader";
 import EventsHeaderNon from "./EventsHeaderNon";
 import EventsMasterSlider from "@/components/event/EventsMasterSlider";
 import Footer from "@/components/Footer";
+import { technicalEvents } from "@/data/events";
+import { nonTechnicalEvents } from "@/data/nonTechnicalEvents";
 
 export default function EventsPage() {
   return (
@@ -29,12 +31,17 @@ export default function EventsPage() {
 
         {/* TECH EVENTS */}
         <EventsHeader />
-        <EventsMasterSlider />
+<EventsMasterSlider
+  events={technicalEvents}
+  sectionId="technical-events"
+/>
 
-        {/* NON-TECH EVENTS */}
-        <EventsHeaderNon />
-        <EventsMasterSlider />
-
+{/* NON-TECH EVENTS */}
+<EventsHeaderNon />
+<EventsMasterSlider
+  events={nonTechnicalEvents}
+  sectionId="non-technical-events"
+/>
         <Footer />
       </div>
     </main>

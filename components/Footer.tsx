@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#01ffff] to-transparent opacity-70" />
 
       {/* BACKGROUND ACCENT */}
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#01ffff]/10 blur-3xl rounded-full pointer-events-none" />
+      {/* <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#01ffff]/10 blur-3xl rounded-full pointer-events-none" /> */}
 
       <div className="relative max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-16">
 
@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="space-y-5">
           <h3 className="text-3xl font-display font-bold tracking-wide text-white">
             NEURONEX{" "}
-            <span className="bg-gradient-to-r from-[#00bebe] via-[#01ffff] to-[#00bebe] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white bg-clip-text text-transparent">
               2K26
             </span>
           </h3>

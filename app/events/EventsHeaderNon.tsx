@@ -44,10 +44,7 @@ const EventsHeaderNon = () => {
           Upcoming{" "}
           <span
             className="
-              bg-gradient-to-r
-              from-[#00bebe]
-              via-[#01ffff]
-              to-[#00bebe]
+               bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
               bg-clip-text
               text-transparent
             "
@@ -67,11 +64,14 @@ const EventsHeaderNon = () => {
         <div className="pt-6">
           <EventsMarquee
             events={[
-              "Fun Games",
-              "Cultural Fest",
-              "Open Mic",
-              "Team Challenges",
-              "Creative Workshops",
+              "Infinity Gruantlet",
+              "Itanoru Sekai",
+              "Final Destination",
+              "Hawkins Mystery",
+              "Alice In Brdland",
+              "Campus Chaos",
+              "Music Mania",
+              "Miniout Circle"
             ]}
           />
         </div>

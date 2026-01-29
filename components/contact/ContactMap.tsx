@@ -34,9 +34,24 @@ export default function ContactMap() {
           "
         >
           {/* TITLE */}
-          <h2 className="text-2xl font-semibold text-[#01ffff] mb-8 text-center tracking-wide">
-            Event Location
-          </h2>
+          <h2
+  className="
+    text-2xl
+    font-semibold
+    mb-8
+    text-center
+    tracking-wide
+    bg-gradient-to-r
+    from-[#01ffff]
+    via-[#7ffdfd]
+    to-white
+    bg-clip-text
+    text-transparent
+  "
+>
+  Event Location
+</h2>
+
 
           {/* MAP */}
           <div className="overflow-hidden rounded-2xl border border-[#01ffff]/25">

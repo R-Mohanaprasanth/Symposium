@@ -5,27 +5,19 @@ import EventCard from "@/components/EventCard";
 
 interface Slide {
   image: string;
-  tags: string[];
-  description: string;
+ 
 }
 
 interface Props {
   slug: string;
   eventHeading: string;
-  title: string;
-  date: string;
-  location: string;
-  attendees: number;
+  
   slides: Slide[];
 }
 
 export default function EventSection({
   slug,
   eventHeading,
-  title,
-  date,
-  location,
-  attendees,
   slides,
 }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -33,7 +25,7 @@ export default function EventSection({
   return (
     <section className="relative min-h-screen overflow-hidden px-24 pt-24">
       {/* EVENT HEADING */}
-   <h2 className="absolute top-12 left-0 -mt-10 text-2xl md:text-4xl font-bold tracking-wide leading-tight">
+   {/* <h2 className="absolute top-12 left-0 -mt-10 text-2xl md:text-4xl font-bold tracking-wide leading-tight">
    <span
     className="
       block
@@ -48,10 +40,7 @@ export default function EventSection({
   </span>{" "}
 <span
    className="
-    bg-gradient-to-r
-    from-[#00bebe]
-    via-[#01ffff]
-    to-[#00bebe]
+     bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
     bg-clip-text
     text-transparent
   "
@@ -60,10 +49,52 @@ export default function EventSection({
   {eventHeading.split(" ").slice(1).join(" ")}
 </span>
 
-</h2>
+</h2> */}
+
+<div className="absolute top-12 left-0 -mt-10">
+  <div className="relative inline-block">
+
+  <h2
+    className="
+      text-3xl md:text-5xl lg:text-5xl
+      font-extrabold
+      tracking-tight
+      leading-tight
+
+      bg-gradient-to-r
+      from-[#01ffff]
+      via-[#7ffdfd]
+      to-white
+      bg-clip-text
+      text-transparent
+
+      drop-shadow-[0_6px_25px_rgba(1,255,255,0.35)]
+    "
+  >
+    {eventHeading}
+  </h2>
+
+  {/* CLEAN UNDERLINE */}
+  <div
+    className="
+      
+      h-[3px]
+      w-full
+      bg-gradient-to-r
+      from-[#01ffff]
+      via-[#7ffdfd]
+      to-white
+      rounded-full
+    "
+  />
+
+</div>
+
+</div>
 
 
-    <div className="flex justify-center mt-10">
+
+    <div className="flex justify-center -mt-10">
       <div className="relative w-[900px] h-[540px] flex items-center justify-center">
         {slides.map((slide, index) => {
           let offset = index - activeIndex;
@@ -90,14 +121,9 @@ export default function EventSection({
               }}
             >
               <EventCard
-                slug={slug}
-                title={title}
-                date={date}
-                location={location}
-                attendees={attendees}
+                slug={slug}              
                 image={slide.image}
-                tags={slide.tags}
-                description={slide.description}
+                
                 isActive={isCenter}
               />
             </div>
