@@ -5,13 +5,18 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import InteractiveText from "@/components/InteractiveText";
+
 import EventCountdown from "@/components/EventCountdown";
 
 // import space from "@/app/layout";
 
 
 const HeroSection: React.FC = () => {
+
+  const isMobile =
+  typeof window !== "undefined" && window.innerWidth < 640;
+
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 text-zinc-200">
 
@@ -30,132 +35,7 @@ const HeroSection: React.FC = () => {
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/65 z-10" />
 
-      {/* GRID OVERLAY */}
-      {/* <div className="absolute inset-0 grid-pattern opacity-30 z-10" /> */}
-
-      {/* ANIMATED LINES */}
-      {/* <svg
-        className="absolute inset-0 w-full h-full pointer-events-none z-10"
-        style={{ opacity: 0.12 }}
-      >
-        <motion.line
-          x1="0%"
-          y1="30%"
-          x2="100%"
-          y2="70%"
-          stroke="#01ffff"
-          strokeWidth="1"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 2, delay: 0.5 }}
-        />
-        <motion.line
-          x1="100%"
-          y1="20%"
-          x2="0%"
-          y2="80%"
-          stroke="#01ffff"
-          strokeWidth="1"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 2, delay: 1 }}
-        />
-      </svg> */}
-
-      {/* CONTENT */}
-      {/* <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 text-center"> */}
-
-        {/* BADGE */}
-        
-
-        {/* HEADING */}
-        {/* <motion.div
-          className="mb-6"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight leading-none">
-            <span className="block text-3xl md:text-5xl uppercase tracking-widest text-zinc-300 mb-2">
-              Symposium
-            </span>
-
-            <InteractiveText
-              text="NEURONEX"
-              className="text-5xl md:text-7xl lg:text-8xl gradient-text"
-            />
-          </h1>
-        </motion.div> */}
-
-        {/* COUNTDOWN */}
-        {/* <EventCountdown /> */}
-
-        {/* CTA BUTTONS */}
-        {/* <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <Link href="/events#technical-events">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-zinc-200 via-white to-zinc-300 text-black px-8 py-6 text-lg font-semibold group hover:brightness-110"
-            >
-              Technical Event
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-
-          <Button
-            size="lg"
-            variant="outline"
-            className="border border-white/40 text-zinc-200 bg-white/5 backdrop-blur-md px-8 py-6 text-lg hover:bg-white/10"
-          >
-            <Play className="w-5 h-5 mr-2" />
-            Non-Technical Event
-          </Button>
-        </motion.div> */}
-
-        {/* STATS */}
-        {/* <motion.div
-          className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          {[
-            { value: "150+", label: "Events Conducted" },
-            { value: "98%", label: "Student Satisfaction" },
-            { value: "10+", label: "Years Experience" },
-            { value: "1000+", label: "Prize Pool" },
-          ].map((stat, i) => (
-            <motion.div key={i} whileHover={{ y: -6 }}>
-              <div className="text-3xl md:text-4xl font-bold text-[#01ffff]">
-                {stat.value}
-              </div>
-              <div className="text-sm text-zinc-300">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div> */}
-
-      {/* SCROLL INDICATOR */}
-      {/* <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-        animate={{ opacity: [0.4, 1, 0.4] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-white/40 flex justify-center pt-2">
-          <motion.div
-            className="w-1.5 h-1.5 rounded-full bg-white"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-        </div>
-      </motion.div> */}
+      
 <div className="absolute inset-0 bg-black/60 z-10" />
 
 <motion.div
@@ -178,7 +58,7 @@ const HeroSection: React.FC = () => {
   />
 
   {/* CONTENT */}
-  <div
+  {/* <div
     className="
       relative z-10
       inline-flex items-center gap-2
@@ -192,75 +72,110 @@ const HeroSection: React.FC = () => {
     <span className="text-sm font-medium text-zinc-200">
       Showcase your Skills
     </span>
-  </div>
+  </div> */}
+  <div
+  className="
+    relative z-10
+    inline-flex items-center gap-2
+    px-3 py-2
+    sm:px-4 sm:py-2
+    rounded-full
+    bg-white/10
+    backdrop-blur-md
+    mt-0 sm:mt-0
+  "
+>
+  <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#01ffff]" />
+  <span className="text-xs sm:text-sm
+font-medium text-zinc-200">
+    Showcase your Skills
+  </span>
+</div>
+
 </motion.div>
-
-
-
-
-
 
 <motion.svg
   viewBox="0 0 1000 300"
-  className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-20"
-  initial={{ opacity: 0, scale: 1.3 }}
-  animate={{ opacity: 1, scale: 1 }}
+  className="
+    left-1/2 -translate-x-1/2
+    absolute
+    top-[200px] sm:top-[-20px]   // slightly up (recommended)
+
+    w-full
+    z-20
+  "
+ initial={{
+  opacity: 0,
+  y: isMobile ? 15 : 0,
+  scale: isMobile ? 1.15 : 1.3,
+}}
+animate={{
+  opacity: 1,
+  y: 0,
+  scale: 1,
+}}
+
   transition={{ duration: 2.8, ease: "easeOut", delay: 1.5 }}
 >
   <defs>
-    {/* Gradient */}
     <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-  <stop offset="0%" stopColor="#00bebe" />
-  <stop offset="40%" stopColor="#00cccc" />
-  <stop offset="100%" stopColor="#006a6a" />
-  <stop offset="30%" stopColor="#000000" />
-  <stop offset="55%" stopColor="#007777" />
+      <stop offset="0%" stopColor="#00bebe" />
+      <stop offset="40%" stopColor="#00cccc" />
+      <stop offset="100%" stopColor="#006a6a" />
+      <stop offset="30%" stopColor="#000000" />
+      <stop offset="55%" stopColor="#007777" />
+    </linearGradient>
 
-</linearGradient>
-
-
-
-
-    {/* Shadow */}
     <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow
-  dx="0"
-  dy="6"
-  stdDeviation="14"
-  floodColor="#00bebe"
-  floodOpacity="0.35"
-/>
-
+        dx="0"
+        dy="6"
+        stdDeviation="14"
+        floodColor="#00bebe"
+        floodOpacity="0.35"
+      />
     </filter>
 
-    {/* Curve */}
-    <path
-      id="curve"
-      d="M 100 200 Q 500 200 900 200"
-    />
+    <path id="curve" d="M 100 200 Q 500 200 900 200" />
   </defs>
 
+  <g style={{ transform: "scale(1, 1.25)" }}   // 📱 mobile height
+  className="sm:[transform:scale(1,1.12)]" >   // 🖥️ desktop height
   <text
     fill="url(#textGradient)"
-    fontSize="110"
+    fontSize="150"
+    className="sm:text-[110px]"
     fontFamily="Space Grotesk"
     fontWeight="800"
     letterSpacing="0.01"
     filter="url(#textShadow)"
+    transform="translate(0, -10)"
   >
     <textPath href="#curve" startOffset="50%" textAnchor="middle">
       NEURONEX
     </textPath>
   </text>
+</g>
+
 </motion.svg>
 
-<div className="absolute z-30 mt-10 flex justify-center">
+
+<div
+  className="
+    absolute z-30
+    mt-[-80px] sm:mt-20
+    -translate-y-10 sm:translate-y-0
+    scale-80 sm:scale-100
+    flex justify-center
+  "
+>
   <EventCountdown />
 </div>
 
+
 {/* CTA BUTTONS */}
         <motion.div
-          className="absolute top-[60%] left-1/2 -translate-x-1/2
+          className="absolute top-[43%] sm:top-[60%] left-1/2 -translate-x-1/2
            flex flex-col sm:flex-row items-center justify-center gap-4 mt-16 z-30"
 
           initial={{ opacity: 0, y: 20 }}
@@ -271,7 +186,7 @@ const HeroSection: React.FC = () => {
             <Button
               size="lg"
            className="
-  px-8 py-6 text-lg
+  px-7 sm:px-8 py-6 text-base sm:text-lg
   text-white font-semibold
   border border-[#00bebe]
   rounded-md
@@ -287,7 +202,7 @@ const HeroSection: React.FC = () => {
 
 
             >
-              Technical Event
+              Technical Events
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
@@ -297,7 +212,7 @@ const HeroSection: React.FC = () => {
     size="lg"
     variant="outline"
     className="
-      px-8 py-6 text-lg
+      px-5 sm:px-8 py-6 text-base sm:text-lg
       text-white font-semibold tracking-wide
       border border-[#01ffff]
       bg-[#01ffff]/15
@@ -308,7 +223,7 @@ const HeroSection: React.FC = () => {
     "
   >
     <Play className="w-5 h-5 mr-2" />
-    Non-Technical Event
+    Non-Tech Events 
   </Button>
 </Link>
 
@@ -318,7 +233,7 @@ const HeroSection: React.FC = () => {
 <motion.div
   className="
     absolute z-30
-    mt-112
+    mt-100 sm:mt-112
     grid grid-cols-2 md:grid-cols-4
     gap-16
     text-center
@@ -341,7 +256,8 @@ const HeroSection: React.FC = () => {
       {/* VALUE */}
       <div
         className="
-          text-3xl md:text-4xl
+          text-xl sm:text-2xl md:text-4xl
+          mt-[-30px] sm:mt-0
           font-extrabold
           bg-gradient-to-b
           from-white
@@ -358,7 +274,8 @@ const HeroSection: React.FC = () => {
       <div
         className="
           mt-1
-          text-sm
+          text-xs sm:text-sm
+
           tracking-wide
           text-[#8ffefe]
         "
@@ -371,27 +288,34 @@ const HeroSection: React.FC = () => {
 
 {/* SCROLL INDICATOR */}
 <motion.div
-  className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30"
+  className="
+    absolute
+    bottom-22 sm:bottom-8
+    left-1/2 -translate-x-1/2
+    z-30
+    scale-90 sm:scale-100
+  "
   initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, delay: 0.8 }}
 >
   <div
     className="
-      w-6 h-10
+      w-5 h-9 sm:w-6 sm:h-10
       rounded-full
       border-2 border-white
       flex justify-center
-      pt-2
+      pt-1.5 sm:pt-2
     "
   >
     <motion.div
-      className="w-1.5 h-1.5 rounded-full bg-[#01ffff]"
-      animate={{ y: [0, 12, 0] }}
+      className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#01ffff]"
+      animate={{ y: [0, 10, 0] }}
       transition={{ duration: 1.5, repeat: Infinity }}
     />
   </div>
 </motion.div>
+
 
     </section>
   );

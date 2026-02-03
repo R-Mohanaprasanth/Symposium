@@ -84,7 +84,7 @@ export default function EventCountdown() {
 
   return (
     <motion.div
-      className="flex flex-wrap justify-center gap-6 md:gap-8 mt-6 mb-14"
+      className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6 mb-14"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
