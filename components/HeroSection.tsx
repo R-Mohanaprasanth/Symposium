@@ -99,7 +99,7 @@ font-medium text-zinc-200">
   className="
     left-1/2 -translate-x-1/2
     absolute
-    top-[200px] sm:top-[-20px]   // slightly up (recommended)
+    top-[190px] sm:top-[-20px]   // slightly up (recommended)
 
     w-full
     z-20
@@ -163,7 +163,7 @@ animate={{
 <div
   className="
     absolute z-30
-    mt-[-80px] sm:mt-20
+    mt-[-90px] sm:mt-20
     -translate-y-10 sm:translate-y-0
     scale-80 sm:scale-100
     flex justify-center
@@ -175,7 +175,7 @@ animate={{
 
 {/* CTA BUTTONS */}
         <motion.div
-          className="absolute top-[43%] sm:top-[60%] left-1/2 -translate-x-1/2
+          className="absolute top-[42%] sm:top-[60%] left-1/2 -translate-x-1/2
            flex flex-col sm:flex-row items-center justify-center gap-4 mt-16 z-30"
 
           initial={{ opacity: 0, y: 20 }}
@@ -233,7 +233,7 @@ animate={{
 <motion.div
   className="
     absolute z-30
-    mt-100 sm:mt-112
+    mt-90 sm:mt-112
     grid grid-cols-2 md:grid-cols-4
     gap-16
     text-center
@@ -257,7 +257,7 @@ animate={{
       <div
         className="
           text-xl sm:text-2xl md:text-4xl
-          mt-[-30px] sm:mt-0
+          mt-[-20px] sm:mt-0
           font-extrabold
           bg-gradient-to-b
           from-white
@@ -290,7 +290,7 @@ animate={{
 <motion.div
   className="
     absolute
-    bottom-22 sm:bottom-8
+    bottom-25 sm:bottom-8
     left-1/2 -translate-x-1/2
     z-30
     scale-90 sm:scale-100
