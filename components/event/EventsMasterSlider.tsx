@@ -55,8 +55,7 @@ export default function EventsMasterSlider({
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute bottom-6 flex items-center gap-3 z-50">
-
+      <div className="absolute bottom-[133px] flex items-center gap-3 z-50">
   {events.map((_, i) => {
     const isActive = index === i;
 
@@ -92,13 +91,12 @@ export default function EventsMasterSlider({
           font-semibold
           text-sm
           transition-all
-
           ${
             isActive
               ? `
                 bg-[#01ffff]
                 text-black
-                shadow-[0_0_20px_rgba(1,255,255,0.7)]
+                shadow-[0_0_0px_rgba(1,255,255,0.7)]
                 scale-110
               `
               : `

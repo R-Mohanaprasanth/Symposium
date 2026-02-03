@@ -12,7 +12,7 @@ const TechFrame: React.FC<TechFrameProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`relative w-full ${className}`}>
+    <div className={`relative w-full mt-2 ${className}`}>
       {/* FRAME */}
       <div className="relative p-8 md:p-12 border border-cyan-400/40 rounded-xl">
 

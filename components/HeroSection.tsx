@@ -39,67 +39,103 @@ const HeroSection: React.FC = () => {
 <div className="absolute inset-0 bg-black/60 z-10" />
 
 <motion.div
-  className="relative inline-flex items-center -mt-135"
+  className="
+    relative
+    inline-flex
+    items-center
+    -mt-140
+    z-[9999]
+  "
   initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7 }}
 >
-  {/* BORDER */}
-  <div
-    className="absolute inset-0 rounded-full"
+  {/* base mild border */}
+
+<div
+  className="absolute inset-0 rounded-3xl pointer-events-none"
+  style={{
+    padding: "1.5px",
+    background: "rgba(34, 172, 172, 0.65)",
+    WebkitMask:
+      "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+    WebkitMaskComposite: "xor",
+    maskComposite: "exclude",
+  }}
+/>
+
+
+  <motion.div
+    className="
+      absolute
+      inset-y-0
+      left-0
+      right-0
+      rounded-3xl
+      pointer-events-none
+      bg-[#01ffff]/15
+    "
     style={{
-      padding: "2px",
-      background: "rgba(1,255,255,0.35)",
+      padding: "3px",
+      background: `
+        conic-gradient(
+          from 0deg,
+          #1edddd 0deg,
+          #15dedee4 40deg,
+          #01ffff 60deg,
+          #25a3a3 80deg,
+          #22bdbde3 100deg,
+          #22ebeb9a 360deg
+        )
+      `,
       WebkitMask:
         "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
       WebkitMaskComposite: "xor",
       maskComposite: "exclude",
     }}
+    animate={{
+      backgroundImage: [
+        `conic-gradient(from 0deg, rgba(1,255,255,0.15) 0deg, rgba(1,255,255,1) 60deg, rgba(1,255,255,0.15) 360deg)`,
+        `conic-gradient(from 360deg, rgba(1,255,255,0.15) 0deg, rgba(1,255,255,1) 60deg, rgba(1,255,255,0.15) 360deg)`
+      ],
+    }}
+    transition={{
+      duration: 3.8,
+      ease: "linear",
+      repeat: Infinity,
+    }}
   />
 
+
+
   {/* CONTENT */}
-  {/* <div
+  <div
     className="
-      relative z-10
+      relative
+      z-[10000]
       inline-flex items-center gap-2
-      px-4 py-2
+      px-3 py-2
+      sm:px-4 sm:py-2
       rounded-full
       bg-white/10
-      backdrop-blur-md
+      
     "
   >
-    <Sparkles className="w-4 h-4 text-[#01ffff]" />
-    <span className="text-sm font-medium text-zinc-200">
+    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#01ffff]" />
+    <span className="text-xs sm:text-sm font-medium text-zinc-200">
       Showcase your Skills
     </span>
-  </div> */}
-  <div
-  className="
-    relative z-10
-    inline-flex items-center gap-2
-    px-3 py-2
-    sm:px-4 sm:py-2
-    rounded-full
-    bg-white/10
-    backdrop-blur-md
-    mt-0 sm:mt-0
-  "
->
-  <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#01ffff]" />
-  <span className="text-xs sm:text-sm
-font-medium text-zinc-200">
-    Showcase your Skills
-  </span>
-</div>
-
+  </div>
 </motion.div>
+
+
 
 <motion.svg
   viewBox="0 0 1000 300"
   className="
     left-1/2 -translate-x-1/2
     absolute
-    top-[190px] sm:top-[-20px]   // slightly up (recommended)
+    top-[180px] sm:top-[-20px]   // slightly up (recommended)
 
     w-full
     z-20
@@ -163,7 +199,7 @@ animate={{
 <div
   className="
     absolute z-30
-    mt-[-90px] sm:mt-20
+    mt-[-115px] sm:mt-20
     -translate-y-10 sm:translate-y-0
     scale-80 sm:scale-100
     flex justify-center
@@ -175,7 +211,7 @@ animate={{
 
 {/* CTA BUTTONS */}
         <motion.div
-          className="absolute top-[42%] sm:top-[60%] left-1/2 -translate-x-1/2
+          className="absolute top-[40%] sm:top-[60%] left-1/2 -translate-x-1/2
            flex flex-col sm:flex-row items-center justify-center gap-4 mt-16 z-30"
 
           initial={{ opacity: 0, y: 20 }}
@@ -233,7 +269,7 @@ animate={{
 <motion.div
   className="
     absolute z-30
-    mt-90 sm:mt-112
+    mt-80 sm:mt-112
     grid grid-cols-2 md:grid-cols-4
     gap-16
     text-center
@@ -290,7 +326,7 @@ animate={{
 <motion.div
   className="
     absolute
-    bottom-25 sm:bottom-8
+    bottom-32 sm:bottom-8
     left-1/2 -translate-x-1/2
     z-30
     scale-90 sm:scale-100

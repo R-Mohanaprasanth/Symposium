@@ -2,32 +2,48 @@ import FadeIn from "@/components/common/FadeIn";
 
 export default function ContactInfo() {
   return (
-    <section className="relative px-6 pb-28 flex justify-center overflow-hidden">
-
+    <section
+      className="
+        relative
+        px-12 sm:px-6
+        pb-20 sm:pb-24 md:pb-28
+        flex justify-center
+        overflow-hidden
+      "
+    >
       {/* SOFT CYAN BACKLIGHT */}
       <div
         className="
           absolute
-          -bottom-40
+          -bottom-32 sm:-bottom-40
           left-1/2
           -translate-x-1/2
-          w-[700px]
-          h-[700px]
+          w-[420px] sm:w-[560px] md:w-[700px]
+          h-[420px] sm:h-[560px] md:h-[700px]
           bg-[#01ffff]/10
-          blur-[180px]
+          blur-[120px] sm:blur-[150px] md:blur-[180px]
           rounded-full
           pointer-events-none
         "
       />
 
-      <div className="relative grid md:grid-cols-3 gap-8 max-w-6xl w-full">
-
+      <div
+        className="
+          relative
+          grid
+          grid-cols-1
+          md:grid-cols-3
+          gap-6 sm:gap-8
+          max-w-6xl
+          w-full
+        "
+      >
         {/* EMAIL */}
         <FadeIn delay={0.1}>
           <div
             className="
               rounded-2xl
-              p-8
+              p-6 sm:p-8
               border border-[#01ffff]/30
               bg-[#061824]/70
               backdrop-blur-xl
@@ -36,10 +52,10 @@ export default function ContactInfo() {
               hover:border-[#01ffff]
             "
           >
-            <h3 className="text-[#01ffff] text-lg font-semibold mb-2 tracking-wide">
+            <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
               Email
             </h3>
-            <p className="text-zinc-300">
+            <p className="text-sm sm:text-base text-zinc-300">
               neuronexfest@gmail.com
             </p>
           </div>
@@ -50,7 +66,7 @@ export default function ContactInfo() {
           <div
             className="
               rounded-2xl
-              p-8
+              p-6 sm:p-8
               border border-[#01ffff]/30
               bg-[#061824]/70
               backdrop-blur-xl
@@ -59,10 +75,10 @@ export default function ContactInfo() {
               hover:border-[#01ffff]
             "
           >
-            <h3 className="text-[#01ffff] text-lg font-semibold mb-2 tracking-wide">
+            <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
               Phone
             </h3>
-            <p className="text-zinc-300">
+            <p className="text-sm sm:text-base text-zinc-300">
               +91 98765 43210
             </p>
           </div>
@@ -73,7 +89,7 @@ export default function ContactInfo() {
           <div
             className="
               rounded-2xl
-              p-8
+              p-6 sm:p-8
               border border-[#01ffff]/30
               bg-[#061824]/70
               backdrop-blur-xl
@@ -82,15 +98,14 @@ export default function ContactInfo() {
               hover:border-[#01ffff]
             "
           >
-            <h3 className="text-[#01ffff] text-lg font-semibold mb-2 tracking-wide">
+            <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
               Venue
             </h3>
-            <p className="text-zinc-300">
+            <p className="text-sm sm:text-base text-zinc-300">
               Velammal Institute of Technology, Chennai
             </p>
           </div>
         </FadeIn>
-
       </div>
     </section>
   );

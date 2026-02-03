@@ -47,10 +47,10 @@ export default function EventLayout({ event }: any) {
           w-full
           rounded-3xl
           p-10
-          border border-[#01ffff]/30
-          bg-[#061824]/80
-          backdrop-blur-xl
-          shadow-2xl
+         border-2 border-[#01ffff]/40
+    bg-[#061824]/70
+    backdrop-blur-xl
+    shadow-[0_0_18px_rgba(1,255,255,0.25)]
         "
       >
         {/* HERO */}
