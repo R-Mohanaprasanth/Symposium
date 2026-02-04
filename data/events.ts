@@ -5,31 +5,32 @@ export const technicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-4.avif",
+        image: "/images/1.png",
       },
       {
-        image: "/images/devcon-2.png",
+        image: "/images/2.png",
       },
       {
-        image: "/images/devcon-3.png",
+        image: "/images/3.png",
       },
     ],
   },
 
   {
-    slug: "code-&-conquer",
+    slug: "code-conquer"
+,
 
     eventHeading: "Code & Conquer",
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/5.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/6.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/7.png",
       },
     ],
   },
@@ -40,13 +41,13 @@ export const technicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/mc-1.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/mc-2.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/mc-3.png",
       },
     ],
   },
@@ -57,13 +58,13 @@ export const technicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/9.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/10.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/11.png",
       },
     ],
   },
@@ -74,13 +75,13 @@ export const technicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/21.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/23.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/24.png",
       },
     ],
   },
@@ -108,13 +109,13 @@ export const technicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/49.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/50.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/51.png",
       },
     ],
   },

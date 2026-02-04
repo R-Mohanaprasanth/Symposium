@@ -55,9 +55,28 @@ export default function ContactInfo() {
             <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
               Email
             </h3>
-            <p className="text-sm sm:text-base text-zinc-300">
-              neuronexfest@gmail.com
-            </p>
+            <div className="mt-3">
+<ol className="space-y-2 text-sm sm:text-base text-zinc-200">
+  <li className="flex items-center gap-3">
+    <span className="min-w-[1.25rem] text-cyan-400 font-semibold">
+      1.
+    </span>
+    <span className="tracking-wide">
+      umabrindha2005@gmail.com
+    </span>
+  </li>
+  <li className="flex items-center gap-3">
+    <span className="min-w-[1.25rem] text-cyan-400 font-semibold">
+      2.
+    </span>
+    <span className="tracking-wide">
+      dineshkumar080426@gmail.com
+    </span>
+  </li>
+</ol>
+
+</div>
+
           </div>
         </FadeIn>
 
@@ -78,9 +97,25 @@ export default function ContactInfo() {
             <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
               Phone
             </h3>
-            <p className="text-sm sm:text-base text-zinc-300">
-              +91 98765 43210
-            </p>
+            <ol className="space-y-2 text-sm sm:text-base text-zinc-200">
+  <li className="flex items-center gap-3">
+    <span className="min-w-[1.25rem] text-cyan-400 font-semibold">
+      1.
+    </span>
+    <span className="tracking-wide">
+      +91&nbsp;84385&nbsp;00767
+    </span>
+  </li>
+  <li className="flex items-center gap-3">
+    <span className="min-w-[1.25rem] text-cyan-400 font-semibold">
+      2.
+    </span>
+    <span className="tracking-wide">
+      +91&nbsp;63742&nbsp;00660
+    </span>
+  </li>
+</ol>
+
           </div>
         </FadeIn>
 

@@ -41,7 +41,8 @@ const orbitron = Orbitron({
   weight: ["600", "700", "800"],
 });
 
-const EVENT_DATE = new Date("2026-02-15T09:00:00");
+const EVENT_DATE = new Date("2026-02-25T09:00:00");
+
 
 export default function EventCountdown() {
   const [mounted, setMounted] = useState(false);

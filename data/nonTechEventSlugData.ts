@@ -1,235 +1,229 @@
 export const nonTechEventSlugData = [
   {
-    slug: "infinity-gruantlet",
+    slug: "infinity-gauntlet",
 
-    heroImage: "/images/devcon-1.png",
+    heroImage: "/images/ig-4.png",
 
-    title: "DevCon 2026",
-    subtitle: "Annual Symposium — Neuronex",
+    title: "Infinity Gauntlet",
 
     description: `
-DevCon 2026 is a flagship technical symposium organized under Neuronex. The event brings together developers, innovators, and technology enthusiasts
-to explore modern development practices.
+The Snap has already happened — half the universe is gone, and chaos reigns. Fifteen teams of new Avengers embark on a daring mission: travel back in time to retrieve the six Infinity Stones before Thanos can claim them. Each round represents a journey to a different point in the past, testing strategy, skill, and teamwork. Rounds 1–4 (Space, Reality, Mind, Time) are point-based challenges where all teams compete, gaining strength and experience without any eliminations, preparing for the high-stakes battles ahead.
 
-Participants will engage in technical sessions, workshops, and collaborative
-activities that encourage innovation, learning, and teamwork.
+The adventure intensifies in the Power Stone round, where the bottom nine teams are snapped out, leaving six survivors to continue. In the Soul Stone challenge, each team must make a strategic sacrifice — a member sits out— shaping the outcome of the final round. Finally, in Endgame, the surviving six teams face chaos, dice-based twists, and unpredictable challenges as they race to collect all stones and defeat Thanos. Only one team will rise as the Infinity Champion, saving the universe and mastering the fate of the Infinity Stones.
 `,
 
-    date: "March 15–17, 2026",
-    time: "10:00 AM – 5:00 PM",
-    venue: "IT LAB – 1",
+    date: "February 25th 2026",
+    time: "10:00 AM – 12:30 PM",
+    venue: "3rd Floor, Drawing Hall",
 
-    teamLimit: "Max 2 Members",
+    teamLimit: "Max 3 Members",
 
-    coordinator: {
-      name: "xxxxxxxxxx",
-      phone: "xxxxxxxxxxxxx",
-    },
-
-    rulesImage: "/images/devcon/rules.png",
+    coordinators: [
+      {
+        name: "P.M. Roshini",
+        phone: "+91 99402 77756",
+      },
+      {
+        name: "V. Roshini",
+        phone: "+91 87785 66420",
+      },
+    ],
+    rulesImage: "/images/ig-5.png",
   },
 
   {
-    slug: "itanoru-sekai",
+    slug: "itonaru-sekai",
 
-    heroImage: "/images/devcon-1.png",
+    heroImage: "/images/is-4.png",
 
-    title: "AI Hackathon 2026",
-    subtitle: "Neuronex Technical Fest",
+    title: "Itonaru Sekai",
+    
 
     description: `
-AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
+ITONARU SEKAI – Enter a Different World which is an immersive anime-themed technical and entertainment event designed to test participants through multiple dimensions of creativity, knowledge, strategy, and teamwork. The event blends anime culture, analytical thinking, and interactive challenges into a structured experience that reflects problem-solving, quick decision-making, and collaborative intelligence. Through a series of carefully designed rounds, participants are encouraged to think critically, communicate effectively, and showcase their understanding of anime, storytelling, and strategic reasoning under time-bound conditions.
 
-Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
-
-The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
+What makes Itonaru Sekai unique is its balanced approach—testing not just how much anime knowledge participants possess, but how well they can interpret clues, synchronize ideas, and strategize as a team. From observation-based challenges to strategy-driven competitive rounds, the event provides an engaging platform where participants can demonstrate their passion for anime while strengthening teamwork, analytical skills, and adaptability in a thrilling and competitive environment.
 `,
 
-    date: "April 8–10, 2026",
-    time: "48 Hours",
-    venue: "Main Seminar Hall",
+    date: "February 25th 2026",
+    time: "10:00 AM – 12:30 PM",
+    venue: "3rd Floor, IT Seminar Hall",
 
-    teamLimit: "Max 4 Members",
+    teamLimit: "Max 2 Members",
+coordinators: [
+      {
+        name: "Ritheesh",
+        phone: "+91 90359 45222",
+      },
+      {
+        name: "Janani",
+        phone: "+91 77086 54918",
+      },
+    ],
 
-    coordinator: {
-      name: "xxxxxxxxxxx",
-      phone: "xxxxxxxxxxx",
-    },
-
-    rulesImage: "/images/hackathon/rules.png",
+    rulesImage: "/images/is-5.png",
   },
   {
     slug: "final-destination",
 
-    heroImage: "/images/devcon-1.png",
+    heroImage: "/images/35.png",
 
-    title: "AI Hackathon 2026",
-    subtitle: "Neuronex Technical Fest",
+    title: "Final Destination",
 
     description: `
-AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
+FINAL DESTINATION -Final Destination is an immersive murder mystery event designed to challenge participants across multiple dimensions of analytical thinking and psychological reasoning. The event blends investigation, observation, and logical deduction into a structured experience that mirrors real-world crime analysis and decision-making under pressure. Through a sequence of carefully designed rounds, participants are encouraged to collaborate, analyze complex clues, and connect fragmented information within a time-bound environment.
 
-Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
-
-The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
+What sets Final Destination apart is its progressive, point-based format that emphasizes accuracy, reasoning, and teamwork rather than elimination. From decoding confidential case files to interpreting layered visual evidence and finally examining a live crime scene setup, each stage deepens the investigative experience. By evaluating teams on logical consistency, attention to detail, and problem-solving approach, the event provides an engaging platform where strategy, observation, and critical thinking lead participants closer to the truth.
 `,
 
-    date: "April 8–10, 2026",
-    time: "48 Hours",
-    venue: "Main Seminar Hall",
+    date: "February 25th 2026",
+    time: "10:00 AM – 12:30 PM",
+    venue: "3rd Floor, Room No-313",
 
-    teamLimit: "Max 4 Members",
+    teamLimit: "Max 3 Members",
 
-    coordinator: {
-      name: "xxxxxxxxxxx",
-      phone: "xxxxxxxxxxx",
-    },
+    coordinators: [
+      {
+        name: "Divyalakshmi",
+        phone: "+91 9940277756",
+      },
+      {
+        name: "Kamesh",
+        phone: "+91 99444 58106",
+      },
+    ],
 
-    rulesImage: "/images/hackathon/rules.png",
+    rulesImage: "/images/fd-5.png",
   },
   {
     slug: "hawkins-mystery",
 
-    heroImage: "/images/devcon-1.png",
+    heroImage: "/images/17.png",
 
-    title: "AI Hackathon 2026",
-    subtitle: "Neuronex Technical Fest",
+    title: "Hawkins Mystery",
 
     description: `
-AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
+HAWKINS MYSTERY is an immersive, theme-based non-technical event inspired by the mysterious world of Stranger Things. Participants will embark on a thrilling journey through four uniquely designed worlds—Hawkins, Upside Down, Trance, and Abyss—each filled with suspense, puzzles, and challenges. The event blends entertainment with teamwork, testing participants’ observation skills, creativity, memory, and problem-solving abilities in a fun yet competitive environment.
 
-Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
-
-The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
+As teams progress through each world, they must solve quizzes, decode hidden messages, perform character enactments, and uncover final clues to escape the mystery. With time-bound rounds and eliminations at every stage, Hawkins Mystery promises an adrenaline-filled experience where strategy, coordination, and quick thinking determine success. Dare to step through the gate and prove if you have what it takes to escape.
 `,
 
-    date: "April 8–10, 2026",
-    time: "48 Hours",
-    venue: "Main Seminar Hall",
+    date: "February 25th 2026",
+    time: "10:00 AM – 12:30 PM",
+    venue: "3rd Floor, Mechanical Seminar Hall",
 
-    teamLimit: "Max 4 Members",
+    teamLimit: "Team size 3-4 Members",
 
-    coordinator: {
-      name: "xxxxxxxxxxx",
-      phone: "xxxxxxxxxxx",
-    },
+    coordinators: [
+      {
+        name: "Dharshini",
+        phone: "+91 98419 45085",
+      },
+      {
+        name: "Vishva",
+        phone: "+91 73733 49499",
+      },
+    ],
 
-    rulesImage: "/images/hackathon/rules.png",
+    rulesImage: "/images/hm-2.png",
   },
   {
-    slug: "alice-in-brdland",
+    slug: "alice-in-borderland",
 
-    heroImage: "/images/devcon-1.png",
+    heroImage: "/images/ab-4.png",
 
-    title: "AI Hackathon 2026",
+    title: "Alice in Borderland",
     subtitle: "Neuronex Technical Fest",
 
     description: `
-AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
+ALICE IN BORDERLAND – is a thrilling non-technical event designed to test participants’ presence of mind, logical thinking, creativity, and teamwork under high-pressure game scenarios. Inspired by survival-style challenges, the event pushes participants to think strategically, make quick decisions, and work together to overcome each stage of the game.
 
-Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
-
-The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
+What makes Alice in Borderland unique is its focus on mental agility rather than technical knowledge. Through a series of engaging and interactive rounds, participants face puzzles, performance-based tasks, and elimination challenges that demand sharp reasoning, coordination, and adaptability. Time management, communication, and smart decision-making play a crucial role in survival.
 `,
 
-    date: "April 8–10, 2026",
-    time: "48 Hours",
-    venue: "Main Seminar Hall",
+    date: "February 25th 2026",
+    time: "10:00 AM – 12:30 PM",
+    venue: "3rd Floor, AI & DS Seminar Hall",
 
-    teamLimit: "Max 4 Members",
+    teamLimit: "4 Members Per Team",
 
-    coordinator: {
-      name: "xxxxxxxxxxx",
-      phone: "xxxxxxxxxxx",
-    },
+    coordinators: [
+      {
+        name: "Indhu priya",
+        phone: "+91 63741 38881",
+      },
+      {
+        name: "Sivapugal",
+        phone: "+91 70922 44654",
+      },
+    ],
 
-    rulesImage: "/images/hackathon/rules.png",
+    rulesImage: "/images/ab-5.png",
   },
-  {
-    slug: "campus-chaos",
-
-    heroImage: "/images/devcon-1.png",
-
-    title: "AI Hackathon 2026",
-    subtitle: "Neuronex Technical Fest",
-
-    description: `
-AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
-
-Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
-
-The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
-`,
-
-    date: "April 8–10, 2026",
-    time: "48 Hours",
-    venue: "Main Seminar Hall",
-
-    teamLimit: "Max 4 Members",
-
-    coordinator: {
-      name: "xxxxxxxxxxx",
-      phone: "xxxxxxxxxxx",
-    },
-
-    rulesImage: "/images/hackathon/rules.png",
-  },
+  
   {
     slug: "music-mania",
 
-    heroImage: "/images/devcon-1.png",
+    heroImage: "/images/29.png",
 
-    title: "AI Hackathon 2026",
-    subtitle: "Neuronex Technical Fest",
+    title: "Music Mania",
+
 
     description: `
-AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
+Music Mania is a high-energy musical event crafted to challenge your instincts, awareness, and passion for music. Designed as a multi-round experience, the event blends excitement, creativity, and unpredictability, keeping participants engaged from start to finish. Each stage raises the intensity, making every moment thrilling and competitive.
 
-Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
-
-The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
+With a perfect mix of nostalgia and modern vibes, Music Mania brings together teamwork, quick thinking, and a deep connection to music. Expect surprises, twists, and moments that test how well you truly understand sound and rhythm. Step in ready for an unforgettable experience—because the real magic unfolds only on stage.
 `,
 
-    date: "April 8–10, 2026",
-    time: "48 Hours",
-    venue: "Main Seminar Hall",
+    date: "February 25th 2026",
+    time: "10:00 AM – 12:30 PM",
+    venue: "3rd Floor, Room No-316",
 
-    teamLimit: "Max 4 Members",
+    teamLimit: "3 Members Per Team",
 
-    coordinator: {
-      name: "xxxxxxxxxxx",
-      phone: "xxxxxxxxxxx",
-    },
+    coordinators: [
+      {
+        name: "Mohanaprasanth",
+        phone: "+91 63810 26784",
+      },
+      {
+        name: "Jane Charusha",
+        phone: "+91 94452 18575",
+      },
+    ],
 
-    rulesImage: "/images/hackathon/rules.png",
+    rulesImage: "/images/30.png",
   },
   {
     slug: "miniout-circle",
 
-    heroImage: "/images/devcon-1.png",
+    heroImage: "/images/moc-2.png",
 
-    title: "AI Hackathon 2026",
-    subtitle: "Neuronex Technical Fest",
+    title: "Miniout Circle",
 
     description: `
-AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
+Mini Out Circle is a fun and fast-paced cricket-based target challenge designed to test a player’s accuracy, timing, and shot control. The game features a marked play area with an inner and outer circle divided into scoring zones. Participants aim to hit the ball into these zones to earn different run values, making every shot a mix of skill and strategy.
 
-Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
-
-The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
+Each player gets limited chances to score maximum runs, and only well-placed shots inside the valid scoring circle are counted. Shots that land outside the boundary are considered out. With simple rules and exciting gameplay, Mini Out Circle is perfect for creating competitive energy and crowd engagement in symposium fun events.
 `,
 
-    date: "April 8–10, 2026",
-    time: "48 Hours",
+    date: "February 25th 2026",
+    time: "10:00 AM – 12:30 PM",
     venue: "Main Seminar Hall",
 
     teamLimit: "Max 4 Members",
 
-    coordinator: {
-      name: "xxxxxxxxxxx",
-      phone: "xxxxxxxxxxx",
-    },
+    coordinators: [
+      {
+        name: "Potri",
+        phone: "+91 63812 59360",
+      },
+      {
+        name: "Nirendiran",
+        phone: "+91 95972 28276",
+      },
+    ],
 
-    rulesImage: "/images/hackathon/rules.png",
+    rulesImage: "/images/moc-3.png",
   },
 ];

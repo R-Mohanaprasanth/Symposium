@@ -149,28 +149,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Rocket, Users } from "lucide-react";
+import { Sparkles, Rocket, Users, PartyPopper, Code2, Cpu } from "lucide-react";
 import TechFrame from "@/components/common/TechFrame";
 
 const features = [
   {
-    icon: Sparkles,
-    title: "Innovation Driven",
-    description:
-      "Hands-on challenges and real-world problem solving across emerging technologies.",
-  },
-  {
-    icon: Rocket,
-    title: "Future Ready",
-    description:
-      "Exposure to AI, Web3, cloud computing, and industry-grade workflows.",
-  },
-  {
-    icon: Users,
-    title: "Community Focused",
-    description:
-      "Connect with innovators, creators, mentors, and tech leaders.",
-  },
+  icon: Code2,
+  title: "Code Centric",
+  description:
+    "Solve practical problems through coding challenges and hands-on technical sessions.",
+},
+
+{
+  icon: Users,
+  title: "Collaborative Network",
+  description:
+    "Build connections with peers, mentors, and professionals across domains.",
+},
+{
+  icon: PartyPopper,
+  title: "Fun & Engaging",
+  description:
+    "Interactive events, competitions, and activities that keep the energy high.",
+},
+
 ];
 
 const AboutSection = () => {
@@ -274,13 +276,13 @@ const AboutSection = () => {
             <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
               Neuronex 2K26 is an annual technical symposium designed to bring
               together innovation, creativity, and collaboration. It creates a
-              platform where students explore real-world technologies, compete,
+              platform where students explore real-world events, where they compete,
               learn, and grow beyond classrooms.
             </p>
 
             <p className="text-xs sm:text-base text-muted-foreground leading-relaxed">
               Through workshops, competitions, and interactive sessions,
-              participants gain exposure to modern engineering practices and
+              participants gain exposure to modern AI tools and
               future-ready skills.
             </p>
 
@@ -321,7 +323,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.6, delay: index * 0.12 }}
               >
                 <TechFrame>
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-7 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
 

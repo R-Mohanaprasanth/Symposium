@@ -48,14 +48,14 @@ export default function EventsMasterSlider({
           initial={{ x: 500, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -500, opacity: 0 }}
-          transition={{ duration: 1.1, ease: "easeInOut" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
           className="w-full flex justify-center"
         >
           <EventSection {...events[index]} />
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute bottom-[133px] flex items-center gap-3 z-50">
+      <div className="absolute bottom-[190px] sm:bottom-[123px] flex items-center gap-3 z-50">
   {events.map((_, i) => {
     const isActive = index === i;
 
@@ -85,6 +85,7 @@ export default function EventsMasterSlider({
         whileHover={{ scale: 1.12 }}
         whileTap={{ scale: 0.95 }}
         className={`
+
           w-10 h-10
           rounded-full
           flex items-center justify-center

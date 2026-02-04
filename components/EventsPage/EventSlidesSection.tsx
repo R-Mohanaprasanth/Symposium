@@ -125,7 +125,8 @@ export default function EventSection({
 
 
     <div className="flex justify-center -mt-10">
-      <div className="relative w-[900px] h-[540px] flex items-center justify-center">
+      <div className="relative w-[900px] h-[490px] sm:w-[900px] sm:h-[540px] w-[320px] h-[440px] flex items-center justify-center">
+
         {slides.map((slide, index) => {
           let offset = index - activeIndex;
 
@@ -144,16 +145,20 @@ export default function EventSection({
                 transform: `
   ${
     isMobile
-      ? `translateY(${offset * 125}px)`
+      ? `translateY(${offset * 90}px)`
       : `translateX(${offset * 300}px)`
   }
-  scale(${isCenter ? 1 : 0.85})
-  ${isMobile ? "scaleX(0.82)" : ""}
+  scale(${isCenter ? (isMobile ? 0.9 : 1) : (isMobile ? 0.78 : 0.88)})
+  ${isMobile ? "scaleX(0.85)" : ""}
 `,
 
-                opacity: isCenter ? 1 : 0.45,
-                zIndex: isCenter ? 20 : 10,
-                filter: isCenter ? "none" : "blur(2px)",
+                opacity: isCenter ? 1 : isMobile ? 0.9 : 1,
+
+zIndex: isCenter ? 20 : 10,
+filter: isCenter
+  ? "none"
+  : "blur(1px) brightness(0.9)",
+
               }}
             >
               <EventCard

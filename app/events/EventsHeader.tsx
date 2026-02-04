@@ -164,8 +164,7 @@ const EventsHeader = () => {
             leading-relaxed
           "
         >
-          Discover and register for the most exciting conferences,
-          hackathons, workshops, and innovation summits happening this season.
+          Discover and register for the most exciting and innovation summits happening this season in Neuronex.
         </p>
 
         {/* MARQUEE */}

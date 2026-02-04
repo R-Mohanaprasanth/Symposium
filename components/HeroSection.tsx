@@ -280,9 +280,9 @@ animate={{
 >
   {[
     { value: "150+", label: "Events Conducted" },
-    { value: "98%", label: "Student Satisfaction" },
-    { value: "10+", label: "Years Experience" },
-    { value: "1000+", label: "Prize Pool" },
+    { value: "100%", label: "Student Satisfaction" },
+   { value: "1000+", label: "Student Participants" }, 
+    { value: "1L+", label: "Prize Pool" },
   ].map((stat, i) => (
     <motion.div
       key={i}

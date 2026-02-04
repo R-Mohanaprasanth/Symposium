@@ -13,6 +13,7 @@ const EventsHeaderNon = () => {
         pb-16 sm:pb-20 md:pb-24
         overflow-hidden
         text-center
+        -mt-40 sm:-mt-20
       "
     >
       {/* SOFT CYAN ACCENT */}

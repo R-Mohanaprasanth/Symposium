@@ -1,9 +1,10 @@
-export default function EventContacts({ coordinator }: any) {
+export default function EventContacts({ coordinators }: any) {
   return (
-    <div className="rounded-2xl p-6 border border-[#01ffff]/25 bg-[#061824]/70 backdrop-blur text-white space-y-2">
+    <div className="rounded-2xl p-5 border border-[#01ffff]/25 bg-[#061824]/70 backdrop-blur text-white space-y-4">
+      
       <h3
         className="
-          text-lg font-semibold mb-3
+          text-2xl font-bold mb-2
           bg-gradient-to-r
           from-[#00bebe]
           via-[#01ffff]
@@ -12,16 +13,19 @@ export default function EventContacts({ coordinator }: any) {
           text-transparent
         "
       >
-        Coordinator
+        Coordinators
       </h3>
 
-      <p className="text-zinc-300">
-        Name: <span className="text-white">{coordinator.name}</span>
-      </p>
-
-      <p className="text-zinc-300">
-        Phone: <span className="text-white">{coordinator.phone}</span>
-      </p>
+      {coordinators.map((person: any, index: number) => (
+        <div key={index} className="space-y-1">
+          <p className="text-zinc-300 text-base">
+            Name: <span className="text-white">{person.name}</span>
+          </p>
+          <p className="text-zinc-300 text-base">
+            Phone: <span className="text-white">{person.phone}</span>
+          </p>
+        </div>
+      ))}
     </div>
   );
 }

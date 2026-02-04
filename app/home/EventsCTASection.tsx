@@ -123,7 +123,7 @@ const EventsCTASection = () => {
             {/* DESCRIPTION */}
           <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-zinc-300 leading-relaxed">
 
-              From hackathons and workshops to tech talks and competitions —
+              From coding challenges and workshops to tech talks and competitions —
               explore events crafted to challenge, inspire, and elevate you.
             </p>
           </div>

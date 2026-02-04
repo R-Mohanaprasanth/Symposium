@@ -102,31 +102,46 @@ export default function EventCard({ slug, image, isActive }: Props) {
 
 
       {/* IMAGE */}
-      <div className="relative h-94 rounded-2xl overflow-hidden bg-black z-10">
-        <img
-          src={image}
-          alt="event"
-          className="w-full h-full object-cover rounded-2xl"
-        />
+      <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-black z-10">
+  <img
+    src={image}
+    alt="event"
+    className="w-full h-full object-cover rounded-2xl"
+  />
 
-        {/* BUTTON */}
-        <Button
-          onClick={(e) => {
-            e.stopPropagation();
-            router.push(`/events/${slug}`);
-          }}
-          className="
-            absolute bottom-4 left-1/2 -translate-x-1/2
-            bg-white/80 text-black
-            hover:bg-white
-            backdrop-blur-md
-            rounded-xl
-            px-6
-          "
-        >
-          Explore Now
-        </Button>
-      </div>
+  {/* BUTTON */}
+  <Button
+  onClick={(e) => {
+    e.stopPropagation();
+    router.push(`/events/${slug}`);
+  }}
+  className="
+  absolute bottom-4 left-1/2 -translate-x-1/2
+  px-7 py-2.5
+  rounded-xl
+  font-semibold
+
+  text-[#01ffff]
+  bg-[#061824]/85
+  backdrop-blur-md
+
+  border border-[#01ffff]/60
+  shadow-[0_0_12px_rgba(1,255,255,0.35)]
+
+  hover:bg-[#01ffff]
+  hover:text-[#001a1a]
+  hover:shadow-[0_0_18px_rgba(1,255,255,0.65)]
+
+  transition-all duration-300
+"
+
+>
+  Explore Now
+</Button>
+
+
+</div>
+
     </div>
   );
 }

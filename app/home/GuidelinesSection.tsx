@@ -15,12 +15,12 @@ const guidelines = [
   {
     icon: UserCheck,
     title: "Eligibility",
-    text: "Open to all undergraduate and postgraduate students from recognized institutions.",
+    text: "Open to all Engineering students from recognized institutions.",
   },
   {
     icon: Clock,
     title: "Reporting Time",
-    text: "Participants must report at least 30 minutes before their scheduled event time.",
+    text: "Participants must report at least 10 minutes before their scheduled event time.",
   },
   {
     icon: Laptop,
@@ -30,17 +30,17 @@ const guidelines = [
   {
     icon: BadgeInfo,
     title: "Registration",
-    text: "Prior online registration is required. On-spot registrations are subject to availability.",
+    text: "Prior online registration is required. On-spot registrations are also availability.",
   },
   {
     icon: AlertTriangle,
     title: "Code of Conduct",
-    text: "Participants must maintain discipline and follow the instructions of event coordinators.",
+    text: "Participants must maintain discipline and follow the instructions of coordinators.",
   },
   {
     icon: CheckCircle,
     title: "Certificates",
-    text: "Participation certificates will be provided to all registered attendees during prize distribution.",
+    text: "Participation certificates will be provided to all Tech-Event registered attendees.",
   },
 ];
 

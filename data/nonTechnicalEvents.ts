@@ -1,35 +1,35 @@
 export const nonTechnicalEvents = [
   {
-    slug: "infinity-gruantlet",
-    eventHeading: "Infinity Gruntlet",
+    slug: "infinity-gauntlet",
+    eventHeading: "Infinity Gauntlet",
 
     slides: [
       {
-        image: "/images/devcon-4.avif",
+        image: "/images/ig-1.png",
       },
       {
-        image: "/images/devcon-2.png",
+        image: "/images/ig-2.png",
       },
       {
-        image: "/images/devcon-3.png",
+        image: "/images/ig-3.png",
       },
     ],
   },
 
   {
-    slug: "itanoru-sekai",
+    slug: "itonaru-sekai",
 
-    eventHeading: "Itanoru Sekai",
+    eventHeading: "Itonaru Sekai",
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/is-1.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/is-2.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/is-3.png",
       },
     ],
   },
@@ -40,13 +40,13 @@ export const nonTechnicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/35.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/36.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/37.png",
       },
     ],
   },
@@ -57,47 +57,30 @@ export const nonTechnicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/18.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/hm-2.png",
       },
       {
-        image: "/images/devcon-1.png",
-      },
-    ],
-  },
-  {
-    slug: "alice-in-brdland",
-
-    eventHeading: "Alice in Brdland",
-
-    slides: [
-      {
-        image: "/images/devcon-1.png",
-      },
-      {
-        image: "/images/devcon-1.png",
-      },
-      {
-        image: "/images/devcon-1.png",
+        image: "/images/20.png",
       },
     ],
   },
   {
-    slug: "campus-chaos",
+    slug: "alice-in-borderland",
 
-    eventHeading: "Campus Chaos",
+    eventHeading: "Alice in Borderland",
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/ab-1.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/ab-2.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/ab-3.png",
       },
     ],
   },
@@ -108,13 +91,13 @@ export const nonTechnicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/31.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/32.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/33.png",
       },
     ],
   },
@@ -125,13 +108,13 @@ export const nonTechnicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/moc-1.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/moc-3.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/moc-4.png",
       },
     ],
   },

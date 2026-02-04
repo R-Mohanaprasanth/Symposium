@@ -108,18 +108,26 @@ const Navbar = () => {
             ))}
 
             <Button
-              className="
-                px-7 py-6 text-base font-semibold text-white
-                border border-[#00cccc]/60
-                bg-gradient-to-b from-[#00bebe] via-[#00cccc] to-[#002222]
-                shadow-[0_0_25px_rgba(0,204,204,0.4)]
-                hover:brightness-110
-                transition
-              "
-            >
-              <Rocket className="w-4 h-4 mr-2" />
-              Get Started
-            </Button>
+  onClick={() =>
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSdyfNolKePjJbLEF2oqTst0UUfVhBLxNqcEVKzR9akafB4tcg/viewform",
+      "_blank"
+    )
+  }
+  className="
+    px-7 py-6 text-base font-semibold text-white
+    border border-[#00cccc]/60
+    bg-gradient-to-b from-[#00bebe] via-[#00cccc] to-[#002222]
+    shadow-[0_0_25px_rgba(0,204,204,0.4)]
+    hover:brightness-110
+    transition
+    flex items-center
+  "
+>
+  <Rocket className="w-4 h-4 mr-2" />
+  Get Started
+</Button>
+
           </div>
 
           {/* MOBILE MENU BUTTON */}
