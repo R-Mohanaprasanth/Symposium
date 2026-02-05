@@ -1,6 +1,7 @@
 export default function EventHero({ image }: { image: string }) {
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-[#01ffff]/25">
+    <div className="relative overflow-hidden  rounded-2xl border border-[#01ffff]/25 h-[320px] md:h-[250px] ">
+
       
       {/* IMAGE */}
       <img

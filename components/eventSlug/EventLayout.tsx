@@ -10,7 +10,7 @@ export default function EventLayout({ event }: any) {
   return (
     <section className="relative min-h-screen px-6 py-32 flex justify-center overflow-hidden">
       {/* BACKGROUND RECTANGLE */}
-      <div
+      {/* <div
         className="
           absolute
           top-24
@@ -21,7 +21,7 @@ export default function EventLayout({ event }: any) {
           rounded-2xl
           -z-20
         "
-      />
+      /> */}
 
       {/* DARK OVERLAY */}
       <div className="fixed inset-0 bg-black/65 -z-10" />
@@ -39,19 +39,21 @@ export default function EventLayout({ event }: any) {
       {/* MAIN CARD */}
       <div
         className="
-          relative max-w-6xl w-full
-          rounded-3xl p-10
-          border-2 border-[#01ffff]/40
-          bg-[#061824]/70
-          backdrop-blur-xl
-          shadow-[0_0_18px_rgba(1,255,255,0.25)]
-        "
+  relative max-w-6xl w-full
+  rounded-3xl p-7
+
+  md:border-2 md:border-[#01ffff]/40
+  md:bg-[#061824]/70
+  md:backdrop-blur-xl
+  md:shadow-[0_0_18px_rgba(1,255,255,0.25)]
+"
+
       >
         {/* IMAGE ROW */}
         <div className="flex flex-col md:flex-row justify-center items-start gap-6">
           {/* HERO IMAGE */}
 
-          <div className="w-full md:w-1/2 max-w-md rounded-3xl p-3 border border-[#01ffff]/25 bg-[#061824]/65 backdrop-blur">
+          <div className="w-full md:w-1/2 max-w-md rounded-3xl p-3 border border-[#01ffff]/25 bg-[#061824]/65 backdrop-blur -mt-10 sm:-mt-0">
             {/* base mild border */}
             <div
               className="absolute inset-0 rounded-3xl pointer-events-none"

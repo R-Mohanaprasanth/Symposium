@@ -44,9 +44,9 @@ export default function EventDetails({ event }: any) {
     <button
   onClick={() => {
     window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSdyfNolKePjbLEF2oqTst0UUfVhBLxNqcEVKzR9akafB4tcg/viewform",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdyfNolKePjJbLEF2oqTst0UUfVhBLxNqcEVKzR9akafB4tcg/viewform",
       "_blank"
-    );
+    )
   }}
   className="
     mt-6
