@@ -38,17 +38,17 @@ export default function EventLayout({ event }: any) {
 
       {/* MAIN CARD */}
       <div
-        className="
-  relative max-w-6xl w-full
-  rounded-3xl p-7
+  className="
+    relative max-w-6xl w-full
+    rounded-3xl p-7 md:p-10
 
-  md:border-2 md:border-[#01ffff]/40
-  md:bg-[#061824]/70
-  md:backdrop-blur-xl
-  md:shadow-[0_0_18px_rgba(1,255,255,0.25)]
-"
+    md:border-2 md:border-[#01ffff]/40
+    md:bg-[#061824]/70
+    md:backdrop-blur-xl
+    md:shadow-[0_0_18px_rgba(1,255,255,0.25)]
+  "
+>
 
-      >
         {/* IMAGE ROW */}
         <div className="flex flex-col md:flex-row justify-center items-start gap-6">
           {/* HERO IMAGE */}
