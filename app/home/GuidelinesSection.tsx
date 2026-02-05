@@ -30,7 +30,7 @@ const guidelines = [
   {
     icon: BadgeInfo,
     title: "Registration",
-    text: "Prior online registration is required. On-spot registrations are also availability.",
+    text: "Prior online registration is required. On-spot registrations are also available.",
   },
   {
     icon: AlertTriangle,

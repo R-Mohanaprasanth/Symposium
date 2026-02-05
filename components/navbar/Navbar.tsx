@@ -30,21 +30,14 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      {/* BACKGROUND (ONLY ON SCROLL) */}
+      {/* BACKGROUND ON SCROLL */}
       {scrolled && (
         <>
-          {/* IMAGE */}
           <div
             className="absolute inset-0 z-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/images/bg-1.png')",
-            }}
+            style={{ backgroundImage: "url('/images/bg-1.png')" }}
           />
-
-          {/* OVERLAY + BLUR */}
           <div className="absolute inset-0 bg-black/65 backdrop-blur-xl z-10" />
-
-          {/* BOTTOM BORDER */}
           <div className="absolute bottom-0 left-0 right-0 h-px bg-[#00ffff]/20 z-20" />
         </>
       )}
@@ -70,7 +63,7 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-col leading-tight">
-                <span className="text-2xl font-extrabold font-display tracking-tight  bg-clip-text text-white">
+                <span className="text-2xl font-extrabold font-display tracking-tight text-white">
                   Velammal
                 </span>
                 <span className="text-sm font-semibold tracking-wide bg-gradient-to-r from-white via-zinc-200 to-zinc-300 bg-clip-text text-transparent">
@@ -80,63 +73,67 @@ const Navbar = () => {
             </motion.div>
           </Link>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center gap-14">
-            {menuItems.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
-              >
-                <Link
-                  href={item.href}
-                  className="
-                    text-lg font-medium text-zinc-300 relative
-                    transition-all duration-300
-                    hover:text-[#00ffff]
-                    after:absolute after:left-0 after:-bottom-1
-                    after:h-[2px] after:w-0
-                    after:bg-gradient-to-r after:from-[#00bebe] after:via-[#00cccc] after:to-[#00ffff]
-                    after:transition-all after:duration-300
-                    hover:after:w-full
-                  "
-                >
-                  {item.name}
-                </Link>
-              </motion.div>
-            ))}
+          {/* RIGHT SIDE */}
+          <div className="flex items-center gap-6">
 
-            <Button
-  onClick={() =>
-    window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSdyfNolKePjJbLEF2oqTst0UUfVhBLxNqcEVKzR9akafB4tcg/viewform",
-      "_blank"
-    )
-  }
-  className="
-    px-7 py-6 text-base font-semibold text-white
-    border border-[#00cccc]/60
-    bg-gradient-to-b from-[#00bebe] via-[#00cccc] to-[#002222]
-    shadow-[0_0_25px_rgba(0,204,204,0.4)]
-    hover:brightness-110
-    transition
-    flex items-center
-  "
->
-  <Rocket className="w-4 h-4 mr-2" />
-  Get Started
-</Button>
+            {/* DESKTOP MENU */}
+            <div className="hidden md:flex items-center gap-14">
+              {menuItems.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                >
+                  <Link
+                    href={item.href}
+                    className="
+                      text-lg font-medium text-zinc-300 relative
+                      transition-all duration-300
+                      hover:text-[#00ffff]
+                      after:absolute after:left-0 after:-bottom-1
+                      after:h-[2px] after:w-0
+                      after:bg-gradient-to-r after:from-[#00bebe] after:via-[#00cccc] after:to-[#00ffff]
+                      after:transition-all after:duration-300
+                      hover:after:w-full
+                    "
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
+
+              <Button
+                onClick={() =>
+                  window.open(
+                    "https://docs.google.com/forms/d/e/1FAIpQLSdyfNolKePjJbLEF2oqTst0UUfVhBLxNqcEVKzR9akafB4tcg/viewform",
+                    "_blank"
+                  )
+                }
+                className="
+                  px-7 py-6 text-base font-semibold text-white
+                  border border-[#00cccc]/60
+                  bg-gradient-to-b from-[#00bebe] via-[#00cccc] to-[#002222]
+                  shadow-[0_0_25px_rgba(0,204,204,0.4)]
+                  hover:brightness-110
+                  transition
+                  flex items-center
+                "
+              >
+                <Rocket className="w-4 h-4 mr-2" />
+                Get Started
+              </Button>
+            </div>
+
+            {/* ⭐ MOBILE MENU BUTTON (FIXED POSITION) */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-white hover:text-[#00ffff] transition"
+            >
+              {isOpen ? <X size={30} /> : <Menu size={30} />}
+            </button>
 
           </div>
-
-          {/* MOBILE MENU BUTTON */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-3xl text-zinc-200 hover:text-white transition-colors"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
         </div>
       </div>
 
@@ -151,6 +148,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col items-center justify-center h-full gap-10">
+
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
@@ -161,6 +159,29 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+
+              <Button
+                onClick={() => {
+                  setIsOpen(false);
+                  window.open(
+                    "https://docs.google.com/forms/d/e/1FAIpQLSdyfNolKePjJbLEF2oqTst0UUfVhBLxNqcEVKzR9akafB4tcg/viewform",
+                    "_blank"
+                  );
+                }}
+                className="
+                  mt-4 px-8 py-6 text-lg font-semibold text-white
+                  border border-[#00cccc]/60
+                  bg-gradient-to-b from-[#00bebe] via-[#00cccc] to-[#002222]
+                  shadow-[0_0_25px_rgba(0,204,204,0.4)]
+                  hover:brightness-110
+                  transition
+                  flex items-center
+                "
+              >
+                <Rocket className="w-5 h-5 mr-2" />
+                Get Started
+              </Button>
+
             </div>
           </motion.div>
         )}

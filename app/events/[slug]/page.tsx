@@ -1,6 +1,7 @@
 import { eventSlugData } from "@/data/eventSlugData";
 import { nonTechEventSlugData } from "@/data/nonTechEventSlugData";
 import EventLayout from "@/components/eventSlug/EventLayout";
+import { WorkshopSlugData } from "@/data/workshopSlugData";
 
 interface Props {
   params: Promise<{
@@ -15,6 +16,7 @@ export default async function EventSlugPage({ params }: Props) {
   const allEvents = [
     ...eventSlugData,
     ...nonTechEventSlugData,
+    ...WorkshopSlugData
   ];
 
   // ✅ find from both

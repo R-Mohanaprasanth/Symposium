@@ -6,6 +6,8 @@ import EventsMasterSlider from "@/components/event/EventsMasterSlider";
 import Footer from "@/components/Footer";
 import { technicalEvents } from "@/data/events";
 import { nonTechnicalEvents } from "@/data/nonTechnicalEvents";
+import WorkshopHeader from "./WorkshopHeader";
+import { Workshop } from "@/data/workshop";
 
 export default function EventsPage() {
   return (
@@ -42,6 +44,13 @@ export default function EventsPage() {
   events={nonTechnicalEvents}
   sectionId="non-technical-events"
 />
+
+{/* Workshops */}
+{/* <WorkshopHeader />
+<EventsMasterSlider
+  events={Workshop}
+  sectionId="workshop"
+/> */}
         <Footer />
       </div>
     </main>

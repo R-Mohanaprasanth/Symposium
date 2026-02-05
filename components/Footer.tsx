@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Instagram,Youtube,Mail } from "lucide-react";
+import Link from "next/link";
+
 
 const Footer = () => {
 
@@ -66,28 +68,63 @@ const Footer = () => {
           </h4>
 
           <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-zinc-300">
-            {["Home", "Events", "Contact"].map(
-              (item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="
-                      relative inline-block
-                      hover:text-[#01ffff]
-                      transition-colors
-                      after:absolute after:left-0 after:-bottom-1
-                      after:h-px after:w-0
-                      after:bg-[#01ffff]
-                      after:transition-all
-                      hover:after:w-full
-                    "
-                  >
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
-          </ul>
+
+  <li>
+    <Link
+      href="/"
+      className="
+        relative inline-block
+        hover:text-[#01ffff]
+        transition-colors
+        after:absolute after:left-0 after:-bottom-1
+        after:h-px after:w-0
+        after:bg-[#01ffff]
+        after:transition-all
+        hover:after:w-full
+      "
+    >
+      Home
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/events"
+      className="
+        relative inline-block
+        hover:text-[#01ffff]
+        transition-colors
+        after:absolute after:left-0 after:-bottom-1
+        after:h-px after:w-0
+        after:bg-[#01ffff]
+        after:transition-all
+        hover:after:w-full
+      "
+    >
+      Events
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/contact"
+      className="
+        relative inline-block
+        hover:text-[#01ffff]
+        transition-colors
+        after:absolute after:left-0 after:-bottom-1
+        after:h-px after:w-0
+        after:bg-[#01ffff]
+        after:transition-all
+        hover:after:w-full
+      "
+    >
+      Contact
+    </Link>
+  </li>
+
+</ul>
+
         </div>
 
         {/* CONTACT */}
