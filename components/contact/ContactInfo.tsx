@@ -27,120 +27,115 @@ export default function ContactInfo() {
         "
       />
 
-      <div
-        className="
-          relative
-          grid
-          grid-cols-1
-          md:grid-cols-3
-          gap-6 sm:gap-8
-          max-w-6xl
-          w-full
-        "
-      >
-        {/* EMAIL */}
-        <FadeIn delay={0.1}>
-          <div
-            className="
-              rounded-2xl
-              p-6 sm:p-8
-              border border-[#01ffff]/30
-              bg-[#061824]/70
-              backdrop-blur-xl
-              text-center
-              transition
-              hover:border-[#01ffff]
-            "
-          >
-            <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
-              Email
-            </h3>
-            <div className="mt-3">
-<ol className="space-y-2 text-sm sm:text-base text-zinc-200">
-  <li className="flex items-center gap-3">
-    <span className="min-w-[1.25rem] text-cyan-400 font-semibold">
-      1.
-    </span>
-    <span className="tracking-wide">
-      umabrindha2005@gmail.com
-    </span>
-  </li>
-  <li className="flex items-center gap-3">
-    <span className="min-w-[1.25rem] text-cyan-400 font-semibold">
-      2.
-    </span>
-    <span className="tracking-wide">
-      dineshkumar080426@gmail.com
-    </span>
-  </li>
-</ol>
+      <div className="relative max-w-6xl w-full space-y-6 sm:space-y-8">
+        {/* ⭐ COORDINATORS BOX */}
 
-</div>
+        <div
+          className="
+            grid
+            grid-cols-1
+            md:grid-cols-3
+            gap-6 sm:gap-8
+          "
+        >
+          {/* EMAIL */}
+          <FadeIn delay={0.1}>
+            <div className="rounded-2xl p-6 sm:p-8 border border-[#01ffff]/30 bg-[#061824]/70 backdrop-blur-xl text-center transition hover:border-[#01ffff]">
+              <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
+                STAFF COORDINATOR
+              </h3>
 
-          </div>
-        </FadeIn>
+              <ol className="space-y-2 text-sm sm:text-base text-zinc-200">
+                <li className="flex gap-3 justify-left">
+                  <span className="text-cyan-400 font-semibold mt-4">1.</span>
 
-        {/* PHONE */}
-        <FadeIn delay={0.2}>
-          <div
-            className="
-              rounded-2xl
-              p-6 sm:p-8
-              border border-[#01ffff]/30
-              bg-[#061824]/70
-              backdrop-blur-xl
-              text-center
-              transition
-              hover:border-[#01ffff]
-            "
-          >
-            <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
-              Phone
-            </h3>
-            <ol className="space-y-2 text-sm sm:text-base text-zinc-200">
-  <li className="flex items-center gap-3">
-    <span className="min-w-[1.25rem] text-cyan-400 font-semibold">
-      1.
-    </span>
-    <span className="tracking-wide">
-      +91&nbsp;84385&nbsp;00767
-    </span>
-  </li>
-  <li className="flex items-center gap-3">
-    <span className="min-w-[1.25rem] text-cyan-400 font-semibold">
-      2.
-    </span>
-    <span className="tracking-wide">
-      +91&nbsp;63742&nbsp;00660
-    </span>
-  </li>
-</ol>
+                  <div className="flex flex-col mt-4">
+                    <span>MR. K. DINESHKUMAR</span>
+                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-2">
+                      PH +91 97108 45174
+                    </p>
+                  </div>
+                </li>
 
-          </div>
-        </FadeIn>
+                <li className="flex gap-3 justify-left">
+                  <span className="text-cyan-400 font-semibold mt-2">2.</span>
 
-        {/* VENUE */}
-        <FadeIn delay={0.3}>
-          <div
-            className="
-              rounded-2xl
-              p-6 sm:p-8
-              border border-[#01ffff]/30
-              bg-[#061824]/70
-              backdrop-blur-xl
-              text-center
-              transition
-              hover:border-[#01ffff]
-            "
-          >
-            <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
-              Venue
-            </h3>
-            <p className="text-sm sm:text-base text-zinc-300">
-              Velammal Institute of Technology, Chennai
-            </p>
-          </div>
-        </FadeIn>
+                  <div className="flex flex-col mt-2 ">
+                    <span className="mr-7">MRS. J. KIRUPATHY</span>
+                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-3">
+                      PH +91 99529 25525
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </FadeIn>
+
+          {/* PHONE */}
+          <FadeIn delay={0.1}>
+            <div className="rounded-2xl p-6 sm:p-8 border border-[#01ffff]/30 bg-[#061824]/70 backdrop-blur-xl text-center transition hover:border-[#01ffff]">
+              <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
+                PRESIDENT
+              </h3>
+
+              <ol className="space-y-2 text-sm sm:text-base text-zinc-200">
+                <li className="flex gap-3 justify-left">
+                  <span className="text-cyan-400 font-semibold mt-4">1.</span>
+
+                  <div className="flex flex-col mt-4">
+                    <span>MR. K.G. THANUMJESH VARMA</span>
+                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-18">
+                      PH +91 80721 15719
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex gap-3 justify-left">
+                  <span className="text-cyan-400 font-semibold mt-2">2.</span>
+
+                  <div className="flex flex-col mt-2">
+                    <span className="mr-10">MRS. M. MAHESHWARI</span>
+                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-13">
+                      PH +91 83103 39488
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div className="rounded-2xl p-6 sm:p-8 border border-[#01ffff]/30 bg-[#061824]/70 backdrop-blur-xl text-center transition hover:border-[#01ffff]">
+              <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
+                VICE-PRESIDENT
+              </h3>
+
+              <ol className="space-y-2 text-sm sm:text-base text-zinc-200">
+                <li className="flex gap-3 justify-left">
+                  <span className="text-cyan-400 font-semibold mt-4">1.</span>
+
+                  <div className="flex flex-col mt-4">
+                    <span>MR. N. DINESH KUMAR</span>
+                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-4">
+                      PH +91 63742 00660
+                    </p>
+                  </div>
+                </li>
+
+                <li className="flex gap-3 justify-left">
+                  <span className="text-cyan-400 font-semibold mt-1.5">2.</span>
+
+                  <div className="flex flex-col mt-2">
+                    <span>MS. C. UMA MAHESHWARI</span>
+                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-10">
+                      PH +91 84385 00767
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </FadeIn>
+        </div>
       </div>
     </section>
   );

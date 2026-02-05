@@ -40,7 +40,7 @@ export const nonTechnicalEvents = [
 
     slides: [
       {
-        image: "/images/35.png",
+        image: "/images/34.png",
       },
       {
         image: "/images/36.png",

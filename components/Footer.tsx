@@ -1,9 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Instagram, Linkedin, Twitter, Mail } from "lucide-react";
+import { Instagram,Youtube,Mail } from "lucide-react";
 
 const Footer = () => {
+
+  const socialLinks = [
+  {
+    icon: Instagram,
+    link: "https://www.instagram.com/neuronex__2k26?igsh=cHV0aTFwcm5ndHZw",
+  },
+  {
+    icon: Youtube,
+    link: "https://youtube.com/@neuronex2k25?si=SchvsinMtZHQ1cxC",
+  },
+  {
+    icon: Mail,
+    link: "https://mail.google.com/mail/?view=cm&to=neuronex2k26@gmail.com",
+  },
+];
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 40 }}
@@ -50,7 +66,7 @@ const Footer = () => {
           </h4>
 
           <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-zinc-300">
-            {["Home", "Events", "Schedule", "Speakers", "Contact"].map(
+            {["Home", "Events", "Contact"].map(
               (item) => (
                 <li key={item}>
                   <a
@@ -76,35 +92,38 @@ const Footer = () => {
 
         {/* CONTACT */}
         <div className="space-y-4 sm:space-y-5 text-center md:text-left">
-          <h4 className="text-xs sm:text-sm uppercase tracking-widest text-[#01ffff]">
+           <h4 className="text-xs sm:text-sm uppercase tracking-widest text-[#01ffff]">
             Connect
           </h4>
 
-          <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 text-sm sm:text-base text-zinc-300">
+         {/*} <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 text-sm sm:text-base text-zinc-300">
             <Mail className="w-4 h-4 text-[#01ffff]" />
             <span>contact@neuronex2k26.com</span>
-          </div>
+          </div> */}
 
           <div className="flex justify-center md:justify-start gap-3 sm:gap-4 pt-1 sm:pt-2">
-            {[Github, Twitter, Instagram, Linkedin].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="
-                  w-9 h-9 sm:w-10 sm:h-10
-                  rounded-full
-                  border border-[#01ffff]/40
-                  flex items-center justify-center
-                  text-[#01ffff]
-                  hover:bg-[#01ffff]/10
-                  hover:border-[#01ffff]
-                  transition-all
-                "
-              >
-                <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
-              </a>
-            ))}
-          </div>
+  {socialLinks.map(({ icon: Icon, link }, i) => (
+    <a
+      key={i}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        w-9 h-9 sm:w-10 sm:h-10
+        rounded-full
+        border border-white
+        flex items-center justify-center
+        text-[#ffffff]
+        hover:border-[#01ffff]
+        hover:text-[#01ffff]
+        transition-all
+      "
+    >
+      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+    </a>
+  ))}
+</div>
+
         </div>
       </div>
 
