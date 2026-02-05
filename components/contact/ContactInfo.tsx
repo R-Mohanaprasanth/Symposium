@@ -126,7 +126,7 @@ export default function ContactInfo() {
 
       {/* NAME HOVER */}
       <span className="mr-10 transition-colors hover:text-[#01ffff] cursor-pointer">
-        MRS. M. MAHESHWARI
+        MS. M. MAHESHWARI
       </span>
 
       {/* NUMBER HOVER */}

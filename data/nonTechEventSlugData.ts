@@ -14,7 +14,7 @@ The adventure intensifies in the Power Stone round, where the bottom nine teams 
 
     date: "February 25th 2026",
     time: "10:00 AM – 12:30 PM",
-    venue: "3rd Floor, Drawing Hall",
+    venue: "3rd Floor, Drawing Hall, Room No-319",
 
     teamLimit: "Max 3 Members",
 
@@ -47,7 +47,7 @@ What makes Itonaru Sekai unique is its balanced approach—testing not just how 
 
     date: "February 25th 2026",
     time: "10:00 AM – 12:30 PM",
-    venue: "3rd Floor, IT Seminar Hall",
+    venue: "3rd Floor, IT Seminar Hall, Room No-A304",
 
     teamLimit: "Max 2 Members",
 coordinators: [
@@ -110,7 +110,7 @@ As teams progress through each world, they must solve quizzes, decode hidden mes
 
     date: "February 25th 2026",
     time: "10:00 AM – 12:30 PM",
-    venue: "3rd Floor, Mechanical Seminar Hall",
+    venue: "3rd Floor, Mechanical Seminar Hall, Room No-A303",
 
     teamLimit: "Team size 3-4 Members",
 
@@ -143,7 +143,7 @@ What makes Alice in Borderland unique is its focus on mental agility rather than
 
     date: "February 25th 2026",
     time: "10:00 AM – 12:30 PM",
-    venue: "3rd Floor, AI & DS Seminar Hall",
+    venue: "3rd Floor, AI & DS Seminar Hall, Room No-A302",
 
     teamLimit: "4 Members Per Team",
 

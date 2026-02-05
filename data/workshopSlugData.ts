@@ -42,14 +42,14 @@ The event focuses on originality, technical depth, clarity of thought, and prese
 
     date: "February 25th 2026",
     time: "10:00 AM – 12:30 PM",
-    venue: "CAD Lab",
+    venue: "Third Floor, CAD Lab, Room No-A301",
 
     teamLimit: "Team Size - Any",
 
     coordinators: [
       {
         name: "Gopika",
-        phone: "+91 9025979142",
+        phone: "+91 81449 69216",
       },
     ],
 

@@ -22,54 +22,47 @@ const EventsMarquee = ({ events }: EventsMarqueeProps) => {
       <div className="relative">
 
         {/* MARQUEE */}
-        <motion.div
-          className="
-            flex items-center
-            gap-6 sm:gap-10 md:gap-14
-            whitespace-nowrap
-          "
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{
-            duration: 18, // slightly slower → better on mobile
-            ease: "linear",
-            repeat: Infinity,
-          }}
-        >
-          {[...events, ...events].map((event, index) => (
-            <div
-              key={index}
-              className="
-                flex items-center
-                gap-6 sm:gap-10 md:gap-14
-              "
-            >
-              {/* EVENT TEXT */}
-              <span
-                className="
-                  text-sm sm:text-lg md:text-xl lg:text-2xl
-                  font-display font-semibold
-                  uppercase tracking-widest
-                  text-zinc-300
-                  hover:text-[#01ffff]
-                  transition-colors
-                "
-              >
-                {event}
-              </span>
+   <motion.div
+  className="
+    flex items-center
+    gap-6 sm:gap-10 md:gap-14
+    whitespace-nowrap
+    min-w-max
+  "
+  animate={{ x: ["0%", "-50%"] }}
+  transition={{
+    duration: 25,
+    ease: "linear",
+    repeat: Infinity,
+  }}
+>
+  {[...events, ...events].map((event, index) => (
+    <div
+      key={index}
+      className="flex items-center gap-6 sm:gap-10 md:gap-14 shrink-0"
+    >
+      <span className="
+        text-sm sm:text-lg md:text-xl lg:text-2xl
+        font-display font-semibold
+        uppercase tracking-widest
+        text-zinc-300
+        hover:text-[#01ffff]
+        transition-colors
+      ">
+        {event}
+      </span>
 
-              {/* SEPARATOR */}
-              <span
-                className="
-                  text-[#01ffff]/50
-                  text-sm sm:text-lg md:text-xl
-                  select-none
-                "
-              >
-                ◆
-              </span>
-            </div>
-          ))}
-        </motion.div>
+      <span className="
+        text-[#01ffff]/50
+        text-sm sm:text-lg md:text-xl
+        select-none
+      ">
+        ◆
+      </span>
+    </div>
+  ))}
+</motion.div>
+
       </div>
     </section>
   );

@@ -46,7 +46,7 @@ What makes Code & Conquer unique is its balanced approach—testing not just how
 
     date: "February 25th 2026",
     time: "10:00 AM – 12:30 PM",
-    venue: "Third Floor, AI & DS Lab 2",
+    venue: "Third Floor, AI & DS Lab 2, Room No- 325",
 
     teamLimit: "Max 3 Members",
 
@@ -113,7 +113,7 @@ By simulating real-world debugging situations, Bug Slayer offers a practical pla
 
     date: "February 25th 2026",
     time: "10:00 AM – 12:30 PM",
-    venue: "3rd Floor, AI & DS Lab 2",
+    venue: "3rd Floor, AI & DS Lab 2, Room No-325",
 
     teamLimit: "Individual Participations Only",
 
