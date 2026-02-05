@@ -164,7 +164,7 @@ Participants will be given an unseen problem statement and must design low-fidel
   {
     slug: "idea-clash",
 
-    heroImage: "/images/devcon-1.png",
+    heroImage: "/images/ic-4.png",
 
     title: "Idea Clash",
 
@@ -193,7 +193,7 @@ The event emphasizes creativity, problem-solving, teamwork, and practical applic
       },
     ],
 
-    rulesImage: "/images/hackathon/rules.png",
+    rulesImage: "/images/ic-5.png",
   },
   {
     slug: "quizophilia",

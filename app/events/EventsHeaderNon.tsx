@@ -160,7 +160,7 @@ const EventsHeaderNon = () => {
         <div className="pt-4 sm:pt-6">
           <EventsMarquee
             events={[
-              "Infinity Gruantlet",
+              "Infinity Guantlet",
               "Itanoru Sekai",
               "Final Destination",
               "Hawkins Mystery",

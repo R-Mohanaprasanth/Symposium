@@ -92,13 +92,13 @@ export const technicalEvents = [
 
     slides: [
       {
-        image: "/images/devcon-1.png",
+        image: "/images/ic-1.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/ic-2.png",
       },
       {
-        image: "/images/devcon-1.png",
+        image: "/images/ic-3.png",
       },
     ],
   },

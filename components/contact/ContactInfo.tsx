@@ -44,30 +44,50 @@ export default function ContactInfo() {
               <h3 className="text-[#01ffff] text-base sm:text-lg font-semibold mb-2 tracking-wide">
                 STAFF COORDINATOR
               </h3>
+              <ol className="space-y-3 text-sm sm:text-base text-zinc-200">
+  {/* COORDINATOR 1 */}
+  <li className="flex gap-3 justify-start">
+    <span className="text-cyan-400 font-semibold mt-3">1.</span>
 
-              <ol className="space-y-2 text-sm sm:text-base text-zinc-200">
-                <li className="flex gap-3 justify-left">
-                  <span className="text-cyan-400 font-semibold mt-4">1.</span>
+    <div className="flex flex-col mt-3">
+      
+      {/* NAME HOVER */}
+      <span className="transition-colors hover:text-[#01ffff] cursor-pointer mb-2">
+        MR. K. DINESHKUMAR
+      </span>
 
-                  <div className="flex flex-col mt-4">
-                    <span>MR. K. DINESHKUMAR</span>
-                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-2">
-                      PH +91 97108 45174
-                    </p>
-                  </div>
-                </li>
+      {/* NUMBER HOVER */}
+      <div className="group cursor-pointer">
+        <p className="text-sm sm:text-base text-zinc-300 mt-2 transition-colors group-hover:text-[#01ffff]">
+          PH <span className="font-bold">+91 97108 45174</span>
+        </p>
+      </div>
 
-                <li className="flex gap-3 justify-left">
-                  <span className="text-cyan-400 font-semibold mt-2">2.</span>
+    </div>
+  </li>
 
-                  <div className="flex flex-col mt-2 ">
-                    <span className="mr-7">MRS. J. KIRUPATHY</span>
-                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-3">
-                      PH +91 99529 25525
-                    </p>
-                  </div>
-                </li>
-              </ol>
+  {/* COORDINATOR 2 */}
+  <li className="flex gap-3 justify-start">
+    <span className="text-cyan-400 font-semibold mt-2">2.</span>
+
+    <div className="flex flex-col mt-2">
+      
+      {/* NAME HOVER */}
+      <span className="transition-colors hover:text-[#01ffff] cursor-pointer mb-2">
+        MRS. J. KIRUPAVATHY
+      </span>
+
+      {/* NUMBER HOVER */}
+      <div className="group cursor-pointer">
+        <p className="text-sm sm:text-base text-zinc-300 mt-2 transition-colors group-hover:text-[#01ffff]">
+          PH <span className="font-bold">+91 99529 25525</span>
+        </p>
+      </div>
+
+    </div>
+  </li>
+</ol>
+
             </div>
           </FadeIn>
 
@@ -79,28 +99,47 @@ export default function ContactInfo() {
               </h3>
 
               <ol className="space-y-2 text-sm sm:text-base text-zinc-200">
-                <li className="flex gap-3 justify-left">
-                  <span className="text-cyan-400 font-semibold mt-4">1.</span>
+  <li className="flex gap-3 justify-left">
+    <span className="text-cyan-400 font-semibold mt-4">1.</span>
 
-                  <div className="flex flex-col mt-4">
-                    <span>MR. K.G. THANUMJESH VARMA</span>
-                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-18">
-                      PH +91 80721 15719
-                    </p>
-                  </div>
-                </li>
+    <div className="flex flex-col mt-4">
+      
+      {/* NAME HOVER */}
+      <span className="transition-colors hover:text-[#01ffff] cursor-pointer">
+        MR. K.G. THANUMJESH VARMA
+      </span>
 
-                <li className="flex gap-3 justify-left">
-                  <span className="text-cyan-400 font-semibold mt-2">2.</span>
+      {/* NUMBER HOVER */}
+      <div className="group cursor-pointer">
+        <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-18 transition-colors group-hover:text-[#01ffff]">
+          PH <span className="font-bold">+91 80721 15719</span>
+        </p>
+      </div>
 
-                  <div className="flex flex-col mt-2">
-                    <span className="mr-10">MRS. M. MAHESHWARI</span>
-                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-13">
-                      PH +91 83103 39488
-                    </p>
-                  </div>
-                </li>
-              </ol>
+    </div>
+  </li>
+
+  <li className="flex gap-3 justify-left">
+    <span className="text-cyan-400 font-semibold mt-2">2.</span>
+
+    <div className="flex flex-col mt-2">
+
+      {/* NAME HOVER */}
+      <span className="mr-10 transition-colors hover:text-[#01ffff] cursor-pointer">
+        MRS. M. MAHESHWARI
+      </span>
+
+      {/* NUMBER HOVER */}
+      <div className="group cursor-pointer">
+        <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-13 transition-colors group-hover:text-[#01ffff]">
+          PH <span className="font-bold">+91 83103 39488</span>
+        </p>
+      </div>
+
+    </div>
+  </li>
+</ol>
+
             </div>
           </FadeIn>
 
@@ -111,28 +150,43 @@ export default function ContactInfo() {
               </h3>
 
               <ol className="space-y-2 text-sm sm:text-base text-zinc-200">
-                <li className="flex gap-3 justify-left">
-                  <span className="text-cyan-400 font-semibold mt-4">1.</span>
+  <li className="flex gap-3 justify-left">
+    <span className="text-cyan-400 font-semibold mt-4">1.</span>
 
-                  <div className="flex flex-col mt-4">
-                    <span>MR. N. DINESH KUMAR</span>
-                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-4">
-                      PH +91 63742 00660
-                    </p>
-                  </div>
-                </li>
+    <div className="flex flex-col mt-4">
+      {/* NAME HOVER */}
+      <span className="transition-colors hover:text-[#01ffff] cursor-pointer">
+        MR. N. DINESH KUMAR
+      </span>
 
-                <li className="flex gap-3 justify-left">
-                  <span className="text-cyan-400 font-semibold mt-1.5">2.</span>
+      {/* NUMBER HOVER */}
+      <div className="group cursor-pointer">
+        <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-4 transition-colors group-hover:text-[#01ffff]">
+          PH <span className="font-bold">+91 63742 00660</span>
+        </p>
+      </div>
+    </div>
+  </li>
 
-                  <div className="flex flex-col mt-2">
-                    <span>MS. C. UMA MAHESHWARI</span>
-                    <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-10">
-                      PH +91 84385 00767
-                    </p>
-                  </div>
-                </li>
-              </ol>
+  <li className="flex gap-3 justify-left">
+    <span className="text-cyan-400 font-semibold mt-1.5">2.</span>
+
+    <div className="flex flex-col mt-2">
+      {/* NAME HOVER */}
+      <span className="transition-colors hover:text-[#01ffff] cursor-pointer">
+        MS. C. UMA MAHESHWARI
+      </span>
+
+      {/* NUMBER HOVER */}
+      <div className="group cursor-pointer">
+        <p className="text-sm sm:text-base text-zinc-300 mt-4 mr-10 transition-colors group-hover:text-[#01ffff]">
+          PH <span className="font-bold">+91 84385 00767</span>
+        </p>
+      </div>
+    </div>
+  </li>
+</ol>
+
             </div>
           </FadeIn>
         </div>
