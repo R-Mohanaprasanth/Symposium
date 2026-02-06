@@ -273,7 +273,7 @@ const AboutSection = () => {
           </h2>
 
           <div className="mt-6 space-y-3 sm:space-y-6 max-w-xl">
-            <p className="text-sm sm:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               Neuronex 2K26 is an annual technical symposium designed to bring
               together innovation, creativity, and collaboration. It creates a
               platform where students explore real-world events, where they compete,

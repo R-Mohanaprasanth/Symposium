@@ -7,7 +7,7 @@ export const nonTechEventSlugData = [
     title: "Infinity Gauntlet",
 
     description: `
-The Snap has already happened — half the universe is gone, and chaos reigns. Fifteen teams of new Avengers embark on a daring mission: travel back in time to retrieve the six Infinity Stones before Thanos can claim them. Each round represents a journey to a different point in the past, testing strategy, skill, and teamwork. Rounds 1–4 (Space, Reality, Mind, Time) are point-based challenges where all teams compete, gaining strength and experience without any eliminations, preparing for the high-stakes battles ahead.
+Infinity Guantler – The Snap has already happened — half the universe is gone, and chaos reigns. Fifteen teams of new Avengers embark on a daring mission: travel back in time to retrieve the six Infinity Stones before Thanos can claim them. Each round represents a journey to a different point in the past, testing strategy, skill, and teamwork. Rounds 1–4 (Space, Reality, Mind, Time) are point-based challenges where all teams compete, gaining strength and experience without any eliminations, preparing for the high-stakes battles ahead.
 
 The adventure intensifies in the Power Stone round, where the bottom nine teams are snapped out, leaving six survivors to continue. In the Soul Stone challenge, each team must make a strategic sacrifice — a member sits out— shaping the outcome of the final round. Finally, in Endgame, the surviving six teams face chaos, dice-based twists, and unpredictable challenges as they race to collect all stones and defeat Thanos. Only one team will rise as the Infinity Champion, saving the universe and mastering the fate of the Infinity Stones.
 `,
@@ -71,7 +71,7 @@ coordinators: [
     title: "Final Destination",
 
     description: `
-FINAL DESTINATION -Final Destination is an immersive murder mystery event designed to challenge participants across multiple dimensions of analytical thinking and psychological reasoning. The event blends investigation, observation, and logical deduction into a structured experience that mirrors real-world crime analysis and decision-making under pressure. Through a sequence of carefully designed rounds, participants are encouraged to collaborate, analyze complex clues, and connect fragmented information within a time-bound environment.
+Final Destination is an immersive murder mystery event designed to challenge participants across multiple dimensions of analytical thinking and psychological reasoning. The event blends investigation, observation, and logical deduction into a structured experience that mirrors real-world crime analysis and decision-making under pressure. Through a sequence of carefully designed rounds, participants are encouraged to collaborate, analyze complex clues, and connect fragmented information within a time-bound environment.
 
 What sets Final Destination apart is its progressive, point-based format that emphasizes accuracy, reasoning, and teamwork rather than elimination. From decoding confidential case files to interpreting layered visual evidence and finally examining a live crime scene setup, each stage deepens the investigative experience. By evaluating teams on logical consistency, attention to detail, and problem-solving approach, the event provides an engaging platform where strategy, observation, and critical thinking lead participants closer to the truth.
 `,
@@ -136,7 +136,7 @@ As teams progress through each world, they must solve quizzes, decode hidden mes
     subtitle: "Neuronex Technical Fest",
 
     description: `
-ALICE IN BORDERLAND – is a thrilling non-technical event designed to test participants’ presence of mind, logical thinking, creativity, and teamwork under high-pressure game scenarios. Inspired by survival-style challenges, the event pushes participants to think strategically, make quick decisions, and work together to overcome each stage of the game.
+ALICE IN BORDERLAND is a thrilling non-technical event designed to test participants’ presence of mind, logical thinking, creativity, and teamwork under high-pressure game scenarios. Inspired by survival-style challenges, the event pushes participants to think strategically, make quick decisions, and work together to overcome each stage of the game.
 
 What makes Alice in Borderland unique is its focus on mental agility rather than technical knowledge. Through a series of engaging and interactive rounds, participants face puzzles, performance-based tasks, and elimination challenges that demand sharp reasoning, coordination, and adaptability. Time management, communication, and smart decision-making play a crucial role in survival.
 `,

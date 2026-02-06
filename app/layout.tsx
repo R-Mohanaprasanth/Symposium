@@ -35,6 +35,8 @@ export default function RootLayout({
 
         {/* PAGE CONTENT */}
         {children}
+
+        <div id="hover-root" />
       </body>
     </html>
   );

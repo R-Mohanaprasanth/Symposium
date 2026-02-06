@@ -5,13 +5,13 @@ export const Workshop = [
 
     slides: [
       {
-        image: "/images/1.png",
+        image: "/images/71.png",
       },
       {
-        image: "/images/2.png",
+        image: "/images/72.png",
       },
       {
-        image: "/images/3.png",
+        image: "/images/73.png",
       },
     ],
   },
@@ -21,13 +21,13 @@ export const Workshop = [
 
     slides: [
       {
-        image: "/images/1.png",
+        image: "/images/76.png",
       },
       {
-        image: "/images/2.png",
+        image: "/images/77.png",
       },
       {
-        image: "/images/3.png",
+        image: "/images/78.png",
       },
     ],
   },

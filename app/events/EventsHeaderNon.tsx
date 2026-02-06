@@ -164,7 +164,7 @@ const EventsHeaderNon = () => {
               "Itanoru Sekai",
               "Final Destination",
               "Hawkins Mystery",
-              "Alice In Brdland",
+              "Alice In Borderland",
               "Campus Chaos",
               "Music Mania",
               "Miniout Circle",

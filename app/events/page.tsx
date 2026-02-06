@@ -11,7 +11,7 @@ import { Workshop } from "@/data/workshop";
 
 export default function EventsPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative min-h-screen overflow-visible">
 
       {/* BACKGROUND IMAGE */}
       <div
@@ -46,11 +46,11 @@ export default function EventsPage() {
 />
 
 {/* Workshops */}
-{/* <WorkshopHeader />
+<WorkshopHeader />
 <EventsMasterSlider
   events={Workshop}
   sectionId="workshop"
-/> */}
+/>
         <Footer />
       </div>
     </main>

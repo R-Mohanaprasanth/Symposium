@@ -169,11 +169,9 @@ Participants will be given an unseen problem statement and must design low-fidel
     title: "Idea Clash",
 
     description: `
-AI Hackathon 2026 is a 48-hour innovation challenge conducted as part of Neuronex Technical Fest.
+Idea Clash is a creativity and entrepreneurship competition where participants transform everyday products into compelling business ideas. Teams will work with one of four common product categories—*shampoo, toothpaste, home appliances, or mobile devices*—and reimagine them through innovation, design, and strategic thinking. The challenge lies in taking something ordinary and turning it into a product or brand with strong market appeal.
 
-Participants collaborate in teams to design and develop AI-powered solutions for real-world problem statements under strict time constraints.
-
-The event emphasizes creativity, problem-solving, teamwork, and practical application of artificial intelligence technologies.
+Participants must present a *video advertisement, poster advertisement, website frontend, and a business pitch*, all prepared in advance. Shortlisted teams will face a high-pressure challenge round where judges introduce real-time business scenarios, requiring teams to defend, sell, or secure investment for their idea. Idea Clash tests creativity, entrepreneurship, communication, and the ability to think on your feet—just like the real business world.
 `,
 
     date: "February 25th 2026",

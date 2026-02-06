@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Instagram,Youtube,Mail } from "lucide-react";
 import Link from "next/link";
+import DeveloperHoverCard from "@/components/DeveloperHoverCard";
+
 
 
 const Footer = () => {
@@ -165,28 +167,46 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="relative border-t border-[#01ffff]/20">
+      <div className="relative border-t border-[#01ffff]/20 overflow-visible">
+
         <div
-          className="
-            max-w-7xl
-            mx-auto
-            px-4 sm:px-6
-            py-4 sm:py-6
-            flex
-            flex-col
-            md:flex-row
-            items-center
-            justify-between
-            gap-2 sm:gap-4
-            text-xs sm:text-sm
-            text-zinc-400
-            text-center md:text-left
-          "
-        >
-          <span>© 2026 NEURONEX. All rights reserved.</span>
+  className="
+    relative
+    overflow-visible
+    max-w-7xl
+    mx-auto
+    px-4 sm:px-6
+    py-4 sm:py-6
+    flex
+    flex-col
+    md:flex-row
+    items-center
+    justify-between
+    gap-2 sm:gap-4
+    text-xs sm:text-sm
+    text-zinc-400
+    text-center md:text-left
+  "
+>
+
+          <span>
+  © 2026 NEURONEX.{" "}
+  <span className="
+    text-[#01ffff]
+    tracking-wide
+    hover:drop-shadow-[0_0_6px_rgba(1,255,255,0.8)]
+  ">
+    Dream. Disrupt. Dominate.
+  </span>
+</span>
+
+
           <span className="text-zinc-500">
-            Crafted with passion for innovation
-          </span>
+  Designed & Developed by{" "}
+  <DeveloperHoverCard />
+
+</span>
+
         </div>
       </div>
     </motion.footer>
