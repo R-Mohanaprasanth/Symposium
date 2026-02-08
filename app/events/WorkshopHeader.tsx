@@ -32,7 +32,12 @@ const EventsHeaderNon = () => {
         "
       />
 
-      <div
+      {/* CONTENT */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
         className="
           relative
           max-w-5xl
@@ -42,8 +47,14 @@ const EventsHeaderNon = () => {
         "
       >
         {/* BADGE */}
-        <motion.div className="relative inline-block overflow-hidden rounded-md">
-          {/* base mild border */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="relative inline-block overflow-hidden rounded-md"
+        >
+          {/* base border */}
           <div
             className="absolute inset-0 rounded-md pointer-events-none"
             style={{
@@ -61,17 +72,6 @@ const EventsHeaderNon = () => {
             className="absolute inset-0 rounded-md pointer-events-none"
             style={{
               padding: "3px",
-              background: `
-                conic-gradient(
-                  from 0deg,
-                  #1edddd 0deg,
-                  #15dedee4 40deg,
-                  #01ffff 60deg,
-                  #25a3a3 80deg,
-                  #22bdbde3 100deg,
-                  #22ebeb9a 360deg
-                )
-              `,
               WebkitMask:
                 "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
               WebkitMaskComposite: "xor",
@@ -100,7 +100,6 @@ const EventsHeaderNon = () => {
             }}
           />
 
-          {/* CONTENT */}
           <span
             className="
               relative z-10
@@ -124,25 +123,41 @@ const EventsHeaderNon = () => {
           className="
             text-3xl sm:text-4xl md:text-5xl
             font-bold
-            font-display
             leading-tight
             text-white
           "
         >
           Upcoming{" "}
-          <span
+          <motion.span
             className="
-              bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
+              inline-block
+              bg-gradient-to-r
+              from-[#01ffff]
+              via-[#7ffdfd]
+              to-white
+              bg-[length:200%_100%]
               bg-clip-text
               text-transparent
             "
+            animate={{
+              backgroundPosition: ["0% 50%", "100% 50%"],
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+            }}
           >
             Workshops
-          </span>
+          </motion.span>
         </h2>
 
         {/* DESCRIPTION */}
-        <p
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.25, duration: 0.6, ease: "easeOut" }}
           className="
             text-sm sm:text-base md:text-lg
             text-zinc-300
@@ -151,19 +166,27 @@ const EventsHeaderNon = () => {
             leading-relaxed
           "
         >
-          Participate, learn, and grow through hands-on training, expert guidance, practical demonstrations, and immersive learning experiences designed to build real-world technical skills.
-        </p>
+          Participate, learn, and grow through hands-on training, expert guidance,
+          practical demonstrations, and immersive learning experiences designed
+          to build real-world technical skills.
+        </motion.p>
 
         {/* MARQUEE */}
-        <div className="pt-4 sm:pt-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.45, duration: 0.5 }}
+          className="pt-4 sm:pt-6"
+        >
           <EventsMarquee
             events={[
               "N8N-AI AUTOMATION",
               "EMERGENT.AI",
             ]}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

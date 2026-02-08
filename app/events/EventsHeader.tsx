@@ -11,11 +11,10 @@ const EventsHeader = () => {
         px-12 sm:px-6
         pt-34 sm:pt-32 md:pt-36
         pb-16 sm:pb-20 md:pb-24
-
         overflow-hidden
       "
     >
-      {/* BACKGROUND ACCENT */}
+      {/* BACKGROUND ACCENTS */}
       <div
         className="
           absolute
@@ -44,7 +43,12 @@ const EventsHeader = () => {
         "
       />
 
-      <div
+      {/* CONTENT */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
         className="
           relative
           max-w-5xl
@@ -55,8 +59,14 @@ const EventsHeader = () => {
         "
       >
         {/* BADGE */}
-        <motion.div className="relative inline-block overflow-hidden rounded-md">
-          {/* base mild border */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="relative inline-block overflow-hidden rounded-md"
+        >
+          {/* Base border */}
           <div
             className="absolute inset-0 rounded-md pointer-events-none"
             style={{
@@ -69,22 +79,11 @@ const EventsHeader = () => {
             }}
           />
 
-          {/* rotating glow */}
+          {/* Rotating glow */}
           <motion.div
             className="absolute inset-0 rounded-md pointer-events-none"
             style={{
               padding: "3px",
-              background: `
-                conic-gradient(
-                  from 0deg,
-                  #1edddd 0deg,
-                  #15dedee4 40deg,
-                  #01ffff 60deg,
-                  #25a3a3 80deg,
-                  #22bdbde3 100deg,
-                  #22ebeb9a 360deg
-                )
-              `,
               WebkitMask:
                 "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
               WebkitMaskComposite: "xor",
@@ -94,15 +93,15 @@ const EventsHeader = () => {
               backgroundImage: [
                 `conic-gradient(
                   from 0deg,
-                  rgba(1,255,255,0.15) 0deg,
+                  rgba(1,255,255,0.2) 0deg,
                   rgba(1,255,255,1) 60deg,
-                  rgba(1,255,255,0.15) 360deg
+                  rgba(1,255,255,0.2) 360deg
                 )`,
                 `conic-gradient(
                   from 360deg,
-                  rgba(1,255,255,0.15) 0deg,
+                  rgba(1,255,255,0.2) 0deg,
                   rgba(1,255,255,1) 60deg,
-                  rgba(1,255,255,0.15) 360deg
+                  rgba(1,255,255,0.2) 360deg
                 )`,
               ],
             }}
@@ -113,7 +112,6 @@ const EventsHeader = () => {
             }}
           />
 
-          {/* CONTENT */}
           <span
             className="
               relative z-10
@@ -137,25 +135,41 @@ const EventsHeader = () => {
           className="
             text-3xl sm:text-4xl md:text-5xl
             font-bold
-            font-display
             leading-tight
             text-white
           "
         >
           Upcoming{" "}
-          <span
+          <motion.span
             className="
-              bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
+              inline-block
+              bg-gradient-to-r
+              from-[#01ffff]
+              via-[#7ffdfd]
+              to-white
+              bg-[length:200%_100%]
               bg-clip-text
               text-transparent
             "
+            animate={{
+              backgroundPosition: ["0% 50%", "100% 50%"],
+            }}
+            transition={{
+              duration: 6,
+              ease: "linear",
+              repeat: Infinity,
+            }}
           >
             Tech Events
-          </span>
+          </motion.span>
         </h2>
 
         {/* SUBTEXT */}
-        <p
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.25, duration: 0.6, ease: "easeOut" }}
           className="
             text-sm sm:text-base md:text-lg
             text-zinc-300
@@ -164,11 +178,18 @@ const EventsHeader = () => {
             leading-relaxed
           "
         >
-          Discover and register for the most exciting and innovation summits happening this season in Neuronex.
-        </p>
+          Discover and register for the most exciting and innovation summits
+          happening this season in Neuronex.
+        </motion.p>
 
         {/* MARQUEE */}
-        <div className="pt-4 sm:pt-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.45, duration: 0.5 }}
+          className="pt-4 sm:pt-6"
+        >
           <EventsMarquee
             events={[
               "Paper Verse",
@@ -180,8 +201,8 @@ const EventsHeader = () => {
               "Quizophilia",
             ]}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

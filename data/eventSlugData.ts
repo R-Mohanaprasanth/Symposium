@@ -7,7 +7,7 @@ export const eventSlugData = [
     title: "Paper Verse",
 
     description: `
-PAPERVERSE  is a technical paper presentation event that offers students a platform to present their innovative ideas, research concepts, and technology-driven solutions. It encourages participants to explore emerging domains such as Artificial Intelligence, Machine Learning, Robotics, Healthcare, Education Technology, Blockchain, AR/VR, and more. Through this event, students can convert their ideas into structured technical papers and showcase them in a professional presentation format before judges and peers.
+PAPERVERSE is a technical paper presentation event that offers students a platform to present their innovative ideas, research concepts, and technology-driven solutions. It encourages participants to explore emerging domains such as Artificial Intelligence, Machine Learning, Robotics, Healthcare, Education Technology, Blockchain, AR/VR, and more. Through this event, students can convert their ideas into structured technical papers and showcase them in a professional presentation format before judges and peers.
 
 The event focuses on originality, technical depth, clarity of thought, and presentation skills. Participants are required to submit an abstract, and shortlisted teams will present their work during the event. PaperVerse helps students strengthen their research mindset, communication ability, and confidence while gaining valuable exposure and feedback from evaluators. It serves as a knowledge-sharing stage for future innovators and problem solvers.
 `,
@@ -73,7 +73,7 @@ What makes Code & Conquer unique is its balanced approach—testing not just how
 
 
     description: `
-MINDCACHE - MindCache is a exciting technical event that tests participants memory, observation skills, and technical knowledge. Designed to challenge the brain under time pressure. The event combines visual recall, coding logic, and quick thinking through multiple engaging rounds.
+MindCache is a exciting technical event that tests participants memory, observation skills, and technical knowledge. Designed to challenge the brain under time pressure. The event combines visual recall, coding logic, and quick thinking through multiple engaging rounds.
 
 The Event includes Logo Identification, Jumbled Code, and a final Tech Quiz buzzer round. Teams must accurately recall logos, reorder code with correct syntax and answer technical questions swiftly. MindCache rewards precision, speed, and strong technical fundamentals, making it an exciting event for tech enthusiasts.
 `,

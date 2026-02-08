@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
-import VerticalEventMarquee from "@/components/VerticalEventMarquee";
+
+import BootLayout from "@/components/BootLayout";
 
 export const metadata = {
   title: "Neuronex 2K26",
@@ -29,15 +28,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#020b13]`}
       >
-        {/* GLOBAL UI */}
-        <Navbar />
-        <VerticalEventMarquee />
-
-        {/* PAGE CONTENT */}
-        {children}
-
-        <div id="hover-root" />
+        <BootLayout>{children}</BootLayout>
       </body>
     </html>
-  );
+  ); 
 }
