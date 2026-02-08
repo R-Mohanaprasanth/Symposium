@@ -165,7 +165,6 @@ const EventsHeaderNon = () => {
               "Final Destination",
               "Hawkins Mystery",
               "Alice In Borderland",
-              "Campus Chaos",
               "Music Mania",
               "Miniout Circle",
             ]}

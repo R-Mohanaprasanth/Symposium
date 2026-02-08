@@ -23,6 +23,10 @@ The workshop also explores AI automation using n8n, where participants will inte
         name: "Dhanush Kumar",
         phone: "+91 90435 62216",
       },
+      {
+        name: "Hari Hara Subramanian",
+        phone: "+91 63821 82076",
+      },
     ],
 
     rulesImage: "/images/75.png",

@@ -21,7 +21,7 @@ export default function EventsMasterSlider({
 
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % events.length);
-    }, 8000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [isPaused, events.length]);
@@ -48,7 +48,7 @@ export default function EventsMasterSlider({
           initial={{ x: 500, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -500, opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
           className="w-full flex justify-center"
         >
           <EventSection {...events[index]} />

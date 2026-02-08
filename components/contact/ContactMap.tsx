@@ -57,7 +57,7 @@ export default function ContactMap() {
               text-transparent
             "
           >
-            Event Location
+            Event Location - Velammal Institute of Technology
           </h2>
 
           {/* MAP */}

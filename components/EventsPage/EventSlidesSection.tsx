@@ -5,29 +5,23 @@ import EventCard from "@/components/EventCard";
 
 interface Slide {
   image: string;
- 
 }
 
 interface Props {
   slug: string;
   eventHeading: string;
-  
+
   slides: Slide[];
 }
 
-export default function EventSection({
-  slug,
-  eventHeading,
-  slides,
-}: Props) {
+export default function EventSection({ slug, eventHeading, slides }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const isMobile =
-  typeof window !== "undefined" && window.innerWidth < 640;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
 
   return (
-   <section
-  className="
+    <section
+      className="
     relative
     min-h-screen
     overflow-visible
@@ -35,52 +29,18 @@ export default function EventSection({
     px-4 sm:px-8 md:px-24
     pt-24
   "
->
-
-
-      {/* EVENT HEADING */}
-   {/* <h2 className="absolute top-12 left-0 -mt-10 text-2xl md:text-4xl font-bold tracking-wide leading-tight">
-   <span
-    className="
-      block
-      text-sm md:text-base
-      uppercase
-      tracking-[0.35em]
-      text-white/60
-      mb-2
-    "
-  >
-    {eventHeading.split(" ")[0]}
-  </span>{" "}
-<span
-   className="
-     bg-gradient-to-r from-[#01ffff] via-[#7ffdfd] to-white
-    bg-clip-text
-    text-transparent
-  "
->
-
-  {eventHeading.split(" ").slice(1).join(" ")}
-</span>
-
-</h2> */}
-
-<div
-  className="
+    >
+      <div
+        className="
     absolute top-12 -mt-10
     left-1/2 -translate-x-1/2
     w-full
     px-4
     md:left-0 md:translate-x-0 md:px-0
   "
->
-
-
-
- 
-
-<h2
-  className="
+      >
+        <h2
+          className="
     text-center md:text-left
     text-3xl md:text-5xl lg:text-5xl
     font-extrabold
@@ -98,15 +58,12 @@ export default function EventSection({
 
     drop-shadow-[0_6px_25px_rgba(1,255,255,0.35)]
   "
->
-  {eventHeading}
-</h2>
+        >
+          {eventHeading}
+        </h2>
 
-
-
-
-  {/* CLEAN UNDERLINE */}
-  {/* <div
+        {/* CLEAN UNDERLINE */}
+        {/* <div
   className="
     h-[3px]
     w-60 sm:w-full
@@ -118,60 +75,47 @@ export default function EventSection({
     rounded-full
   "
 /> */}
-</div>
+      </div>
 
+      <div className="flex justify-center -mt-10">
+        <div className="relative w-[900px] h-[490px] sm:w-[900px] sm:h-[540px] w-[320px] h-[440px] flex items-center justify-center">
+          {slides.map((slide, index) => {
+            let offset = index - activeIndex;
 
+            // 🔁 LOOP LOGIC
+            if (offset < -1) offset += slides.length;
+            if (offset > 1) offset -= slides.length;
 
+            const isCenter = offset === 0;
 
-
-    <div className="flex justify-center -mt-10">
-      <div className="relative w-[900px] h-[490px] sm:w-[900px] sm:h-[540px] w-[320px] h-[440px] flex items-center justify-center">
-
-        {slides.map((slide, index) => {
-          let offset = index - activeIndex;
-
-          // 🔁 LOOP LOGIC
-          if (offset < -1) offset += slides.length;
-          if (offset > 1) offset -= slides.length;
-
-          const isCenter = offset === 0;
-
-          return (
-            <div
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className="absolute transition-all duration-700 ease-in-out cursor-pointer"
-              style={{
-                transform: `
-  ${
-    isMobile
-      ? `translateY(${offset * 90}px)`
-      : `translateX(${offset * 300}px)`
-  }
-  scale(${isCenter ? (isMobile ? 0.9 : 1) : (isMobile ? 0.78 : 0.88)})
+            return (
+              <div
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className="absolute transition-all duration-700 ease-in-out cursor-pointer"
+                style={{
+                  transform: `
+  ${isMobile ? `translateY(${offset * 90}px)` : `translateX(${offset * 300}px)`}
+  scale(${isCenter ? (isMobile ? 0.9 : 1) : isMobile ? 0.78 : 0.88})
   ${isMobile ? "scaleX(0.85)" : ""}
 `,
 
-                opacity: isCenter ? 1 : isMobile ? 0.9 : 1,
+                  opacity: isCenter ? 1 : isMobile ? 0.9 : 1,
 
-zIndex: isCenter ? 20 : 10,
-filter: isCenter
-  ? "none"
-  : "blur(1px) brightness(0.9)",
-
-              }}
-            >
-              <EventCard
-                slug={slug}              
-                image={slide.image}
-                
-                isActive={isCenter}
-              />
-            </div>
-          );
-        })}
+                  zIndex: isCenter ? 20 : 10,
+                  filter: isCenter ? "none" : "blur(1px) brightness(0.9)",
+                }}
+              >
+                <EventCard
+                  slug={slug}
+                  image={slide.image}
+                  isActive={isCenter}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
     </section>
   );
 }
