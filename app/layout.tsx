@@ -6,7 +6,11 @@ import BootLayout from "@/components/BootLayout";
 export const metadata = {
   title: "Neuronex 2K26",
   description: "National Level Technical Symposium",
+  icons: {
+    icon: "/images/logo.png",
+  },
 };
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
