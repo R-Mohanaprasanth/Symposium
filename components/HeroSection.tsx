@@ -223,17 +223,24 @@ animate={{
               size="lg"
            className="
   px-7 sm:px-8 py-6 text-base sm:text-lg
-  text-white font-semibold
+  text-white font-semibold tracking-wide
   border border-[#00bebe]
   rounded-md
+
   bg-gradient-to-b
   from-[#00e5e5]
   via-[#00bebe]
   to-[#002222]
   backdrop-blur-md
-  hover:brightness-110
-  transition
+
+  hover:bg-[#01ffff]/25
+  hover:bg-none
+  hover:border-[#01ffff]
+  hover:backdrop-blur-sm
+
+  transition-all duration-300 ease-out
 "
+
 
 
 
@@ -248,15 +255,25 @@ animate={{
     size="lg"
     variant="outline"
     className="
-      px-5 sm:px-8 py-6 text-base sm:text-lg
-      text-white font-semibold tracking-wide
-      border border-[#01ffff]
-      bg-[#01ffff]/15
-      backdrop-blur-sm
-      rounded-md
-      hover:bg-[#01ffff]/25
-      transition
-    "
+  px-5 sm:px-8 py-6 text-base sm:text-lg
+  text-white font-semibold tracking-wide
+  border border-[#01ffff]
+  rounded-md
+
+  bg-[#01ffff]/15
+  backdrop-blur-sm
+
+  hover:bg-gradient-to-b
+  hover:from-[#00e5e5]
+  hover:via-[#00bebe]
+  hover:to-[#002222]
+  hover:text-white
+  hover:border-[#00bebe]
+  hover:backdrop-blur-md
+
+  transition-all duration-300 ease-out
+"
+
   >
     <Play className="w-5 h-5 mr-2" />
     Non-Tech Events 
