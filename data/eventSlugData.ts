@@ -21,11 +21,11 @@ The event focuses on originality, technical depth, clarity of thought, and prese
     coordinators: [
       {
         name: "Midhun",
-        phone: "+91 9025979142",
+        phone: "+91 90259 79142",
       },
       {
         name: "Jayshree",
-        phone: "+91 9361271794",
+        phone: "+91 93612 71794",
       },
     ],
 
@@ -53,12 +53,12 @@ What makes Code & Conquer unique is its balanced approach—testing not just how
     coordinators: [
       {
         name: "Rupesh",
-        phone: "+91 7200799210"
+        phone: "+91 72007 99210"
 ,
       },
       {
         name: "V. Likhitha",
-        phone: "+91 9515784929",
+        phone: "+91 95157 84929",
       },
     ],
 
@@ -120,7 +120,7 @@ By simulating real-world debugging situations, Bug Slayer offers a practical pla
     coordinators: [
       {
         name: "Karthik",
-        phone: "+91 9014507152",
+        phone: "+91 90145 07152",
       },
       {
         name: "Kannapan",
@@ -183,11 +183,11 @@ Participants must present a *video advertisement, poster advertisement, website 
     coordinators: [
       {
         name: "Subhasree",
-        phone: "+91 9043681876",
+        phone: "+91 90436 81876",
       },
       {
         name: "Nadheem",
-        phone: "+91 7305402353",
+        phone: "+91 73054 02353",
       },
     ],
 
@@ -215,11 +215,11 @@ The competition unfolds across three exciting rounds, starting with a screening 
     coordinators: [
       {
         name: "Suchithra",
-        phone: "+91 9100872996",
+        phone: "+91 63058 60476",
       },
       {
-        name: "Shashank",
-        phone: "+91 7382144723",
+        name: "Sasank",
+        phone: "+91 73821 44723",
       },
     ],
     rulesImage: "/images/53.png",

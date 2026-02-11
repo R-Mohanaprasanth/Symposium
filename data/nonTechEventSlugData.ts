@@ -85,7 +85,7 @@ What sets Final Destination apart is its progressive, point-based format that em
     coordinators: [
       {
         name: "Divyalakshmi",
-        phone: "+91 9940277756",
+        phone: "+91 99402 77756",
       },
       {
         name: "Kamesh",
