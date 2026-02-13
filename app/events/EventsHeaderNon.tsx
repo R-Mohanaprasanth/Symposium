@@ -183,10 +183,10 @@ const EventsHeaderNon = () => {
             events={[
               "Infinity Guantlet",
               "Itanoru Sekai",
+              "Music Mania",
               "Final Destination",
               "Hawkins Mystery",
               "Alice In Borderland",
-              "Music Mania",
               "Miniout Circle",
             ]}
           />
