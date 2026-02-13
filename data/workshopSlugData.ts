@@ -55,6 +55,10 @@ Participants will gain hands-on experience working with AI models, prompt engine
         name: "Gopika",
         phone: "+91 81449 69216",
       },
+      {
+        name: "Aparna",
+        phone: "+91 81449 69216",
+      },
     ],
 
     rulesImage: "/images/80.png",
