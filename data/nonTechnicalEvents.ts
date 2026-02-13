@@ -33,6 +33,25 @@ export const nonTechnicalEvents = [
       },
     ],
   },
+
+  {
+    slug: "music-mania",
+
+    eventHeading: "Music Mania",
+
+    slides: [
+      {
+        image: "/images/31.png",
+      },
+      {
+        image: "/images/32.png",
+      },
+      {
+        image: "/images/33.png",
+      },
+    ],
+  },
+
   {
     slug: "final-destination",
 
@@ -84,23 +103,7 @@ export const nonTechnicalEvents = [
       },
     ],
   },
-  {
-    slug: "music-mania",
-
-    eventHeading: "Music Mania",
-
-    slides: [
-      {
-        image: "/images/31.png",
-      },
-      {
-        image: "/images/32.png",
-      },
-      {
-        image: "/images/33.png",
-      },
-    ],
-  },
+  
   {
     slug: "miniout-circle",
 

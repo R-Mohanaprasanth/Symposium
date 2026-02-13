@@ -63,6 +63,40 @@ coordinators: [
 
     rulesImage: "/images/is-5.png",
   },
+
+  {
+    slug: "music-mania",
+
+    heroImage: "/images/29.png",
+
+    title: "Music Mania",
+
+
+    description: `
+Music Mania is a high-energy musical event crafted to challenge your instincts, awareness, and passion for music. Designed as a multi-round experience, the event blends excitement, creativity, and unpredictability, keeping participants engaged from start to finish. Each stage raises the intensity, making every moment thrilling and competitive.
+
+With a perfect mix of nostalgia and modern vibes, Music Mania brings together teamwork, quick thinking, and a deep connection to music. Expect surprises, twists, and moments that test how well you truly understand sound and rhythm. Step in ready for an unforgettable experience—because the real magic unfolds only on stage.
+`,
+
+    date: "February 25th 2026",
+    time: "10:00 AM – 12:30 PM",
+    venue: "3rd Floor, Room No-316",
+
+    teamLimit: "3 Members Per Team",
+
+    coordinators: [
+      {
+        name: "Mohanaprasanth",
+        phone: "+91 63810 26784",
+      },
+      {
+        name: "Jane Charusha",
+        phone: "+91 94452 18575",
+      },
+    ],
+
+    rulesImage: "/images/30.png",
+  },
   {
     slug: "final-destination",
 
@@ -160,40 +194,7 @@ What makes Alice in Borderland unique is its focus on mental agility rather than
 
     rulesImage: "/images/ab-5.png",
   },
-  
-  {
-    slug: "music-mania",
 
-    heroImage: "/images/29.png",
-
-    title: "Music Mania",
-
-
-    description: `
-Music Mania is a high-energy musical event crafted to challenge your instincts, awareness, and passion for music. Designed as a multi-round experience, the event blends excitement, creativity, and unpredictability, keeping participants engaged from start to finish. Each stage raises the intensity, making every moment thrilling and competitive.
-
-With a perfect mix of nostalgia and modern vibes, Music Mania brings together teamwork, quick thinking, and a deep connection to music. Expect surprises, twists, and moments that test how well you truly understand sound and rhythm. Step in ready for an unforgettable experience—because the real magic unfolds only on stage.
-`,
-
-    date: "February 25th 2026",
-    time: "10:00 AM – 12:30 PM",
-    venue: "3rd Floor, Room No-316",
-
-    teamLimit: "3 Members Per Team",
-
-    coordinators: [
-      {
-        name: "Mohanaprasanth",
-        phone: "+91 63810 26784",
-      },
-      {
-        name: "Jane Charusha",
-        phone: "+91 94452 18575",
-      },
-    ],
-
-    rulesImage: "/images/30.png",
-  },
   {
     slug: "miniout-circle",
 
