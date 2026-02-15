@@ -99,7 +99,7 @@ The Event includes Logo Identification, Jumbled Code, and a final Tech Quiz buzz
   {
     slug: "bug-slayer",
 
-    heroImage: "/images/bs-1.png",
+    heroImage: "/images/bug.png",
 
     title: "Bug Slayer",
 
