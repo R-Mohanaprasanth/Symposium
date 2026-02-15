@@ -34,7 +34,7 @@ The event focuses on originality, technical depth, clarity of thought, and prese
 
   {
     slug: "code-conquer",
-    heroImage: "/images/8.png",
+    heroImage: "/images/code.png",
 
     title: "Code & Conquer",
 
