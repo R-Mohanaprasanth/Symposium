@@ -53,8 +53,7 @@ What makes Code & Conquer unique is its balanced approach—testing not just how
     coordinators: [
       {
         name: "Rupesh",
-        phone: "+91 72007 99210"
-,
+        phone: "+91 91008 72996",
       },
       {
         name: "V. Likhitha",
