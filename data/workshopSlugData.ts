@@ -57,7 +57,7 @@ Participants will gain hands-on experience working with AI models, prompt engine
       },
       {
         name: "Aparna",
-        phone: "+91 81449 69216",
+        phone: "+91 99623 75524",
       },
     ],
 
