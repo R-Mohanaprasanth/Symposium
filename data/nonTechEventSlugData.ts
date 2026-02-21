@@ -20,6 +20,10 @@ The adventure intensifies in the Power Stone round, where the bottom nine teams 
 
     coordinators: [
       {
+        name: "Brindha",
+        phone: "+91 63831 59834",
+      },
+      {
         name: "P.M. Roshini",
         phone: "+91 99402 77756",
       },
@@ -51,6 +55,10 @@ What makes Itonaru Sekai unique is its balanced approach—testing not just how 
 
     teamLimit: "Max 2 Members",
 coordinators: [
+  {
+        name: "Lokeshwaran",
+        phone: "+91 87543 17818",
+      },
       {
         name: "Ritheesh",
         phone: "+91 90359 45222",
@@ -86,6 +94,10 @@ With a perfect mix of nostalgia and modern vibes, Music Mania brings together te
 
     coordinators: [
       {
+        name: "Madan",
+        phone: "+91 93611 03726",
+      },
+      {
         name: "Mohanaprasanth",
         phone: "+91 63810 26784",
       },
@@ -118,6 +130,10 @@ What sets Final Destination apart is its progressive, point-based format that em
 
     coordinators: [
       {
+        name: "Abishek",
+        phone: "+91 91503 16318",
+      },
+      {
         name: "Divyalakshmi",
         phone: "+91 93451 10050",
       },
@@ -149,6 +165,10 @@ As teams progress through each world, they must solve quizzes, decode hidden mes
     teamLimit: "Team size 3-4 Members",
 
     coordinators: [
+      {
+        name:"Santhiya",
+        phone: "+91 63816 64766",
+      },
       {
         name: "Dharshini",
         phone: "+91 98419 45085",
@@ -183,6 +203,10 @@ What makes Alice in Borderland unique is its focus on mental agility rather than
 
     coordinators: [
       {
+        name: "Chaithrika",
+        phone: "+91 73964 37527",
+      },
+      {
         name: "Indhu priya",
         phone: "+91 63741 38881",
       },
@@ -215,6 +239,10 @@ Each player gets limited chances to score maximum runs, and only well-placed sho
     teamLimit: "Max 4 Members",
 
     coordinators: [
+      {
+        name: "Hashim",
+        phone: "+91 96007 87675",
+      },
       {
         name: "Potri",
         phone: "+91 63812 59360",

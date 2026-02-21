@@ -20,6 +20,10 @@ The event focuses on originality, technical depth, clarity of thought, and prese
 
     coordinators: [
       {
+        name: "Gunasekhar",
+        phone: "+91 89786 46406",
+      },
+      {
         name: "Midhun",
         phone: "+91 90259 79142",
       },
@@ -51,6 +55,10 @@ What makes Code & Conquer unique is its balanced approach—testing not just how
     teamLimit: "Max 3 Members",
 
     coordinators: [
+      {
+        name: "Ravi Varma",
+        phone: "+91 97870 91006",
+      },
       {
         name: "Rupesh",
         phone: "+91 91008 72996",
@@ -85,6 +93,10 @@ The Event includes Logo Identification, Jumbled Code, and a final Tech Quiz buzz
 
     coordinators: [
       {
+        name: "Jenifer Thangam",
+        phone: "+91 91507 26934",
+      },
+      {
         name: "Kavitha",
         phone: "+91 93454 53851",
       },
@@ -118,6 +130,10 @@ By simulating real-world debugging situations, Bug Slayer offers a practical pla
 
     coordinators: [
       {
+        name: "Periyanayagam",
+        phone: "+91 93601 40621",
+      },
+      {
         name: "Karthik",
         phone: "+91 90145 07152",
       },
@@ -150,6 +166,10 @@ Participants will be given an unseen problem statement and must design low-fidel
 
     coordinators: [
       {
+        name: "Ludson",
+        phone: "+91 84891 15685",
+      },
+      {
         name: "Prajeeth",
         phone: "+91 99522 11401",
       },
@@ -180,6 +200,10 @@ Participants must present a *video advertisement, poster advertisement, website 
     teamLimit: "Max 4 Members",
 
     coordinators: [
+      {
+        name: "Lokesh",
+        phone: "+91 98438 94902",
+      },
       {
         name: "Subhasree",
         phone: "+91 90436 81876",
@@ -212,6 +236,10 @@ The competition unfolds across three exciting rounds, starting with a screening 
     teamLimit: "Team Size 2 Members",
 
     coordinators: [
+      {
+        name: "Ranjitha",
+        phone: "+91 99433 15201",
+      },
       {
         name: "Suchithra",
         phone: "+91 63058 60476",
