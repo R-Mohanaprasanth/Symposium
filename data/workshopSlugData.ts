@@ -20,6 +20,10 @@ The workshop also explores AI automation using n8n, where participants will inte
 
     coordinators: [
       {
+        name: "Priyadharshini",
+        phone: "+91 99403 36893",
+      },
+      {
         name: "Dhanush Kumar",
         phone: "+91 90435 62216",
       },
