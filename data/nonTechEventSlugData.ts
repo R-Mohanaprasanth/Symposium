@@ -94,8 +94,8 @@ With a perfect mix of nostalgia and modern vibes, Music Mania brings together te
 
     coordinators: [
       {
-        name: "Madan",
-        phone: "+91 93611 03726",
+        name: "Adhirai",
+        phone: "+91 63818 06042",
       },
       {
         name: "Mohanaprasanth",
